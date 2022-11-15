@@ -1,0 +1,15 @@
+#nav-bar {
+  --nav-gap: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--nav-gap, 1rem);
+  /* padding-left: var(--nav-gap, 1rem);
+  padding-right: var(--nav-gap, 1rem); */
+  padding: var(--nav-gap, 1rem);
+}
+
+.nav-links li:nth-child(1) {
+  margin-left: auto;
+}
