@@ -1,11 +1,26 @@
+/* variables */
 :root {
   --yellow: #f4ff0a;
   --blue: #13fafc;
   --black: #000000;
-  --rounded-corner: 35;
+  --round-corner: 1.5rem;
 }
-body {
+/* utility classes */
+.yellow-txt {
+  color: var(--yellow, yellow);
+}
+
+* {
   font-family: 'Manrope', sans-serif;
+}
+/* global formatting to clear browser */
+body,
+a,
+p {
+  /* clear browser formatting */
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 li,
@@ -19,16 +34,17 @@ a {
 }
 
 #root {
+  /* END OF GLOBAL FORMATTING */
+  /* center main content */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #content {
-  display: grid;
-  grid-template-rows: minmax(auto, 100vh) auto auto auto;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  width: minmax(40rem, 60rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: min(55rem, 100vw);
 }

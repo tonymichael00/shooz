@@ -1,15 +1,20 @@
 #nav-bar {
-  --nav-gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .nav-links {
-  display: flex;
-  gap: var(--nav-gap, 1rem);
-  /* padding-left: var(--nav-gap, 1rem);
-  padding-right: var(--nav-gap, 1rem); */
-  padding: var(--nav-gap, 1rem);
+  /* display: flex; */
+  padding: 1rem;
+  /* padding-left: 2rem;
+  padding-right: 2rem; */
 }
 
-.nav-links li:nth-child(1) {
-  margin-left: auto;
+/* .nav-links li:nth-child(1) {
+  margin-right: auto;
 }
+.nav-links li:nth-child(2) {
+  margin-left: auto;
+} */

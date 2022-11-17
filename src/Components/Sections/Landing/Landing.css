@@ -1,0 +1,35 @@
+#landing {
+  --txt-padding: 0.8rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: max(100vh, 60rem);
+  width: 100%;
+}
+
+#title {
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  text-align: right;
+  padding: var(--txt-padding, 0.5rem);
+  width: 75%;
+  border-top-right-radius: var(--round-corner, 1rem);
+  border-bottom-right-radius: var(--round-corner, 1rem);
+}
+
+.shooz-txt {
+  font-size: 5rem;
+}
+
+#title-caption {
+  /* text-align: right; */
+  margin-left: auto;
+  background-color: black;
+  color: white;
+  width: 75%;
+  padding: var(--txt-padding, 0.5rem);
+  border-top-left-radius: var(--round-corner, 1rem);
+  border-bottom-left-radius: var(--round-corner, 1rem);
+}
