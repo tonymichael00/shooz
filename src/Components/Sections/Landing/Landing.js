@@ -1,14 +1,15 @@
 import React from 'react';
 import './Landing.css';
-import NavBar from './NavBar/NavBar';
+import NavBar from '../NavBar/NavBar';
 
 const Landing = () => {
   return (
     <div id="landing">
-      <NavBar />
       <div id="title">
-        <span className="shooz-txt yellow-txt">shooz</span>
-        <br /> with <span className="yellow-txt">Mike Schuster</span>
+        <div id="title-background">
+          <span className="shooz-txt yellow-txt">shooz</span>
+          <br /> with <span className="yellow-txt">Mike Schuster</span>
+        </div>
       </div>
       <div id="title-caption">
         I can help solve your web problems.
