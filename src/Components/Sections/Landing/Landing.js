@@ -6,10 +6,8 @@ const Landing = () => {
   return (
     <div id="landing">
       <div id="title">
-        <div id="title-background">
-          <span className="shooz-txt yellow-txt">shooz</span>
-          <br /> with <span className="yellow-txt">Mike Schuster</span>
-        </div>
+        <span className="shooz-txt yellow-txt">shooz</span>
+        <br /> with <span className="yellow-txt">Mike Schuster</span>
       </div>
       <div id="title-caption">
         I can help solve your web problems.

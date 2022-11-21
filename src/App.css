@@ -42,9 +42,7 @@ a {
 }
 
 #content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 100vh auto auto auto;
   width: min(55rem, 100vw);
 }
