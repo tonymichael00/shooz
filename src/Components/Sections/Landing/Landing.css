@@ -1,60 +1,98 @@
 #landing {
-  --txt-padding: 0.8rem;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  --txt-padding: var(--round-corner, 1.5rem);
+  --bkd-height: 15rem;
+  grid-column: 1/4;
+  display: grid;
+  grid-template-rows: min-content 1fr 1fr;
   height: max(100vh, 30rem);
   width: 100%;
+  position: relative;
+}
+
+#title-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+#title-overflow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* width: 100vw; */
 }
 
 #title {
   background-color: black;
+  position: relative;
+  /* left: 5%; */
   color: white;
   font-weight: 700;
-  text-align: right;
+  text-align: center;
   padding: var(--txt-padding, 0.5rem);
   border-top-right-radius: var(--round-corner, 1rem);
   border-bottom-right-radius: var(--round-corner, 1rem);
-  /* position: relative;
-  left: 100%;
-  right: 75%; */
-  width: 75%;
-  margin-right: auto;
+  /* height: var(--bkd-height, 10rem); */
 }
 
-/* #title-bkgd {
-  background-color: black;
+.black-bkd {
+  background-color: rgb(0, 0, 0);
   position: absolute;
-  left: 0;
-  right: inherit;
-} */
-
-#title::before {
-  content: '';
-  background-color: rgb(255, 0, 0);
-  /* position: absolute; */
-  /* left: 0;
-  right: 100px; */
+  /* this is the problem vv */
   width: 100vw;
-  height: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
 
-  z-index: 1;
+.left {
+  right: var(--round-corner);
+}
+
+.right {
+  left: var(--round-corner);
 }
 
 .shooz-txt {
-  font-size: 5rem;
+  font-size: 7rem;
 }
 
-#title-caption {
+.small-title-txt {
+  font-size: 1.2rem;
+}
+
+#caption-wrapper {
+  position: relative;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* #caption {
   background-color: black;
+  position: relative;
   color: white;
   padding: var(--txt-padding, 0.5rem);
   border-top-left-radius: var(--round-corner, 1rem);
   border-bottom-left-radius: var(--round-corner, 1rem);
-  /* position: relative;
-  margin-left: auto;
-  margin-right: 0px; */
-  /* width: 75%; */
+} */
+
+#caption {
+  background-color: black;
+  position: relative;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  padding: var(--txt-padding, 0.5rem);
+  border-top-left-radius: var(--round-corner, 1rem);
+  border-bottom-left-radius: var(--round-corner, 1rem);
+  /* height: var(--bkd-height, 10rem); */
+  /* left: 5%; */
+}
+#caption-txt {
+  color: white;
+  text-align: center;
 }

@@ -1,23 +1,86 @@
-/* variables */
-:root {
-  --yellow: #f4ff0a;
-  --blue: #13fafc;
-  --black: #000000;
-  --round-corner: 1.5rem;
-}
-/* utility classes */
-.yellow-txt {
-  color: var(--yellow, yellow);
+/* TODO: DOUBLE CHECK CSS RESET FOR REDUNDANCY. */
+/* ESPECIALLY PERSONAL RESET AT BOTTOM */
+
+/* reset css */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-* {
-  font-family: 'Manrope', sans-serif;
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
-/* global formatting to clear browser */
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* My formatting. Double check redundancy. */
 body,
 a,
 p {
-  /* clear browser formatting */
   padding: 0;
   margin: 0;
   border: 0;
@@ -33,8 +96,31 @@ a {
   text-decoration: none;
 }
 
+* {
+  font-family: 'Manrope', sans-serif;
+}
+
+/* variables */
+:root {
+  --yellow: #f4ff0a;
+  --blue: #13fafc;
+  --black: #000000;
+  --round-corner: 1.5rem;
+}
+
+/* utility classes */
+.yellow-txt {
+  color: var(--yellow, yellow);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* INDIVIDUAL FORMATTING */
 #root {
-  /* END OF GLOBAL FORMATTING */
   /* center main content */
   display: flex;
   justify-content: center;
@@ -43,6 +129,8 @@ a {
 
 #content {
   display: grid;
-  grid-template-rows: 100vh auto auto auto;
-  width: min(55rem, 100vw);
+  grid-template-rows: min-content 100vh auto auto auto;
+  grid-template-columns: 1fr min(55rem, 100vw) 1fr;
+  /* width: min(55rem, 100vw); */
+  width: 100vw;
 }

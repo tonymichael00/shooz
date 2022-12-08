@@ -1,9 +1,9 @@
 import './App.css';
+import React from 'react';
 import AboutMe from './Components/Sections/AboutMe';
-import Landing from './Components/Sections/Landing';
 import WhatIveDone from './Components/Sections/WhatIveDone';
 import Contact from './Components/Sections/Contact';
-import React from 'react';
+import Landing from './Components/Sections/Landing/Landing';
 import NavBar from './Components/Sections/NavBar';
 
 function App() {

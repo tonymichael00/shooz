@@ -1,5 +1,7 @@
 header {
   width: 100%;
+  height: fit-content;
+  grid-column: 2/3;
 }
 
 #nav-bar {
