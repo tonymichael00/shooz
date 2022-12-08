@@ -2,7 +2,7 @@ import React from 'react';
 import './AboutMe.css';
 
 const AboutMe = () => {
-  return <p>AboutMe</p>;
+  return <div id="about-sec">About</div>;
 };
 
 export default AboutMe;
