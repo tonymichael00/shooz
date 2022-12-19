@@ -6,13 +6,11 @@ import hamMenu from './images/hamMenu.svg';
 const NavBar = () => {
   return (
     <header>
-      <nav>
-        <ul id="nav-bar">
-          <li className="navi logo">
-            <a href="_self">
-              <img src={logo} alt="Logo" className="center-flex" />
-            </a>
-          </li>
+      <nav id="nav-bar">
+        <a href="_self" className="navi logo">
+          <img src={logo} alt="Logo" className="center-flex" />
+        </a>
+        <ul>
           <li className="navi links">
             <a href="_self">
               <span>About</span>

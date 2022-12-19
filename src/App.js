@@ -9,7 +9,6 @@ import NavBar from './Components/Sections/NavBar';
 function App() {
   return (
     <div id="content">
-      <NavBar />
       <Landing />
       <AboutMe />
       <WhatIveDone />
