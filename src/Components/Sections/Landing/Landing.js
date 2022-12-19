@@ -8,20 +8,18 @@ const Landing = () => {
         <div id="title">
           <div className="black-bkd left"></div>
           <span className="shooz-txt yellow-txt">shooz</span>
-          <br />{' '}
+          {/* <br />
           <span className="small-title-txt">
-            {' '}
             with <span className="yellow-txt">Mike Schuster</span>
-          </span>
+          </span> */}
         </div>
-        {/* </div> */}
       </div>
       <div id="caption-wrapper">
         <div id="caption">
           <div className="black-bkd right"></div>
           <div id="caption-txt">
-            I can help solve your web problems.
-            <br /> Don't hesitate to
+            Hi! I'm <span className="yellow-txt">Mike Schuster.</span> I can
+            help solve your web problems. Don't hesitate to
             <span className="yellow-txt"> contact me.</span>
           </div>
         </div>

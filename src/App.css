@@ -46,13 +46,6 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -106,7 +99,7 @@ a {
   --blue: #13fafc;
   --black: #000000;
   --round-corner: 1.5rem;
-  --nav-height: 5rem;
+  --nav-height: 4rem;
 }
 
 /* utility classes */
@@ -114,7 +107,7 @@ a {
   color: var(--yellow, yellow);
 }
 
-.center {
+.center-flex {
   display: flex;
   justify-content: center;
   align-items: center;
