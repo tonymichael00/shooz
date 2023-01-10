@@ -3,62 +3,67 @@
 #landing {
   --txt-padding: var(--round-corner, 1.5rem);
   --bkd-height: 15rem;
+  --title-font-size: 10rem;
+  --title-bkd: calc(var(--title-font-size) + 3rem);
   grid-column: 1/4;
   display: grid;
-  grid-template-rows: min-content 1fr 1fr;
+  grid-template-rows: min-content 1fr;
   height: max(100vh, 30rem);
   width: 100%;
   position: relative;
 }
 
-title-page {
-  grid-column: 1/4;
+#title-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  /* height: 100%; */
 }
 
-#title-wrapper {
+#title-bubble {
+  /* justify-self: center; */
+  grid-column: 1/4;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  width: 100%;
+  /* height: 50vh; */
 }
 
-#title-overflow {
+.shooz-bkd {
   position: absolute;
   left: 0;
-  right: 0;
-  /* width: 100vw; */
-}
-
-#title {
-  background-color: black;
-  position: relative;
-  /* left: 5%; */
-  color: white;
-  font-weight: 700;
-  text-align: center;
+  width: 50%;
+  height: var(--title-bkd);
   padding: var(--txt-padding, 0.5rem);
   border-top-right-radius: var(--round-corner, 1rem);
   border-bottom-right-radius: var(--round-corner, 1rem);
-  /* height: var(--bkd-height, 10rem); */
+  background-color: black;
+  z-index: -1;
+}
+
+#title {
+  font-weight: 700;
+  font-size: var(--title-font-size);
+
+  height: var(--title-bkd);
+  padding: var(--txt-padding, 0.5rem);
+  border-top-right-radius: var(--round-corner, 1rem);
+  border-bottom-right-radius: var(--round-corner, 1rem);
+  background-color: black;
 }
 
 #caption-wrapper {
+  /* align-self: center; */
   position: relative;
-  height: 40vh;
+  /* height: ; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-/* #caption {
-  background-color: black;
-  position: relative;
-  color: white;
-  padding: var(--txt-padding, 0.5rem);
-  border-top-left-radius: var(--round-corner, 1rem);
-  border-bottom-left-radius: var(--round-corner, 1rem);
-} */
 
 #caption {
   background-color: black;
@@ -98,19 +103,4 @@ title-page {
 .right {
   /* left: var(--round-corner); */
   left: 50%;
-}
-
-.shooz-txt {
-  font-size: 10rem;
-}
-
-.small-title-txt {
-  font-size: 1.2rem;
-}
-
-.shooz-bkd {
-  position: absolute;
-  left: 0;
-  right: 0;
-  background-color: red;
 }

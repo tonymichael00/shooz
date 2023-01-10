@@ -7,14 +7,13 @@ const Landing = () => {
     <div id="landing">
       <NavBar />
       <div id="title-page">
-        <div id="title-wrapper">
-          {/* <div id="title"> */}
-          {/* <div className="black-bkd left"></div> */}
+        <div id="title-bubble">
           <div className="shooz-bkd"></div>
-          <span className="shooz-txt yellow-txt">shooz</span>
-          {/* </div> */}
+          <div id="title" className="center-flex">
+            <span className="shooz-txt yellow-txt">shooz</span>
+          </div>
         </div>
-        <div id="caption-wrapper">
+        <div id="title-caption-bubble">
           <div id="caption">
             <div className="black-bkd right"></div>
             <div id="caption-txt">
