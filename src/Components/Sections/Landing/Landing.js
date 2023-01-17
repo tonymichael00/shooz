@@ -6,7 +6,7 @@ const Landing = () => {
   return (
     <div id="landing">
       <NavBar />
-      <div id="title-page">
+      <div id="title-sec">
         <div id="title-bubble">
           <div className="shooz-bkd"></div>
           <div id="title-txt" className="center-flex">

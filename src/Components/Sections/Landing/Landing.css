@@ -5,6 +5,7 @@
   --bkd-height: 15rem;
   --title-font-size: 10rem;
   --title-bkd: calc(var(--title-font-size) + 3rem);
+  --title-caption-bkd: 7rem;
   grid-column: 1/4;
   display: grid;
   grid-template-rows: min-content 1fr;
@@ -12,12 +13,13 @@
   width: 100%;
   position: relative;
 }
-
-#title-page {
+/* Change to grid */
+#title-sec {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  align-content: space-around;
 }
 
 #title-bubble {
@@ -27,6 +29,9 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  /* align-self: center; */
+  top: auto;
+  bottom: auto;
 }
 
 .shooz-bkd {
@@ -79,15 +84,14 @@
   color: white;
   width: 40ch;
   font-size: 1.2rem;
+  height: var(--title-caption-bkd);
 }
 
 .caption-bkd {
   background-color: rgb(0, 0, 0);
   position: absolute;
-  /* this is the problem vv */
-  width: 50vw;
-  top: 0;
-  bottom: 0;
+  width: 50%;
   left: 50%;
+  height: var(--title-caption-bkd);
   z-index: -1;
 }
