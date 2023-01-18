@@ -1,11 +1,11 @@
-/* TODO:  */
+/* TODO:  media query*/
 
 #landing {
-  --txt-padding: var(--round-corner, 1.5rem);
-  --bkd-height: 15rem;
-  --title-font-size: 10rem;
+  --landing-padding: var(--round-corner, 1.5rem);
+  --title-font-size: clamp(max(5rem, vw), 15vw, max(15rem, 30vw));
   --title-bkd: calc(var(--title-font-size) + 3rem);
-  --title-caption-bkd: 7rem;
+  --caption-bkd: 7rem;
+  --caption-font-size: clamp(min(0.5rem, 100%), 15vw, 1.2rem);
   grid-column: 1/4;
   display: grid;
   grid-template-rows: min-content 1fr;
@@ -13,16 +13,14 @@
   width: 100%;
   position: relative;
 }
-/* Change to grid */
+
 #title-sec {
-  display: flex;
-  flex-wrap: wrap;
-  /* flex-direction: column; */
-  /* align-items: center; */
-  align-content: space-around;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
 }
 
 #title-bubble {
+  grid-column: 1/4;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -34,12 +32,12 @@
   bottom: auto;
 }
 
-.shooz-bkd {
+#shooz-bkd {
   position: absolute;
   left: 0;
   width: 50%;
   height: var(--title-bkd);
-  padding: var(--txt-padding, 0.5rem);
+  padding: var(--landing-padding, 0.5rem);
   border-top-right-radius: var(--round-corner, 1rem);
   border-bottom-right-radius: var(--round-corner, 1rem);
   background-color: black;
@@ -50,7 +48,7 @@
   font-weight: 700;
   font-size: var(--title-font-size);
   height: var(--title-bkd);
-  padding: var(--txt-padding, 0.5rem);
+  padding: var(--landing-padding, 0.5rem);
   border-top-right-radius: var(--round-corner, 1rem);
   border-bottom-right-radius: var(--round-corner, 1rem);
   background-color: black;
@@ -77,21 +75,28 @@
   background-color: black;
   position: relative;
   font-weight: 500;
+  font-size: var(--caption-font-size);
   text-align: center;
-  padding: var(--txt-padding, 0.5rem);
+  padding: var(--landing-padding, 0.5rem);
   border-top-left-radius: var(--round-corner, 1rem);
   border-bottom-left-radius: var(--round-corner, 1rem);
   color: white;
-  width: 40ch;
-  font-size: 1.2rem;
-  height: var(--title-caption-bkd);
+  /* width: 40ch; */
+  height: var(--caption-bkd);
 }
 
-.caption-bkd {
+#caption-bkd {
   background-color: rgb(0, 0, 0);
   position: absolute;
   width: 50%;
   left: 50%;
-  height: var(--title-caption-bkd);
+  height: var(--caption-bkd);
   z-index: -1;
+}
+
+/* need to fix */
+@media (max-width: 37rem) {
+  #title-txt {
+    width: 100%;
+  }
 }
