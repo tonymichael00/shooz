@@ -1,11 +1,12 @@
-/* TODO:  media query*/
+/* TODO:  media query, convert all text to circles? Might not work for large text*/
+/* TODO:  */
 
 #landing {
-  --landing-padding: var(--round-corner, 1.5rem);
-  --title-font-size: clamp(max(5rem, vw), 15vw, max(15rem, 30vw));
-  --title-bkd: calc(var(--title-font-size) + 3rem);
-  --caption-bkd: 7rem;
-  --caption-font-size: clamp(min(0.5rem, 100%), 15vw, 1.2rem);
+  --landing-padding: 2rem;
+  --title-font-size: clamp(5rem, 20vw, 15rem);
+  --title-bkd-ht: clamp(5rem, 20vw, 15rem);
+  --caption-bkd-ht: clamp(4rem, 15vw, 1.2rem);
+  --caption-font-size: clamp(0.5rem, 15vw, 1.2rem);
   grid-column: 1/4;
   display: grid;
   grid-template-rows: min-content 1fr;
@@ -27,7 +28,6 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  /* align-self: center; */
   top: auto;
   bottom: auto;
 }
@@ -36,7 +36,7 @@
   position: absolute;
   left: 0;
   width: 50%;
-  height: var(--title-bkd);
+  height: var(--title-bkd-ht);
   padding: var(--landing-padding, 0.5rem);
   border-top-right-radius: var(--round-corner, 1rem);
   border-bottom-right-radius: var(--round-corner, 1rem);
@@ -47,11 +47,15 @@
 #title-txt {
   font-weight: 700;
   font-size: var(--title-font-size);
-  height: var(--title-bkd);
+  height: var(--title-bkd-ht);
   padding: var(--landing-padding, 0.5rem);
   border-top-right-radius: var(--round-corner, 1rem);
   border-bottom-right-radius: var(--round-corner, 1rem);
   background-color: black;
+}
+
+#shooz-txt {
+  height: var(--title-bkd-ht);
 }
 
 #caption-wrapper {
@@ -82,7 +86,7 @@
   border-bottom-left-radius: var(--round-corner, 1rem);
   color: white;
   /* width: 40ch; */
-  height: var(--caption-bkd);
+  height: var(--caption-bkd-ht);
 }
 
 #caption-bkd {
@@ -90,13 +94,13 @@
   position: absolute;
   width: 50%;
   left: 50%;
-  height: var(--caption-bkd);
+  height: var(--caption-bkd-ht);
   z-index: -1;
 }
 
 /* need to fix */
 @media (max-width: 37rem) {
   #title-txt {
-    width: 100%;
+    /* width: 100%; */
   }
 }
