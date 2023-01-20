@@ -98,7 +98,7 @@ a {
   --yellow: #f4ff0a;
   --blue: #13fafc;
   --black: #000000;
-  --round-corner: 5vw;
+  --round-corner: clamp(0.5rem, 5vw, 0.9rem);
   --nav-height: 4rem;
 }
 
