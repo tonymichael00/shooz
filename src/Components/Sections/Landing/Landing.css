@@ -1,13 +1,14 @@
-/* TODO:  media query, convert all text to circles? Might not work for large text*/
+/* TODO:  media query, use grid to center text and create sides*/
 /* TODO:  */
 
 #landing {
-  --landing-padding: 2rem;
+  --title-padding: 2rem;
   --title-corner: clamp(0.5rem, 5vw, 2.5rem);
   --title-font-size: clamp(5rem, 20vw, 15rem);
   --title-bkd-ht: clamp(5rem, 20vw, 15rem);
+  --title-caption-padding: 0.5rem;
   --caption-bkd-ht: clamp(4rem, 15vw, 1.2rem);
-  --caption-font-size: clamp(0.5rem, 15vw, 2rem);
+  --caption-font-size: clamp(0.5rem, 15vw, 1.5rem);
   grid-column: 1/4;
   display: grid;
   grid-template-rows: min-content 1fr;
@@ -21,7 +22,7 @@
   grid-template-rows: 3fr 1fr;
 }
 
-#title-bubble {
+#title-shape {
   grid-column: 1/4;
   position: relative;
   display: flex;
@@ -33,25 +34,25 @@
   bottom: auto;
 }
 
+#shooz-bkd {
+  font-weight: 700;
+  font-size: var(--title-font-size);
+  height: var(--title-bkd-ht);
+  padding: var(--title-padding, 0.5rem);
+  border-top-right-radius: var(--title-corner, 1rem);
+  /* border-top-right-radius: clamp(0.5rem, 5vw, 2.5rem); */
+  border-bottom-right-radius: var(--title-corner, 1rem);
+  background-color: black;
+}
+
 #side-shooz-bkd {
   position: absolute;
   left: 0;
   width: 50%;
   height: var(--title-bkd-ht);
-  padding: var(--landing-padding, 0.5rem);
+  padding: var(--title-padding, 0.5rem);
   background-color: black;
   z-index: -1;
-}
-
-#shooz-bkd {
-  font-weight: 700;
-  font-size: var(--title-font-size);
-  height: var(--title-bkd-ht);
-  padding: var(--landing-padding, 0.5rem);
-  border-top-right-radius: var(--title-corner, 1rem);
-  /* border-top-right-radius: clamp(0.5rem, 5vw, 2.5rem); */
-  border-bottom-right-radius: var(--title-corner, 1rem);
-  background-color: black;
 }
 
 #shooz-txt {
@@ -65,8 +66,8 @@
   align-items: center;
 }
 
-#title-caption-sec {
-  grid-column: 1/4;
+#title-caption-shape {
+  grid-column: 2/4;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -76,18 +77,20 @@
 }
 
 #title-caption-bkd {
-  background-color: rgb(0, 0, 0);
+  grid-column: 2/4;
+
+  background-color: rgb(255, 0, 0);
   position: relative;
   font-weight: 500;
   font-size: var(--caption-font-size);
-  text-align: center;
-  padding: var(--landing-padding, 0.5rem);
+  text-align: left;
+  padding: var(--title-caption-padding, 0.5rem);
   border-top-left-radius: var(--round-corner, 1rem);
   border-bottom-left-radius: var(--round-corner, 1rem);
   color: white;
-  height: var(--caption-bkd-ht);
-  /* width: 90vw;
-  margin-left: auto; */
+  /* height: var(--caption-bkd-ht); */
+  /* width: 80vw; */
+  margin-left: auto;
 }
 
 #title-caption-side-bkd {

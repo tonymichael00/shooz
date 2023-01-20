@@ -126,7 +126,7 @@ a {
   /* grid-template-rows:
     min(100vh, 67.5)
     auto auto; */
-  grid-template-columns: 1fr min(120rem, 100vw) 1fr;
+  grid-template-columns: 1fr max(20rem, 50vw) 1fr;
   /* width: min(55rem, 100vw); */
   width: 100vw;
 }
