@@ -1,5 +1,5 @@
-/* TODO:  media query, use grid to center text and create sides*/
-/* TODO:  */
+/* TODO:  use grid to center text and create sides*/
+/* TODO:  media query: make 1 column*/
 
 #landing {
   --title-padding: 2rem;
@@ -11,7 +11,8 @@
   --caption-font-size: clamp(0.5rem, 15vw, 1.5rem);
   grid-column: 1/4;
   display: grid;
-  grid-template-rows: min-content 1fr;
+  grid-template-columns: 1fr max(20rem, 70vw) 1fr;
+  /* grid-template-rows: min-content repeat(1fr); */
   height: max(100vh, 30rem);
   width: 100%;
   position: relative;
