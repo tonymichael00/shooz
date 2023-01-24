@@ -3,6 +3,7 @@
 header {
   /* height: fit-content; */
   grid-column: 1/4;
+  grid-row: 1/2;
   width: 100vw;
 }
 

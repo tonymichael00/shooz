@@ -1,5 +1,6 @@
 /* TODO:  use grid to center text and create sides*/
 /* TODO:  media query: make 1 column*/
+/* TODO: maybe remove divs around shooz and color background black */
 
 #landing {
   --title-padding: 2rem;
@@ -12,9 +13,9 @@
   grid-column: 1/4;
   display: grid;
   grid-template-columns: 1fr max(20rem, 70vw) 1fr;
-  /* grid-template-rows: min-content repeat(1fr); */
+  grid-template-rows: min-content 1fr clamp(5rem, 20vw, 15rem) 1fr 1fr 1fr;
   height: max(100vh, 30rem);
-  width: 100%;
+  /* width: 100%; */
   position: relative;
 }
 
@@ -24,40 +25,52 @@
 }
 
 #title-shape {
-  grid-column: 1/4;
+  grid-column: 1/3;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
   top: auto;
   bottom: auto;
 }
 
 #shooz-bkd {
+  grid-column: 2/3;
   font-weight: 700;
   font-size: var(--title-font-size);
-  height: var(--title-bkd-ht);
   padding: var(--title-padding, 0.5rem);
   border-top-right-radius: var(--title-corner, 1rem);
   /* border-top-right-radius: clamp(0.5rem, 5vw, 2.5rem); */
   border-bottom-right-radius: var(--title-corner, 1rem);
   background-color: black;
+  /* left: 0; */
+  /* width: min-content; */
+}
+
+#shooz-bkd-wrapper {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  /* height: 100%; */
 }
 
 #side-shooz-bkd {
   position: absolute;
+  grid-column: 1/2;
+  grid-row: 3/4;
   left: 0;
-  width: 50%;
-  height: var(--title-bkd-ht);
+  /* width: 50%;
+  height: 100%; */
   padding: var(--title-padding, 0.5rem);
   background-color: black;
   z-index: -1;
 }
 
 #shooz-txt {
-  height: var(--title-bkd-ht);
+  /* display: inline-block; */
 }
 
 #caption-wrapper {
@@ -74,11 +87,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
 }
 
 #title-caption-bkd {
-  grid-column: 2/4;
+  grid-column: 2/3;
+  grid-row: 5/6;
 
   background-color: rgb(255, 0, 0);
   position: relative;
@@ -97,9 +111,9 @@
 #title-caption-side-bkd {
   background-color: rgb(0, 0, 0);
   position: absolute;
-  width: 50%;
+  /* width: 50%; */
   left: 50%;
-  height: var(--caption-bkd-ht);
+  /* height: 100%; */
   z-index: -1;
 }
 
