@@ -1,7 +1,7 @@
 import React from 'react';
 import './NavBar.css';
-import logo from './images/logo.png';
-import hamMenu from './images/hamMenu.svg';
+import logo from './Images/logo.png';
+import hamMenu from './Images/hamMenu.svg';
 
 const NavBar = () => {
   return (

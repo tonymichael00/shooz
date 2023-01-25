@@ -3,9 +3,11 @@
 /* TODO: maybe remove divs around shooz and color background black */
 
 #landing {
-  --title-padding: 2rem;
+  --shooz-title-ht: clamp(5rem, 20vw, 15rem);
+  /* --title-padding: 2rem; */
+  --title-padding: 0rem;
   --title-corner: clamp(0.5rem, 5vw, 2.5rem);
-  --title-font-size: clamp(5rem, 20vw, 15rem);
+  --title-font-size: clamp(4rem, 15vw, 14rem);
   --title-bkd-ht: clamp(5rem, 20vw, 15rem);
   --title-caption-padding: 0.5rem;
   --caption-bkd-ht: clamp(4rem, 15vw, 1.2rem);
@@ -31,13 +33,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
-  top: auto;
-  bottom: auto;
+}
+
+#shooz-bkd-wrapper {
+  position: relative;
+  grid-column: 1/4;
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 #shooz-bkd {
+  height: 100%;
+  width: 100%;
   grid-column: 2/3;
+  /* grid-row: 2/3; */
+  display: flex;
+  flex-direction: row;
+  /* grid-template-rows: 1fr 1fr; */
   font-weight: 700;
   font-size: var(--title-font-size);
   padding: var(--title-padding, 0.5rem);
@@ -49,12 +62,8 @@
   /* width: min-content; */
 }
 
-#shooz-bkd-wrapper {
-  grid-column: 2/3;
-  grid-row: 3/4;
-  display: grid;
-  grid-template-columns: 1fr min-content 1fr;
-  /* height: 100%; */
+#shooz-bkd p {
+  font-size: var(--title-font-size);
 }
 
 #side-shooz-bkd {
@@ -62,15 +71,15 @@
   grid-column: 1/2;
   grid-row: 3/4;
   left: 0;
-  /* width: 50%;
-  height: 100%; */
   padding: var(--title-padding, 0.5rem);
   background-color: black;
   z-index: -1;
 }
 
 #shooz-txt {
-  /* display: inline-block; */
+  height: var(--shooz-title-ht);
+
+  /* height: var(--shooz-title-ht); */
 }
 
 #caption-wrapper {
@@ -93,19 +102,18 @@
 #title-caption-bkd {
   grid-column: 2/3;
   grid-row: 5/6;
-
   background-color: rgb(255, 0, 0);
   position: relative;
   font-weight: 500;
   font-size: var(--caption-font-size);
-  text-align: left;
+  text-align: center;
   padding: var(--title-caption-padding, 0.5rem);
   border-top-left-radius: var(--round-corner, 1rem);
   border-bottom-left-radius: var(--round-corner, 1rem);
   color: white;
   /* height: var(--caption-bkd-ht); */
   /* width: 80vw; */
-  margin-left: auto;
+  /* margin-left: auto; */
 }
 
 #title-caption-side-bkd {
