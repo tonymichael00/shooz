@@ -4,8 +4,9 @@
 
 #landing {
   --shooz-title-ht: clamp(5rem, 20vw, 15rem);
+  --shooz-title-ht: 1rem;
   /* --title-padding: 2rem; */
-  --title-padding: 0rem;
+  --title-padding: 2rem;
   --title-corner: clamp(0.5rem, 5vw, 2.5rem);
   --title-font-size: clamp(4rem, 15vw, 14rem);
   --title-bkd-ht: clamp(5rem, 20vw, 15rem);
@@ -15,7 +16,7 @@
   grid-column: 1/4;
   display: grid;
   grid-template-columns: 1fr max(20rem, 70vw) 1fr;
-  grid-template-rows: min-content 1fr clamp(5rem, 20vw, 15rem) 1fr 1fr 1fr;
+  grid-template-rows: min-content 1fr min-content 1fr 1fr 1fr;
   height: max(100vh, 30rem);
   /* width: 100%; */
   position: relative;
@@ -64,29 +65,31 @@
 
 #shooz-bkd p {
   font-size: var(--title-font-size);
+  line-height: 0.8;
+  /* height: var(--shooz-title-ht); */
+  /* font-stretch: 100%; */
 }
 
 #side-shooz-bkd {
-  position: absolute;
+  /* position: absolute; */
   grid-column: 1/2;
-  grid-row: 3/4;
-  left: 0;
-  padding: var(--title-padding, 0.5rem);
+  /* grid-row: 3/4; */
+  /* left: 0; */
+  /* padding: var(--title-padding, 0.5rem); */
   background-color: black;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 #shooz-txt {
-  height: var(--shooz-title-ht);
-
   /* height: var(--shooz-title-ht); */
 }
 
-#caption-wrapper {
+#title-caption-wrapper {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  grid-column: 1/4;
+  grid-row: 5/6;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 #title-caption-shape {
@@ -101,8 +104,8 @@
 
 #title-caption-bkd {
   grid-column: 2/3;
-  grid-row: 5/6;
-  background-color: rgb(255, 0, 0);
+  /* grid-row: 5/6; */
+  background-color: rgb(0, 0, 0);
   position: relative;
   font-weight: 500;
   font-size: var(--caption-font-size);
@@ -112,17 +115,19 @@
   border-bottom-left-radius: var(--round-corner, 1rem);
   color: white;
   /* height: var(--caption-bkd-ht); */
-  /* width: 80vw; */
+  width: var(--middle-column-width);
   /* margin-left: auto; */
 }
 
 #title-caption-side-bkd {
+  grid-column: 3/4;
+  grid-row: 1/2;
   background-color: rgb(0, 0, 0);
-  position: absolute;
+  /* position: absolute; */
   /* width: 50%; */
-  left: 50%;
+  /* left: 50%; */
   /* height: 100%; */
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 /* need to fix */
