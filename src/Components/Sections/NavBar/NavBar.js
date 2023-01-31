@@ -10,41 +10,24 @@ const NavBar = () => {
         <a href="_self" className="logo">
           <img src={logo} alt="Logo" className="center-flex" />
         </a>
-        <ul>
-          <li className="links">
-            <a href="_self">
-              <span>About</span>
-            </a>
-          </li>
-          <li className="links">
-            <a href="#Experience">
-              <span>Experience</span>
-            </a>
-          </li>
-          <li className="links">
-            <a href="#Projects">
-              <span>Projects</span>
-            </a>
-          </li>
-          <li className="links">
-            <a href="#Contact">
-              <span>Contact</span>
-            </a>
-          </li>
-          <li className="links">
-            <a href="_self">
-              <span>Resume</span>
-            </a>
-          </li>
-          <li className="hamMenu">
-            <img
-              src={hamMenu}
-              alt="Logo"
-              id="hamMenu"
-              className="center-flex"
-            />
-          </li>
-        </ul>
+        {/* div to create space in grid */}
+        <div></div>
+        <a className="center-flex" href="_self">
+          <span>About</span>
+        </a>
+        <a className="center-flex" href="#Experience">
+          <span>Experience</span>
+        </a>
+        <a className="center-flex" href="#Projects">
+          <span>Projects</span>
+        </a>
+        <a className="center-flex" href="#Contact">
+          <span>Contact</span>
+        </a>
+        <a className="center-flex" href="_self">
+          <span>Resume</span>
+        </a>
+        <img src={hamMenu} alt="Logo" id="hamMenu" className="center-flex" />
       </nav>
     </header>
   );
