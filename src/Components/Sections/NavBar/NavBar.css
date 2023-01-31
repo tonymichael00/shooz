@@ -1,6 +1,7 @@
-/* TODO:  */
+/* TODO:  convert ul to grid or fix spacing*/
 
 header {
+  --nav-spacing: 0rem;
   /* height: fit-content; */
   grid-column: 1/4;
   grid-row: 1/2;
@@ -8,49 +9,39 @@ header {
 }
 
 nav {
-  height: 100%;
-  width: 100%;
 }
 
 #nav-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: min-content 1fr;
   /* gap: 1rem; */
-  width: 100%;
-  height: 100%;
 }
 
-#nav-bar > * {
+#nav-bar > a {
+  padding: var(--nav-spacing);
+}
+/* #nav-bar > * {
   padding: 1rem;
+} */
+
+#nav-bar ul {
+  display: flex;
+  justify-content: right;
+  align-items: center;
 }
-
-/* ul {
-  width: 100%;
-} */
-
-/* .navi a {
-  display: block;
+#nav-bar ul li {
+  display: inline;
+  padding: var(--nav-spacing);
 }
-
-.navi {
-  padding-left: 1rem;
-  padding-right: 1rem;
-} */
-
-/* .logo {
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-} */
 
 .links {
   display: flex;
-  /* turn off  for hamburger*/
-  display: none;
+  /* vv visibility */
+  /* display: none; */
 }
 
 #hamMenu {
+  display: none;
   height: 2rem;
   width: 2rem;
 }

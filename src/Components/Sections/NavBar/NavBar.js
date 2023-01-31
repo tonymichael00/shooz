@@ -7,36 +7,36 @@ const NavBar = () => {
   return (
     <header>
       <nav id="nav-bar">
-        <a href="_self" className="navi logo">
+        <a href="_self" className="logo">
           <img src={logo} alt="Logo" className="center-flex" />
         </a>
         <ul>
-          <li className="navi links">
+          <li className="links">
             <a href="_self">
               <span>About</span>
             </a>
           </li>
-          <li className="navi links">
+          <li className="links">
             <a href="#Experience">
               <span>Experience</span>
             </a>
           </li>
-          <li className="navi links">
+          <li className="links">
             <a href="#Projects">
               <span>Projects</span>
             </a>
           </li>
-          <li className="navi links">
+          <li className="links">
             <a href="#Contact">
               <span>Contact</span>
             </a>
           </li>
-          <li className="navi links">
+          <li className="links">
             <a href="_self">
               <span>Resume</span>
             </a>
           </li>
-          <li className="navi">
+          <li className="hamMenu">
             <img
               src={hamMenu}
               alt="Logo"
