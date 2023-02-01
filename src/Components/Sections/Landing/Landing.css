@@ -1,6 +1,10 @@
-/* TODO:  use grid to center text and create sides*/
-/* TODO:  media query: make 1 column*/
-/* TODO: maybe remove divs around shooz and color background black */
+/* TODO:  use grid to center text and create sides
+media query: make 1 column
+adjust caption text size using percentages. 
+Create title variables
+make padding adjust with screen size. 
+Make title font smaller
+remove unneeded variables*/
 
 #landing {
   --shooz-title-ht: clamp(5rem, 20vw, 15rem);
@@ -20,22 +24,7 @@
   grid-template-columns: 1fr max(20rem, 70vw) 1fr;
   grid-template-rows: min-content 1fr min-content 1fr min-content 1fr;
   height: max(100vh, 30rem);
-  /* width: 100%; */
   position: relative;
-}
-
-#title-sec {
-  display: grid;
-  grid-template-rows: 3fr 1fr;
-}
-
-#title-shape {
-  grid-column: 1/3;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 #shooz-bkd-wrapper {
@@ -43,48 +32,44 @@
   grid-column: 1/4;
   grid-row: 3/4;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr auto 1fr;
 }
 
 #shooz-bkd {
-  height: 100%;
-  width: 100%;
   grid-column: 2/3;
-  /* grid-row: 2/3; */
-  display: flex;
-  flex-direction: row;
-  /* grid-template-rows: 1fr 1fr; */
   font-weight: 700;
   font-size: var(--title-font-size);
   padding: var(--title-padding, 0.5rem);
   border-top-right-radius: var(--title-corner, 1rem);
-  /* border-top-right-radius: clamp(0.5rem, 5vw, 2.5rem); */
   border-bottom-right-radius: var(--title-corner, 1rem);
   background-color: black;
-  /* left: 0; */
-  /* width: min-content; */
 }
 
-#shooz-bkd p {
+/* title text */
+#shooz-bkd p:first-child {
   font-size: var(--title-font-size);
   line-height: 0.8;
-  /* height: var(--shooz-title-ht); */
-  /* font-stretch: 100%; */
+}
+/* subtitle text */
+#shooz-bkd p:second-child {
+  font-size: 1rem;
+  line-height: 0.8;
 }
 
 #side-shooz-bkd {
-  /* position: absolute; */
   grid-column: 1/2;
-  /* grid-row: 3/4; */
-  /* left: 0; */
-  /* padding: var(--title-padding, 0.5rem); */
   background-color: black;
-  /* z-index: -1; */
 }
 
-#shooz-txt {
+.shooz-title {
   /* height: var(--shooz-title-ht); */
 }
+
+.shooz-subtitle {
+  font-size: clamp(calc(4rem * 0.25), calc(15vw * 0.25), calc(14rem * 0.25));
+}
+
+/* CAPTION CSS */
 
 #title-caption-wrapper {
   position: relative;
@@ -92,23 +77,14 @@
   grid-row: 5/6;
   display: grid;
   /* use title-caption-background to adjust width */
-  grid-template-columns: 1fr min-content 1fr;
+  grid-template-columns: 1fr auto 1fr;
   /* height: var(--caption-bkd-ht); */
-}
-
-#title-caption-shape {
-  grid-column: 2/4;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* width: 100%; */
 }
 
 #title-caption-bkd {
   grid-column: 2/3;
-  /* grid-row: 5/6; */
+  display: flex;
+  flex-direction: column;
   background-color: rgb(0, 0, 0);
   position: relative;
   font-weight: 500;
@@ -118,24 +94,16 @@
   border-top-left-radius: var(--round-corner, 1rem);
   border-bottom-left-radius: var(--round-corner, 1rem);
   color: white;
-  /* height: var(--caption-bkd-ht); */
-  width: var(--caption-width);
-  /* margin-left: auto; */
 }
 
-/* #title-caption-bkd p {
-  font-size: var(--caption-font-size);
-} */
+#title-caption-bkd p {
+  /* font-size: var(--caption-font-size); */
+}
 
 #title-caption-side-bkd {
   grid-column: 3/4;
   grid-row: 1/2;
   background-color: rgb(0, 0, 0);
-  /* position: absolute; */
-  /* width: 50%; */
-  /* left: 50%; */
-  /* height: 100%; */
-  /* z-index: -1; */
 }
 
 /* need to fix */

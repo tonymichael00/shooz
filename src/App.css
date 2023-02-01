@@ -108,6 +108,10 @@ a {
   color: var(--yellow, yellow);
 }
 
+.white-txt {
+  color: white;
+}
+
 .center-flex {
   display: flex;
   justify-content: center;
