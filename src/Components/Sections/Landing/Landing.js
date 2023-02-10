@@ -10,9 +10,9 @@ const Landing = () => {
         <div id="side-shooz-bkd"></div>
         <div id="shooz-bkd">
           <p className="center-flex">
-            <span className="shooz-title yellow-txt center-flex">shooz</span>
+            <span className="yellow-txt center-flex">shooz</span>
           </p>
-          <p className="shooz-subtitle center-flex">
+          <p className="center-flex">
             <span className="shooz-subtitle white-txt">with </span>
             &nbsp;
             <span className="shooz-subtitle yellow-txt"> Mike Schuster</span>

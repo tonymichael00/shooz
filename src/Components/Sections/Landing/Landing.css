@@ -1,24 +1,60 @@
 /* TODO:  use grid to center text and create sides
 media query: make 1 column
 adjust caption text size using percentages. 
-Create title variables
-make padding adjust with screen size. 
-Make title font smaller
-remove unneeded variables*/
+move title padding to title
+clean up variables not used twice
+*/
 
 #landing {
-  --shooz-title-ht: clamp(5rem, 20vw, 15rem);
-  --shooz-title-ht: 1rem;
+  --clamp1: 10rem;
+  --clamp2: 20vw;
+  --clamp3: 13rem;
+  /* --shooz-title-ht: clamp(var(--clamp1), var(--clamp2), var(--clamp3)); */
+  /* --shooz-title-ht: 1rem; */
   /* --title-padding: 2rem; */
-  --title-padding: 2rem;
-  --title-corner: clamp(0.5rem, 5vw, 2.5rem);
-  --title-font-size: clamp(4rem, 15vw, 14rem);
-  --title-bkd-ht: clamp(5rem, 20vw, 15rem);
-  --title-caption-padding: 0.5rem;
-  --caption-bkd-ht: clamp(1.2rem, 15vw, 4rem);
-  --caption-font-size: clamp(0.2rem, 2vw, 1.5rem);
+  /* --title-padding: 2rem; */
+  --title-padding-perc: 0.15;
+  --title-padding: clamp(
+    calc(var(--clamp1) * var(--title-padding-perc)),
+    calc(var(--clamp2) * var(--title-padding-perc)),
+    calc(var(--clamp3) * var(--title-padding-perc))
+  );
+  --title-corner-perc: 0.15;
+  --title-corner: clamp(
+    calc(var(--clamp1) * var(--title-corner-perc)),
+    calc(var(--clamp2) * var(--title-corner-perc)),
+    calc(var(--clamp3) * var(--title-corner-perc))
+  );
+  --title-font-size-perc: 1;
+  --title-font-size: clamp(
+    calc(var(--clamp1) * var(--title-font-size-perc)),
+    calc(var(--clamp2) * var(--title-font-size-perc)),
+    calc(var(--clamp3) * var(--title-font-size-perc))
+  );
+  --title-sub-font-size-perc: 0.2;
+  --title-sub-font-size: clamp(
+    calc(var(--clamp1) * var(--title-sub-font-size-perc)),
+    calc(var(--clamp2) * var(--title-sub-font-size-perc)),
+    calc(var(--clamp3) * var(--title-sub-font-size-perc))
+  );
+  /* --title-bkd-ht: clamp(5rem, 20vw, 15rem); */
+  /* --title-caption-padding: 0.5rem; */
+  /* --caption-bkd-ht: clamp(1.2rem, 15vw, 4rem); */
+  --caption-font-size-perc: 0.11;
+  --caption-font-size: clamp(
+    calc(var(--clamp1) * var(--caption-font-size-perc)),
+    calc(var(--clamp2) * var(--caption-font-size-perc)),
+    calc(var(--clamp3) * var(--caption-font-size-perc))
+  );
+  --caption-padding-perc: 0.1;
+  --caption-padding: clamp(
+    calc(var(--clamp1) * var(--caption-padding-perc)),
+    calc(var(--clamp2) * var(--caption-padding-perc)),
+    calc(var(--clamp3) * var(--caption-padding-perc))
+  );
+
   /* --caption-width: clamp(30ch, 20vw, 70ch); */
-  --caption-width: 45ch;
+  /* --caption-width: 45ch; */
   grid-column: 1/4;
   display: grid;
   grid-template-columns: 1fr max(20rem, 70vw) 1fr;
@@ -38,35 +74,37 @@ remove unneeded variables*/
 #shooz-bkd {
   grid-column: 2/3;
   font-weight: 700;
-  font-size: var(--title-font-size);
-  padding: var(--title-padding, 0.5rem);
+  /* font-size: var(--title-font-size); */
+  padding-right: var(--title-padding);
   border-top-right-radius: var(--title-corner, 1rem);
   border-bottom-right-radius: var(--title-corner, 1rem);
   background-color: black;
 }
 
 /* title text */
+/* padding and corner same variable for visual consistency */
+
+#shooz-bkd p {
+  line-height: 0.8;
+}
+
 #shooz-bkd p:first-child {
   font-size: var(--title-font-size);
   line-height: 0.8;
+  padding-top: var(--title-corner);
 }
+
 /* subtitle text */
-#shooz-bkd p:second-child {
-  font-size: 1rem;
+#shooz-bkd p:nth-child(2) {
+  font-size: var(--title-sub-font-size);
+  /* font-weight: 500; */
   line-height: 0.8;
+  padding: var(--title-corner);
 }
 
 #side-shooz-bkd {
   grid-column: 1/2;
   background-color: black;
-}
-
-.shooz-title {
-  /* height: var(--shooz-title-ht); */
-}
-
-.shooz-subtitle {
-  font-size: clamp(calc(4rem * 0.25), calc(15vw * 0.25), calc(14rem * 0.25));
 }
 
 /* CAPTION CSS */
@@ -90,14 +128,10 @@ remove unneeded variables*/
   font-weight: 500;
   font-size: var(--caption-font-size);
   text-align: center;
-  padding: var(--title-caption-padding, 0.5rem);
-  border-top-left-radius: var(--round-corner, 1rem);
-  border-bottom-left-radius: var(--round-corner, 1rem);
+  padding: var(--caption-padding);
+  border-top-left-radius: var(--caption-padding);
+  border-bottom-left-radius: var(--caption-padding);
   color: white;
-}
-
-#title-caption-bkd p {
-  /* font-size: var(--caption-font-size); */
 }
 
 #title-caption-side-bkd {
