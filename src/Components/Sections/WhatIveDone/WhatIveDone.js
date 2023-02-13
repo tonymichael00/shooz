@@ -1,5 +1,5 @@
 import React from 'react';
-import './WhatIveDone.css';
+import './WhatIveDone.scss';
 
 const WhatIveDone = () => {
   return <div id="ive-done-sec">What I've done.</div>;

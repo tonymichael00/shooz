@@ -1,5 +1,5 @@
 import React from 'react';
-import './NavBar.css';
+import './NavBar.scss';
 import logo from './Images/logo.png';
 import hamMenu from './Images/hamMenu.svg';
 

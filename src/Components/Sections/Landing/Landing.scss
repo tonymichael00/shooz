@@ -6,7 +6,7 @@ clean up variables not used twice
 */
 
 #landing {
-  --clamp1: 10rem;
+  --clamp1: var(--mobile-width);
   --clamp2: 20vw;
   --clamp3: 13rem;
   /* --shooz-title-ht: clamp(var(--clamp1), var(--clamp2), var(--clamp3)); */
