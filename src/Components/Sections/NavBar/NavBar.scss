@@ -1,5 +1,8 @@
 /* TODO:  convert ul to grid or fix spacing*/
 
+$mobile-width: 65rem;
+// 35rem
+
 header {
   --nav-spacing: 1rem;
   /* height: fit-content; */
@@ -10,8 +13,7 @@ header {
 
 nav {
   display: grid;
-  grid-template-columns: min-content 1fr repeat(5, min-content);
-  gap: 1rem;
+  grid-template-columns: min-content 1fr min-content;
   padding: var(--nav-spacing);
 }
 
@@ -19,12 +21,22 @@ nav {
   display: none;
   height: 2rem;
   width: 2rem;
+  @media (max-width: $mobile-width) {
+    display: block;
+  }
 }
 
-@media (max-width: 37rem) {
-  #hamMenu {
-    display: block;
-    height: 2rem;
-    width: 2rem;
+#nav-links-cont {
+  display: grid;
+  grid-template-columns: repeat(5, min-content);
+  gap: 1rem;
+  @media (max-width: $mobile-width) {
+    grid-template-columns: min-content;
+  }
+}
+
+.nav-links {
+  @media (max-width: $mobile-width) {
+    display: none;
   }
 }

@@ -9,10 +9,6 @@ clean up variables not used twice
   --clamp1: var(--mobile-width);
   --clamp2: 20vw;
   --clamp3: 13rem;
-  /* --shooz-title-ht: clamp(var(--clamp1), var(--clamp2), var(--clamp3)); */
-  /* --shooz-title-ht: 1rem; */
-  /* --title-padding: 2rem; */
-  /* --title-padding: 2rem; */
   --title-padding-perc: 0.15;
   --title-padding: clamp(
     calc(var(--clamp1) * var(--title-padding-perc)),
@@ -37,9 +33,6 @@ clean up variables not used twice
     calc(var(--clamp2) * var(--title-sub-font-size-perc)),
     calc(var(--clamp3) * var(--title-sub-font-size-perc))
   );
-  /* --title-bkd-ht: clamp(5rem, 20vw, 15rem); */
-  /* --title-caption-padding: 0.5rem; */
-  /* --caption-bkd-ht: clamp(1.2rem, 15vw, 4rem); */
   --caption-font-size-perc: 0.11;
   --caption-font-size: clamp(
     calc(var(--clamp1) * var(--caption-font-size-perc)),
@@ -52,9 +45,6 @@ clean up variables not used twice
     calc(var(--clamp2) * var(--caption-padding-perc)),
     calc(var(--clamp3) * var(--caption-padding-perc))
   );
-
-  /* --caption-width: clamp(30ch, 20vw, 70ch); */
-  /* --caption-width: 45ch; */
   grid-column: 1/4;
   display: grid;
   grid-template-columns: 1fr max(20rem, 70vw) 1fr;
@@ -74,7 +64,6 @@ clean up variables not used twice
 #shooz-bkd {
   grid-column: 2/3;
   font-weight: 700;
-  /* font-size: var(--title-font-size); */
   padding-right: var(--title-padding);
   border-top-right-radius: var(--title-corner, 1rem);
   border-bottom-right-radius: var(--title-corner, 1rem);
@@ -97,7 +86,6 @@ clean up variables not used twice
 /* subtitle text */
 #shooz-bkd p:nth-child(2) {
   font-size: var(--title-sub-font-size);
-  /* font-weight: 500; */
   line-height: 0.8;
   padding: var(--title-corner);
 }
@@ -116,7 +104,6 @@ clean up variables not used twice
   display: grid;
   /* use title-caption-background to adjust width */
   grid-template-columns: 1fr auto 1fr;
-  /* height: var(--caption-bkd-ht); */
 }
 
 #title-caption-bkd {
@@ -143,6 +130,5 @@ clean up variables not used twice
 /* need to fix */
 @media (max-width: 37rem) {
   #shooz-bkd {
-    /* width: 100%; */
   }
 }

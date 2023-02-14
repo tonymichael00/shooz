@@ -1,3 +1,6 @@
+// TODO: put div around nav so it can turn into square with
+// hamburger menu
+
 import React from 'react';
 import './NavBar.scss';
 import logo from './Images/logo.png';
@@ -12,22 +15,31 @@ const NavBar = () => {
         </a>
         {/* div to create space in grid */}
         <div></div>
-        <a className="center-flex" href="_self">
-          <span>About</span>
-        </a>
-        <a className="center-flex" href="#Experience">
-          <span>Experience</span>
-        </a>
-        <a className="center-flex" href="#Projects">
-          <span>Projects</span>
-        </a>
-        <a className="center-flex" href="#Contact">
-          <span>Contact</span>
-        </a>
-        <a className="center-flex" href="_self">
-          <span>Resume</span>
-        </a>
-        <img src={hamMenu} alt="Logo" id="hamMenu" className="center-flex" />
+        <div id="nav-links-cont">
+          <a className="nav-links center-flex" href="_self">
+            About
+          </a>
+          <a className="nav-links center-flex" href="#Experience">
+            Experience
+          </a>
+          <a className="nav-links center-flex" href="#Projects">
+            Projects
+          </a>
+          <a className="nav-links center-flex" href="#Contact">
+            Contact
+          </a>
+          <a className="nav-links center-flex" href="_self">
+            Resume
+          </a>
+          <a className=" center-flex" href="_self">
+            <img
+              src={hamMenu}
+              alt="Logo"
+              id="hamMenu"
+              className="center-flex"
+            />
+          </a>
+        </div>
       </nav>
     </header>
   );
