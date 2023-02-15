@@ -1,5 +1,5 @@
 // TODO: create class for clicked ham menu. change class when clicked
-
+// onclick remove all formatting classes and change to click
 import React from 'react';
 import './NavBar.scss';
 import logo from './Images/logo.png';
@@ -14,29 +14,30 @@ const NavBar = () => {
         </a>
         {/* div to create space in grid */}
         <div></div>
-        <div id="nav-links-cont">
-          <a className="nav-links center-flex" href="_self">
-            About
-          </a>
-          <a className="nav-links center-flex" href="#Experience">
-            Experience
-          </a>
-          <a className="nav-links center-flex" href="#Projects">
-            Projects
-          </a>
-          <a className="nav-links center-flex" href="#Contact">
-            Contact
-          </a>
-          <a className="nav-links center-flex" href="_self">
-            Resume
-          </a>
-          <a className=" center-flex" href="_self">
+        <div className="nav-links-cont-click">
+          <a className="center-flex" href="_self">
             <img
               src={hamMenu}
               alt="Logo"
               id="hamMenu"
               className="center-flex"
             />
+          </a>
+
+          <a className="nav-links-click" href="_self">
+            About
+          </a>
+          <a className="nav-links-click" href="#Experience">
+            Experience
+          </a>
+          <a className="nav-links-click" href="#Projects">
+            Projects
+          </a>
+          <a className="nav-links-click" href="#Contact">
+            Contact
+          </a>
+          <a className="nav-links-click" href="_self">
+            Resume
           </a>
         </div>
       </nav>

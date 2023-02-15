@@ -26,9 +26,9 @@ nav {
   }
 }
 
-#nav-links-cont {
+.nav-links-cont {
   display: grid;
-  grid-template-columns: repeat(5, min-content);
+  grid-template-columns: repeat(6, min-content);
   gap: 1rem;
   @media (max-width: $mobile-width) {
     grid-template-columns: min-content;
@@ -38,5 +38,26 @@ nav {
 .nav-links {
   @media (max-width: $mobile-width) {
     display: none;
+  }
+}
+
+.nav-links-cont-click {
+  @media (max-width: $mobile-width) {
+    position: absolute;
+    right: var(--nav-spacing);
+    top: var(--nav-spacing);
+    width: 10rem;
+    background-color: black;
+
+    a:nth-child(1) img {
+      color: var(--yellow);
+      margin-left: auto;
+    }
+  }
+}
+
+.nav-links-click {
+  @media (max-width: $mobile-width) {
+    display: block;
   }
 }
