@@ -1,5 +1,4 @@
-// TODO: put div around nav so it can turn into square with
-// hamburger menu
+// TODO: create class for clicked ham menu. change class when clicked
 
 import React from 'react';
 import './NavBar.scss';
