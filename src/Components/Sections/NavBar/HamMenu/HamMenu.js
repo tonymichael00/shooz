@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './HamMenu.css';
+import './HamMenu.scss';
 
 const HamMenu = () => {
   const [clickMenu, setClickMenu] = useState(false);
