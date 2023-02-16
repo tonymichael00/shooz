@@ -3,30 +3,21 @@ import './HamMenu.css';
 
 const HamMenu = () => {
   const [clickMenu, setClickMenu] = useState(false);
-
-  function handleClick() {
-    setClickMenu((clickMenu) => !clickMenu);
-  }
-
   let menuClassToggle = clickMenu ? 'open' : '';
 
+  function handleClick() {
+    setClickMenu(!clickMenu);
+    console.log('clicked!!!!!!!!');
+  }
+
   return (
-    <div id="menu-toggle" className={menuClassToggle} onClick={handleClick}>
-      <div id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div id="cross">
-        <span></span>
-        <span></span>
-      </div>
-      <div id="clickMenu">
-        <li className="navi">
-          <img src={hamMenu} alt="Logo" id="hamMenu" className="center-flex" />
-        </li>
-      </div>
+    // <div id="menu-toggle" className={menuClassToggle} onClick={handleClick}>
+    <div id="nav-icon1" className={menuClassToggle} onClick={handleClick}>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+    // </div>
   );
 };
 

@@ -1,6 +1,7 @@
-/* TODO:  convert ul to grid or fix spacing*/
+/* TODO:  learn to program hamburger menu using only css
+*/
 
-$mobile-width: 65rem;
+$mobile-width: 75rem;
 // 35rem
 
 header {
@@ -13,16 +14,25 @@ header {
 
 nav {
   display: grid;
+  position: relative;
   grid-template-columns: min-content 1fr min-content;
   padding: var(--nav-spacing);
+  @media (max-width: $mobile-width) {
+    grid-template-columns: min-content 1fr;
+  }
 }
 
-#hamMenu {
+#ham-menu {
   display: none;
-  height: 2rem;
-  width: 2rem;
+
   @media (max-width: $mobile-width) {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    a {
+      // display: block;
+    }
   }
 }
 
@@ -45,13 +55,15 @@ nav {
   @media (max-width: $mobile-width) {
     position: absolute;
     right: var(--nav-spacing);
-    top: var(--nav-spacing);
+    // top: var(--nav-spacing);
+    top: 20rem;
     width: 10rem;
-    background-color: black;
+    background-color: none;
 
-    a:nth-child(1) img {
+    a:nth-child(1) svg {
       color: var(--yellow);
       margin-left: auto;
+      margin-bottom: auto;
     }
   }
 }
