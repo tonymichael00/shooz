@@ -1,13 +1,11 @@
 /* TODO:  multiply units with percentage
 */
-@use 'sass:math';
 
-$perc-width: 1;
+$perc-width: 0.6;
 
 #nav-icon1 {
   width: 60px * $perc-width;
-  /* width: @include be-resp(60px, 0.5); */
-  height: 45px;
+  height: 45px * $perc-width;
   position: relative;
   margin: auto;
   -webkit-transform: rotate(0deg);
@@ -24,36 +22,44 @@ $perc-width: 1;
 #nav-icon1 span {
   display: block;
   position: absolute;
-  height: 9px;
+  height: 9px * $perc-width;
   width: 100%;
-  background: #d3531a;
-  border-radius: 9px;
+  background: #000000;
+  border-radius: 9px * $perc-width;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: 0.25s ease-in-out;
-  -moz-transition: 0.25s ease-in-out;
-  -o-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 #nav-icon1 span:nth-child(1) {
-  top: 0px;
+  top: 0px * $perc-width;
 }
 
 #nav-icon1 span:nth-child(2) {
-  top: 18px;
+  top: 18px * $perc-width;
+  -webkit-transition: 0.1s ease-in-out;
+  -moz-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
 
 #nav-icon1 span:nth-child(3) {
-  top: 36px;
+  top: 36px * $perc-width;
+}
+
+#nav-icon1.open span {
+  background-color: var(--yellow);
 }
 
 #nav-icon1.open span:nth-child(1) {
-  top: 18px;
+  top: 18px * $perc-width;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
   -o-transform: rotate(135deg);
@@ -62,11 +68,11 @@ $perc-width: 1;
 
 #nav-icon1.open span:nth-child(2) {
   opacity: 0;
-  left: -60px;
+  left: -60px * $perc-width;
 }
 
 #nav-icon1.open span:nth-child(3) {
-  top: 18px;
+  top: 18px * $perc-width;
   -webkit-transform: rotate(-135deg);
   -moz-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);

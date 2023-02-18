@@ -17,6 +17,7 @@ nav {
   position: relative;
   grid-template-columns: min-content 1fr min-content;
   padding: var(--nav-spacing);
+  z-index: 1;
   @media (max-width: $mobile-width) {
     grid-template-columns: min-content 1fr;
   }
@@ -30,9 +31,24 @@ nav {
     justify-content: center;
     align-items: center;
     margin-left: auto;
+    z-index: 2;
     a {
       // display: block;
     }
+  }
+}
+
+.nav-links {
+  z-index: 1;
+  &-click {
+    @media (max-width: $mobile-width) {
+      display: block;
+      color: var(--yellow);
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    display: none;
   }
 }
 
@@ -43,33 +59,23 @@ nav {
   @media (max-width: $mobile-width) {
     grid-template-columns: min-content;
   }
-}
 
-.nav-links {
-  @media (max-width: $mobile-width) {
-    display: none;
-  }
-}
-
-.nav-links-cont-click {
-  @media (max-width: $mobile-width) {
-    position: absolute;
-    right: var(--nav-spacing);
-    // top: var(--nav-spacing);
-    top: 20rem;
-    width: 10rem;
-    background-color: none;
-
-    a:nth-child(1) svg {
-      color: var(--yellow);
-      margin-left: auto;
-      margin-bottom: auto;
+  &-click {
+    @media (max-width: $mobile-width) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: absolute;
+      padding: 1.8rem;
+      border-bottom-left-radius: 0.7rem;
+      right: var(--nav-spacing);
+      // top: var(--nav-spacing);
+      top: 0rem;
+      width: 10rem;
+      right: 0;
+      height: 14rem;
+      background-color: black;
+      line-height: 1.5;
     }
-  }
-}
-
-.nav-links-click {
-  @media (max-width: $mobile-width) {
-    display: block;
   }
 }
