@@ -73,9 +73,19 @@ nav {
       top: 0rem;
       width: 10rem;
       right: 0;
-      height: 14rem;
+      height: 20rem;
       background-color: black;
-      line-height: 1.5;
+      line-height: 1.8;
+    }
+    div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: min-content min-content;
+
+      //resume button is top row
+      a:nth-child(1) {
+        grid-column: 1/3;
+      }
     }
   }
 }
