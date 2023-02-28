@@ -82,6 +82,11 @@ nav {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: min-content min-content;
 
+      //github, linkedin links
+      a:nth-child(n + 2) {
+        text-align: center;
+        line-height: 2;
+      }
       //resume button is top row
       a:nth-child(1) {
         grid-column: 1/3;
