@@ -1,12 +1,20 @@
 // TODO: create class for clicked ham menu. change class when clicked
 // onclick remove all formatting classes and change to click
-import React from 'react';
+import React, { useState } from 'react';
 import './NavBar.scss';
 import logo from './Images/logo.png';
 import HamMenu from './HamMenu/HamMenu';
+
 // import hamMenu from './Images/hamMenu.svg';
 
 const NavBar = () => {
+  const [clickMenu, setClickMenu] = useState(false);
+
+  let navLinkClassToggle = clickMenu
+    ? 'nav-links-cont-click'
+    : 'nav-links-cont';
+  console.log(clickMenu);
+
   return (
     <header>
       <nav id="nav-bar">
@@ -15,9 +23,9 @@ const NavBar = () => {
         </a>
         {/* div to create space in grid */}
         <div id="ham-menu">
-          <HamMenu />
+          <HamMenu setClickMenu={setClickMenu} clickMenu={clickMenu} />
         </div>
-        <div className="nav-links-cont-click">
+        <div className={navLinkClassToggle}>
           <a className="nav-links-click" href="_self">
             About
           </a>

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './HamMenu.scss';
 
-const HamMenu = () => {
-  const [clickMenu, setClickMenu] = useState(false);
+const HamMenu = ({ setClickMenu, clickMenu }) => {
+  // const [clickMenu, setClickMenu] = useState(false);
+  // const [clickMenu, setClickMenu] = useState(false);
   let menuClassToggle = clickMenu ? 'open' : '';
 
   function handleClick() {
