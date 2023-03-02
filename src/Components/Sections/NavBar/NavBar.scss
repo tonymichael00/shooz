@@ -1,7 +1,7 @@
 /* TODO:  learn to program hamburger menu using only css
 */
 
-$mobile-width: 75rem;
+$mobile-width: 35rem;
 $ham-spacing: 0.5rem;
 // 35rem
 
@@ -55,8 +55,33 @@ nav {
 
 .nav-links-cont {
   display: grid;
-  grid-template-columns: repeat(6, min-content);
+  grid-template-columns: repeat(5, min-content);
   gap: 1rem;
+  margin-left: auto;
+
+  button {
+    background-color: black;
+    border: 0.1rem solid black;
+    border-radius: 099rem;
+    color: var(--yellow);
+    width: 5rem;
+    line-height: 1.2;
+
+    &:hover {
+      // border-color: var(--blue);
+      color: var(--blue);
+    }
+  }
+
+  div svg {
+    display: none;
+  }
+
+  a:hover {
+    text-decoration-line: underline;
+    text-decoration-color: var(--blue);
+  }
+
   @media (max-width: $mobile-width) {
     grid-template-columns: min-content;
   }
@@ -81,10 +106,7 @@ nav {
     a {
       padding: $ham-spacing;
     }
-    a:hover {
-      text-decoration-line: underline;
-      text-decoration-color: var(--blue);
-    }
+
     div {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -101,9 +123,6 @@ nav {
         // display: block;
         svg {
           fill: var(--yellow);
-          &:hover {
-            fill: var(--blue);
-          }
         }
       }
       //resume button is top row
@@ -118,9 +137,6 @@ nav {
         color: var(--yellow);
         width: 5rem;
         line-height: 1.2;
-      }
-      button:hover {
-        border-color: var(--blue);
       }
     }
   }
