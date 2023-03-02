@@ -2,6 +2,7 @@
 */
 
 $mobile-width: 75rem;
+$ham-spacing: 0.5rem;
 // 35rem
 
 header {
@@ -42,8 +43,8 @@ nav {
   z-index: 1;
   &-click {
     @media (max-width: $mobile-width) {
-      display: block;
       color: var(--yellow);
+      // padding: $ham-spacing;
     }
   }
 
@@ -66,26 +67,44 @@ nav {
       flex-direction: column;
       justify-content: flex-end;
       position: absolute;
-      padding: 1.8rem;
+      padding: 1rem;
       border-bottom-left-radius: 0.7rem;
       right: var(--nav-spacing);
       // top: var(--nav-spacing);
       top: 0rem;
-      width: 10rem;
+      width: 12rem;
       right: 0;
-      height: 20rem;
+      height: 18rem;
       background-color: black;
-      line-height: 1.8;
+      line-height: 1;
+    }
+    a {
+      padding: $ham-spacing;
+    }
+    a:hover {
+      text-decoration-line: underline;
+      text-decoration-color: var(--blue);
     }
     div {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: min-content min-content;
+      grid-template-rows: auto auto;
+      gap: $ham-spacing;
+      padding: $ham-spacing;
 
       //github, linkedin links
       a {
         text-align: center;
         line-height: 2;
+        width: fit-content;
+        margin: auto;
+        // display: block;
+        svg {
+          fill: var(--yellow);
+          &:hover {
+            fill: var(--blue);
+          }
+        }
       }
       //resume button is top row
       button {
@@ -95,10 +114,13 @@ nav {
         text-align: center;
         background-color: transparent;
         border: 0.1rem solid var(--yellow);
-        border-radius: 0.5rem;
+        border-radius: 99rem;
         color: var(--yellow);
-        width: fit-content;
+        width: 5rem;
         line-height: 1.2;
+      }
+      button:hover {
+        border-color: var(--blue);
       }
     }
   }
