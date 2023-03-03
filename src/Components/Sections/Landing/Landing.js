@@ -15,7 +15,10 @@ const Landing = () => {
           <p className="center-flex">
             <span className="shooz-subtitle white-txt">with </span>
             &nbsp;
-            <span className="shooz-subtitle yellow-txt"> Mike Schuster</span>
+            <span className="shooz-subtitle yellow-txt hover-blue">
+              {' '}
+              Mike Schuster
+            </span>
           </p>
         </div>
       </div>
@@ -23,12 +26,12 @@ const Landing = () => {
         <div id="title-caption-side-bkd"></div>
         <div id="title-caption-bkd" className="center-flex">
           <p>
-            I can help <span className="yellow-txt">solve </span>your web
-            problems.
+            I can help <span className="yellow-txt hover-blue">solve </span>your
+            web problems.
           </p>
           <p>
             Don't hesitate to
-            <span className="yellow-txt"> contact me.</span>
+            <span className="yellow-txt hover-blue"> contact me.</span>
           </p>
         </div>
       </div>

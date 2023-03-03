@@ -127,6 +127,10 @@ clean up variables not used twice
   background-color: rgb(0, 0, 0);
 }
 
+.hover-blue:hover {
+  color: var(--blue);
+}
+
 /* need to fix */
 @media (max-width: 37rem) {
   #shooz-bkd {
