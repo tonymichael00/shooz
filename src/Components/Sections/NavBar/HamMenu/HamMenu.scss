@@ -1,6 +1,8 @@
 /* TODO:  multiply units with percentage
 */
 
+@use 'src/Sass/global' as *;
+
 $perc-width: 0.5;
 
 #nav-icon1 {
@@ -55,7 +57,7 @@ $perc-width: 0.5;
 }
 
 #nav-icon1.open span {
-  background-color: var(--blue);
+  background-color: $blue;
 }
 
 #nav-icon1.open span:nth-child(1) {
