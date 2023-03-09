@@ -3,51 +3,23 @@
 
 @use 'src/Sass/global' as *;
 
-$clamp1: 6rem;
-$clamp2: 30vw;
-$clamp3: 13rem;
-
-@mixin resp-clamp($prop, $per, $clamp-1, $clamp-2, $clamp-3) {
-  #{$prop}: clamp($clamp1 * $per, $clamp2 * $per, $clamp3 * $per);
-}
-
-$title-padding-perc: 0.15;
-$title-padding: clamp(
-  $clamp1 * $title-padding-perc,
-  $clamp2 * $title-padding-perc,
-  $clamp3 * $title-padding-perc
-);
-$title-corner-perc: 0.15;
-$title-corner: clamp(
-  calc($clamp1 * $title-corner-perc),
-  calc($clamp2 * $title-corner-perc),
-  calc($clamp3 * $title-corner-perc)
-);
-$title-font-size-perc: 1;
-$title-font-size: clamp(
-  calc($clamp1 * $title-font-size-perc),
-  calc($clamp2 * $title-font-size-perc),
-  calc($clamp3 * $title-font-size-perc)
-);
-$title-sub-font-size-perc: 0.2;
-$title-sub-font-size: clamp(
-  calc($clamp1 * $title-sub-font-size-perc),
-  calc($clamp2 * $title-sub-font-size-perc),
-  calc($clamp3 * $title-sub-font-size-perc)
-);
+//title clamp variables
+$title-clamp-1: 7rem;
+$title-clamp-2: 30vw;
+$title-clamp-3: 16rem;
+//caption clamp variables
+$caption-clamp-1: 6rem;
+$caption-clamp-2: 30vw;
+$caption-clamp-3: 10rem;
+//title percentage size
+$title-perc: 1;
+$title-corner-padding-perc: (0.08 * $title-perc) + 0.02;
+$title-font-size-perc: 1 * $title-perc;
+$title-sub-font-size-perc: 0.2 * $title-perc;
+//caption percentage size
 $caption-perc: 1.3;
 $caption-font-size-perc: 0.11 * $caption-perc;
-$caption-font-size: clamp(
-  calc($clamp1 * $caption-font-size-perc),
-  calc($clamp2 * $caption-font-size-perc),
-  calc($clamp3 * $caption-font-size-perc)
-);
-$caption-padding-perc: 0.1 * $caption-perc;
-$caption-padding: clamp(
-  calc($clamp1 * $caption-padding-perc),
-  calc($clamp2 * $caption-padding-perc),
-  calc($clamp3 * $caption-padding-perc)
-);
+$caption-padding-perc: 0.08 * $caption-perc;
 
 #landing {
   grid-column: 1/4;
@@ -72,31 +44,38 @@ $caption-padding: clamp(
 #shooz-bkd {
   grid-column: 2/3;
   font-weight: 700;
+  background-color: black;
   @include resp-clamp(
     padding-right,
-    $title-padding-perc,
-    $clamp1,
-    $clamp2,
-    $clamp3
+    $title-corner-padding-perc,
+    $title-clamp-1,
+    $title-clamp-2,
+    $title-clamp-3
+  );
+  @include resp-clamp(
+    padding-left,
+    $title-corner-padding-perc,
+    $title-clamp-1,
+    $title-clamp-2,
+    $title-clamp-3
   );
   @include resp-clamp(
     border-top-right-radius,
-    $title-corner-perc,
-    $clamp1,
-    $clamp2,
-    $clamp3
+    $title-corner-padding-perc,
+    $title-clamp-1,
+    $title-clamp-2,
+    $title-clamp-3
   );
   @include resp-clamp(
     border-bottom-right-radius,
-    $title-corner-perc,
-    $clamp1,
-    $clamp2,
-    $clamp3
+    $title-corner-padding-perc,
+    $title-clamp-1,
+    $title-clamp-2,
+    $title-clamp-3
   );
-  background-color: black;
 }
 
-/* title text */
+/* TITLE TEXT */
 /* padding and corner same variable for visual consistency */
 
 #shooz-bkd p {
@@ -104,16 +83,41 @@ $caption-padding: clamp(
 }
 
 #shooz-bkd p:first-child {
-  font-size: $title-font-size;
   line-height: 0.8;
-  padding-top: $title-corner;
+  @include resp-clamp(
+    font-size,
+    $title-font-size-perc,
+    $title-clamp-1,
+    $title-clamp-2,
+    $title-clamp-3
+  );
+  @include resp-clamp(
+    padding-top,
+    $title-corner-padding-perc,
+    $title-clamp-1,
+    $title-clamp-2,
+    $title-clamp-3
+  );
 }
 
-/* subtitle text */
+/* TITLE SUBTITLE TEXT */
+
 #shooz-bkd p:nth-child(2) {
-  font-size: $title-sub-font-size;
   line-height: 0.8;
-  padding: $title-corner;
+  @include resp-clamp(
+    font-size,
+    $title-sub-font-size-perc,
+    $title-clamp-1,
+    $title-clamp-2,
+    $title-clamp-3
+  );
+  @include resp-clamp(
+    padding,
+    $title-corner-padding-perc,
+    $title-clamp-1,
+    $title-clamp-2,
+    $title-clamp-3
+  );
 }
 
 #side-shooz-bkd {
@@ -121,7 +125,7 @@ $caption-padding: clamp(
   background-color: black;
 }
 
-/* CAPTION CSS */
+/************************ CAPTION CSS */
 
 #title-caption-wrapper {
   position: relative;
@@ -139,12 +143,39 @@ $caption-padding: clamp(
   background-color: rgb(0, 0, 0);
   position: relative;
   font-weight: 500;
-  font-size: $caption-font-size;
-  text-align: center;
-  padding: $caption-padding;
-  border-top-left-radius: $caption-padding;
-  border-bottom-left-radius: $caption-padding;
   color: white;
+  @include resp-clamp(
+    font-size,
+    $caption-font-size-perc,
+    $caption-clamp-1,
+    $caption-clamp-2,
+    $caption-clamp-3
+  );
+  text-align: center;
+  @include resp-clamp(
+    padding,
+    $caption-padding-perc,
+    $caption-clamp-1,
+    $caption-clamp-2,
+    $caption-clamp-3
+  );
+  @include resp-clamp(
+    border-top-left-radius,
+    $caption-padding-perc,
+    $caption-clamp-1,
+    $caption-clamp-2,
+    $caption-clamp-3
+  );
+  @include resp-clamp(
+    border-bottom-left-radius,
+    $caption-padding-perc,
+    $caption-clamp-1,
+    $caption-clamp-2,
+    $caption-clamp-3
+  );
+  p {
+    line-height: 1.3;
+  }
 }
 
 #title-caption-side-bkd {
@@ -155,10 +186,4 @@ $caption-padding: clamp(
 
 .hover-blue:hover {
   color: $blue;
-}
-
-/* need to fix */
-@media (max-width: 37rem) {
-  #shooz-bkd {
-  }
 }

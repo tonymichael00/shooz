@@ -26,7 +26,7 @@ $perc-width: 0.5;
   position: absolute;
   height: 9px * $perc-width;
   width: 100%;
-  background: #000000;
+  background: $black;
   border-radius: 9px * $perc-width;
   opacity: 1;
   left: 0;

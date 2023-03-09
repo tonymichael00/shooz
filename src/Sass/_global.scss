@@ -6,3 +6,8 @@ $round-corner: clamp(0.5rem, 5vw, 0.9rem);
 $nav-height: 4rem;
 $middle-column-width: max(20rem, 50vw);
 $mobile-width: 35rem;
+
+//mixins
+@mixin resp-clamp($prop, $per, $clamp-1, $clamp-2, $clamp-3) {
+  #{$prop}: clamp($clamp-1 * $per, $clamp-2 * $per, $clamp-3 * $per);
+}
