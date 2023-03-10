@@ -24,7 +24,7 @@ const Landing = () => {
       </div>
       <div id="title-caption-wrapper">
         <div id="title-caption-side-bkd"></div>
-        <div id="title-caption-bkd" className="center-flex">
+        <div id="title-caption-bkd">
           <p>
             I can help <span className="yellow-txt hover-blue">solve </span>your
             web problems.
