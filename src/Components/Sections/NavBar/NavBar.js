@@ -25,17 +25,17 @@ const NavBar = () => {
         <div id="ham-menu">
           <HamMenu setClickMenu={setClickMenu} clickMenu={clickMenu} />
         </div>
-        <div className={`nav-links-cont ${navLinksContToggle}`}>
-          <a className={`nav-links ${navLinksToggle}`} href="_self">
+        <div className={`${navLinksContToggle}`}>
+          <a className={`${navLinksToggle}`} href="_self">
             About
           </a>
-          <a className={`nav-links ${navLinksToggle}`} href="#Experience">
+          <a className={`${navLinksToggle}`} href="#Experience">
             Experience
           </a>
-          <a className={`nav-links ${navLinksToggle}`} href="#Projects">
+          <a className={`${navLinksToggle}`} href="#Projects">
             Projects
           </a>
-          <a className={`nav-links ${navLinksToggle}`} href="#Contact">
+          <a className={`${navLinksToggle}`} href="#Contact">
             Contact
           </a>
         </div>
