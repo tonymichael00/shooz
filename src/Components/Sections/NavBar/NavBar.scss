@@ -60,27 +60,8 @@ nav {
   gap: 1rem;
   margin-left: auto;
 
-  button {
-    background-color: black;
-    border: 0.1rem solid black;
-    border-radius: 099rem;
-    color: $yellow;
-    width: 5rem;
-    line-height: 1.2;
-
-    &:hover {
-      // border-color: $blue;
-      color: $blue;
-    }
-  }
-
-  div svg {
-    // display: none;
-  }
-
   a:hover {
-    text-decoration-line: underline;
-    text-decoration-color: $blue;
+    // text-decoration: underline solid $blue 0.4rem;
   }
 
   @media (max-width: $mobile-width) {

@@ -97,7 +97,7 @@ a {
 
 /* utility classes */
 .yellow-txt {
-  color: var(--yellow, yellow);
+  color: $yellow;
 }
 
 .white-txt {
@@ -120,10 +120,7 @@ a {
 
 #content {
   display: grid;
-  /* grid-template-rows:
-    min(100vh, 67.5)
-    auto auto; */
-  grid-template-columns: 1fr var(--middle-column-width) 1fr;
-  /* width: min(55rem, 100vw); */
+  grid-template-columns: 1fr $middle-column-width 1fr;
+  // grid-template-rows: min(100vh, 70rem) repeat(auto-fill, auto);
   width: 100vw;
 }
