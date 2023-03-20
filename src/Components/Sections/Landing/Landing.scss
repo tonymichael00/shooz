@@ -46,9 +46,31 @@ $caption-padding-perc: 0.12 * $caption-perc;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   width: 100vw;
-  @media (max-width: $mobile-width) {
-    // grid-template-columns: min-content 100vw min-content;
-  }
+}
+
+#side-shooz-bkd {
+  position: absolute;
+  grid-column: 1/3;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  // z-index: 1;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  @include resp-clamp(
+    border-top-right-radius,
+    $title-corner-padding-perc,
+    $title-clamp-1,
+    $title-clamp-2,
+    $title-clamp-3
+  );
+  @include resp-clamp(
+    border-bottom-right-radius,
+    $title-corner-padding-perc,
+    $title-clamp-1,
+    $title-clamp-2,
+    $title-clamp-3
+  );
 }
 
 #shooz-bkd {
@@ -132,11 +154,6 @@ $caption-padding-perc: 0.12 * $caption-perc;
     $title-clamp-2,
     $title-clamp-3
   );
-}
-
-#side-shooz-bkd {
-  grid-column: 1/2;
-  background-color: black;
 }
 
 /*CAPTION CSS****************************************************  */
