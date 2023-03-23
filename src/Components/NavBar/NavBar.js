@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import './NavBar.scss';
 import logo from './Images/logo.png';
 import HamMenu from './HamMenu/HamMenu';
+import { motion } from 'framer-motion';
 
 // import hamMenu from './Images/hamMenu.svg';
 
@@ -15,9 +16,27 @@ const NavBar = () => {
     : 'nav-links-cont';
   let navLinksToggle = clickMenu ? 'nav-links-click' : 'nav-links';
 
+  const linkVariants = {
+    hidden: {
+      y: '-100%',
+    },
+    visible: {
+      y: 0,
+      transition: {
+        delay: 2,
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
   return (
     <header>
-      <nav id="nav-bar">
+      <motion.nav
+        id="nav-bar"
+        initial={{ y: '-100%' }}
+        animate={{ y: 0 }}
+        transition={{ delay: 2 }}
+      >
         <a href="_self" className="logo center-flex">
           <img src={logo} alt="Logo" className="center-flex" />
         </a>
@@ -39,7 +58,7 @@ const NavBar = () => {
             Contact
           </a>
         </div>
-      </nav>
+      </motion.nav>
     </header>
   );
 };

@@ -1,9 +1,9 @@
 import './App.scss';
 import React from 'react';
-import AboutMe from './Components/Sections/AboutMe';
-import WhatIveDone from './Components/Sections/WhatIveDone';
-import Contact from './Components/Sections/Contact';
-import Landing from './Components/Sections/Landing/Landing';
+import AboutMe from './Components/AboutMe';
+import WhatIveDone from './Components/WhatIveDone';
+import Contact from './Components/Contact';
+import Landing from './Components/Landing';
 
 function App() {
   return (
