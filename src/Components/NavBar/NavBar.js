@@ -6,6 +6,7 @@ import logo from './Images/logo.png';
 import HamMenu from './HamMenu/HamMenu';
 import { motion } from 'framer-motion';
 
+// TODO: CENTER LINKS
 // import hamMenu from './Images/hamMenu.svg';
 
 const NavBar = () => {
@@ -16,48 +17,82 @@ const NavBar = () => {
     : 'nav-links-cont';
   let navLinksToggle = clickMenu ? 'nav-links-click' : 'nav-links';
 
-  const linkVariants = {
+  const contVariants = {
     hidden: {
       y: '-100%',
     },
     visible: {
       y: 0,
+
       transition: {
-        delay: 2,
-        staggerChildren: 0.5,
+        when: 'beforeChildren',
+        staggerChildren: 0.3,
       },
+    },
+  };
+
+  const linkVariants = {
+    hidden: {
+      y: '-100%',
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
     },
   };
 
   return (
     <header>
-      <motion.nav
-        id="nav-bar"
-        initial={{ y: '-100%' }}
-        animate={{ y: 0 }}
-        transition={{ delay: 2 }}
-      >
-        <a href="_self" className="logo center-flex">
+      <motion.nav id="nav-bar">
+        <motion.a
+          href="_self"
+          className="logo center-flex"
+          // variants={linkVariants}
+          // initial="hidden"
+          // animate="visible"
+        >
           <img src={logo} alt="Logo" className="center-flex" />
-        </a>
+        </motion.a>
         {/* div to create space in grid */}
-        <div id="ham-menu">
+        <motion.div id="ham-menu">
           <HamMenu setClickMenu={setClickMenu} clickMenu={clickMenu} />
-        </div>
-        <div className={`${navLinksContToggle}`}>
-          <a className={`${navLinksToggle}`} href="_self">
+        </motion.div>
+        <motion.div
+          className={`${navLinksContToggle}`}
+          variants={contVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.a
+            className={`${navLinksToggle}`}
+            href="_self"
+            variants={linkVariants}
+          >
             About
-          </a>
-          <a className={`${navLinksToggle}`} href="#Experience">
+          </motion.a>
+          <motion.a
+            className={`${navLinksToggle}`}
+            href="#Experience"
+            variants={linkVariants}
+          >
             Experience
-          </a>
-          <a className={`${navLinksToggle}`} href="#Projects">
+          </motion.a>
+          <motion.a
+            className={`${navLinksToggle}`}
+            href="#Projects"
+            variants={linkVariants}
+          >
             Projects
-          </a>
-          <a className={`${navLinksToggle}`} href="#Contact">
+          </motion.a>
+          <motion.a
+            className={`${navLinksToggle}`}
+            href="#Contact"
+            variants={linkVariants}
+          >
             Contact
-          </a>
-        </div>
+          </motion.a>
+        </motion.div>
       </motion.nav>
     </header>
   );
