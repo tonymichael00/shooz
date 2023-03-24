@@ -24,8 +24,8 @@ const NavBar = () => {
     visible: {
       y: 0,
       transition: {
-        when: 'beforeChildren',
-        staggerChildren: 0.3,
+        // when: 'beforeChildren',
+        staggerChildren: 0.2,
       },
     },
   };
@@ -53,7 +53,8 @@ const NavBar = () => {
           <img src={logo} alt="Logo" className="center-flex" />
         </motion.a>
         {/* div to create space in grid */}
-        <motion.div id="ham-menu">
+
+        <motion.div id="ham-menu" initial={{ y: '-100%' }} animate={{ y: 0 }}>
           <HamMenu setClickMenu={setClickMenu} clickMenu={clickMenu} />
         </motion.div>
         <motion.div
@@ -64,28 +65,28 @@ const NavBar = () => {
         >
           <motion.a
             className={`${navLinksToggle}`}
-            href="_self"
+            href="#about-head"
             variants={linkVariants}
           >
             About
           </motion.a>
           <motion.a
             className={`${navLinksToggle}`}
-            href="#Experience"
+            href="#where-head"
             variants={linkVariants}
           >
             Experience
           </motion.a>
           <motion.a
             className={`${navLinksToggle}`}
-            href="#Projects"
+            href="#projects-sec"
             variants={linkVariants}
           >
             Projects
           </motion.a>
           <motion.a
             className={`${navLinksToggle}`}
-            href="#Contact"
+            href="#contact-sec"
             variants={linkVariants}
           >
             Contact

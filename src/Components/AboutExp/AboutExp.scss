@@ -1,0 +1,86 @@
+/* TODO:  
+*/
+
+@use 'src/Sass/global' as *;
+
+$head-clamp-1: 6rem;
+$head-clamp-2: 30vw;
+$head-clamp-3: 9rem;
+
+$head-perc: 0.7;
+$head-corner-padding-perc: (0.2 * $head-perc) + 0.02;
+
+#about-sec {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-rows: min-content min-content minmax(3rem, 1fr) min-content min-content minmax(
+      3rem,
+      1fr
+    );
+}
+#about-head-cont {
+  position: relative;
+  grid-row: 1/2;
+}
+
+#about-head {
+}
+
+#about-body {
+  grid-row: 2/3;
+}
+
+#where-head {
+  grid-row: 4/5;
+}
+
+#where-body {
+  grid-row: 5/6;
+}
+
+.head-bkd {
+  position: relative;
+  @include resp-clamp(
+    right,
+    $head-corner-padding-perc,
+    $head-clamp-1,
+    $head-clamp-2,
+    $head-clamp-3
+  );
+  @include resp-clamp(
+    top,
+    $head-corner-padding-perc,
+    $head-clamp-1,
+    $head-clamp-2,
+    $head-clamp-3
+  );
+  z-index: -1;
+  width: fit-content;
+  height: 100%;
+  background-color: $blue;
+  @include resp-clamp(
+    border-radius,
+    $head-corner-padding-perc,
+    $head-clamp-1,
+    $head-clamp-2,
+    $head-clamp-3
+  );
+  @include resp-clamp(
+    padding,
+    $head-corner-padding-perc,
+    $head-clamp-1,
+    $head-clamp-2,
+    $head-clamp-3
+  );
+}
+
+.head {
+  position: relative;
+  // height: clamp(0.5rem, 30vw, 4rem);
+}
+
+.body {
+  background-color: black;
+  color: white;
+}
