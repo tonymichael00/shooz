@@ -23,7 +23,6 @@ const NavBar = () => {
     },
     visible: {
       y: 0,
-
       transition: {
         when: 'beforeChildren',
         staggerChildren: 0.3,
@@ -48,9 +47,8 @@ const NavBar = () => {
         <motion.a
           href="_self"
           className="logo center-flex"
-          // variants={linkVariants}
-          // initial="hidden"
-          // animate="visible"
+          initial={{ y: '-100%' }}
+          animate={{ y: 0 }}
         >
           <img src={logo} alt="Logo" className="center-flex" />
         </motion.a>

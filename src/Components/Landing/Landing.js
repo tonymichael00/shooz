@@ -9,10 +9,9 @@ import { motion } from 'framer-motion';
 
 const Landing = () => {
   const sideTransition = {
-    type: 'spring',
-    stiffness: 200,
-    damping: 16,
-    delay: 0.5,
+    // type: 'spring',
+    // stiffness: 200,
+    // damping: 16,
   };
 
   return (
@@ -23,13 +22,13 @@ const Landing = () => {
           id="side-shooz-bkd"
           initial={{ left: 0, width: 0 }}
           animate={{ width: '100%' }}
-          transition={sideTransition}
+          // transition={sideTransition}
         ></motion.div>
         <motion.div
           id="shooz-bkd"
           initial={{ x: '-100vw' }}
           animate={{ x: 0 }}
-          transition={sideTransition}
+          // transition={sideTransition}
         >
           <p className="center-flex">
             <span className="yellow-txt center-flex">shooz</span>
