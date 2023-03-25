@@ -22,12 +22,14 @@ const Landing = () => {
           id="side-shooz-bkd"
           initial={{ left: 0, width: 0 }}
           animate={{ width: '100%' }}
-          // transition={sideTransition}
+          transition={{ delay: 0.5 }}
         ></motion.div>
         <motion.div
           id="shooz-bkd"
           initial={{ x: '-100vw' }}
           animate={{ x: 0 }}
+          transition={{ delay: 0.5 }}
+
           // transition={sideTransition}
         >
           <p className="center-flex">
@@ -47,13 +49,13 @@ const Landing = () => {
           id="title-caption-side-bkd"
           initial={{ right: 0, width: 0 }}
           animate={{ width: '100%' }}
-          transition={sideTransition}
+          transition={{ delay: 0.5 }}
         ></motion.div>
         <motion.div
           id="title-caption-bkd"
           initial={{ x: '100vw' }}
           animate={{ x: 0 }}
-          transition={sideTransition}
+          transition={{ delay: 0.5 }}
         >
           <p>I can help solve your web problems.</p>
           <p>Don't hesitate to contact me.</p>

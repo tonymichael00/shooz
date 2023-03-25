@@ -41,6 +41,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-weight: 500;
 }
 
 /* A elements that don't have a class get default styles */
@@ -112,6 +113,102 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+// *****************************BOXES AFTER TITLE
+// CLAMP VALUES
+$clamp-1: 6rem;
+$clamp-2: 30vw;
+$clamp-3: 9rem;
+
+//HEAD PERCENTAGE ADJUSTMENTS
+//ADJUST PERC FOR EVERYTHING OR VALUES IN PARENTHESES
+//FOR IDIVIDUAL
+$head-perc: 0.7;
+$head-corner-padding-perc: (0.2 * $head-perc) + 0.02;
+$head-font-perc: (0.17 * $head-perc) + 0.02;
+
+//BODY PERCENTAGE ADJUSTMENTS
+//ADJUST PERC FOR EVERYTHING OR VALUES IN PARENTHESES
+//FOR IDIVIDUAL
+$body-perc: 0.7;
+$body-corner-padding-perc: (0.2 * $body-perc) + 0.02;
+$body-font-perc: (0.17 * $body-perc) + 0.02;
+
+.body {
+  background-color: black;
+  color: white;
+  @include resp-clamp(
+    border-radius,
+    $body-corner-padding-perc,
+    $clamp-1,
+    $clamp-2,
+    $clamp-3
+  );
+  @include resp-clamp(
+    padding,
+    $body-corner-padding-perc,
+    $clamp-1,
+    $clamp-2,
+    $clamp-3
+  );
+}
+
+.head-right {
+  margin-left: auto;
+
+  @include resp-clamp(
+    left,
+    $head-corner-padding-perc,
+    $clamp-1,
+    $clamp-2,
+    $clamp-3
+  );
+}
+
+.head-left {
+  margin-right: auto;
+  @include resp-clamp(
+    right,
+    $head-corner-padding-perc,
+    $clamp-1,
+    $clamp-2,
+    $clamp-3
+  );
+}
+
+.head {
+  position: relative;
+
+  @include resp-clamp(
+    top,
+    calc($head-corner-padding-perc/2),
+    $clamp-1,
+    $clamp-2,
+    $clamp-3
+  );
+  z-index: -1;
+  width: fit-content;
+  height: 100%;
+  background-color: $blue;
+  @include resp-clamp(
+    border-radius,
+    $head-corner-padding-perc,
+    $clamp-1,
+    $clamp-2,
+    $clamp-3
+  );
+  @include resp-clamp(
+    padding,
+    $head-corner-padding-perc,
+    $clamp-1,
+    $clamp-2,
+    $clamp-3
+  );
+
+  @include resp-clamp(font-size, $head-font-perc, $clamp-1, $clamp-2, $clamp-3);
+  font-weight: 700;
+  line-height: 1;
 }
 
 /* INDIVIDUAL FORMATTING */
