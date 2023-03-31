@@ -4,7 +4,8 @@ $blue: #13fafc;
 $black: #000000;
 $round-corner: clamp(0.5rem, 5vw, 0.9rem);
 $nav-height: 4rem;
-$middle-column-width: max(20rem, 50vw);
+$middle-column-width: min(65ch, 90vw);
+// $middle-column-width: max(20rem, 50vw);
 
 //mixins
 @mixin resp-clamp($prop, $per, $clamp-1, $clamp-2, $clamp-3) {

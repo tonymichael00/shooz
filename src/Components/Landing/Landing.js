@@ -2,36 +2,22 @@ import React from 'react';
 import NavBar from '../NavBar';
 import './Landing.scss';
 import { motion } from 'framer-motion';
-// import { sideTransition } from '../../Framer/globalVariants.js';
 
 // TODO: maybe add blue glow to title shapes
 // use varaints in app.js to propogate to children
 
 const Landing = () => {
-  const sideTransition = {
-    // type: 'spring',
-    // stiffness: 200,
-    // damping: 16,
-  };
-
   return (
     <div id="landing">
       <NavBar />
-      <div id="shooz-bkd-wrapper">
-        <motion.div
-          id="side-shooz-bkd"
-          initial={{ left: 0, width: 0 }}
-          animate={{ width: '100%' }}
-          transition={{ delay: 0.5 }}
-        ></motion.div>
-        <motion.div
-          id="shooz-bkd"
-          initial={{ x: '-100vw' }}
-          animate={{ x: 0 }}
-          transition={{ delay: 0.5 }}
-
-          // transition={sideTransition}
-        >
+      <motion.div
+        id="shooz-bkd-wrapper"
+        initial={{ x: '-100vw', opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ type: 'tween' }}
+      >
+        <motion.div id="side-shooz-bkd"></motion.div>
+        <motion.div id="shooz-bkd">
           <p className="center-flex">
             <span className="yellow-txt center-flex">shooz</span>
           </p>
@@ -43,19 +29,24 @@ const Landing = () => {
             </span>
           </p>
         </motion.div>
-      </div>
-      <motion.div id="title-caption-wrapper">
+      </motion.div>
+      <motion.div
+        id="title-caption-wrapper"
+        // initial={{ x: '100vw', opacity: 0 }}
+        // animate={{ x: 0, opacity: 1 }}
+        // transition={{ type: 'tween' }}
+      >
         <motion.div
           id="title-caption-side-bkd"
-          initial={{ right: 0, width: 0 }}
-          animate={{ width: '100%' }}
-          transition={{ delay: 0.5 }}
+          initial={{ x: '100vw', opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ type: 'tween' }}
         ></motion.div>
         <motion.div
           id="title-caption-bkd"
-          initial={{ x: '100vw' }}
-          animate={{ x: 0 }}
-          transition={{ delay: 0.5 }}
+          initial={{ x: '100vw', opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ type: 'tween' }}
         >
           <p>I can help solve your web problems.</p>
           <p>Don't hesitate to contact me.</p>

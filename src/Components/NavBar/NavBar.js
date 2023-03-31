@@ -26,6 +26,7 @@ const NavBar = () => {
       transition: {
         // when: 'beforeChildren',
         staggerChildren: 0.2,
+        type: 'tween',
       },
     },
   };
@@ -38,6 +39,9 @@ const NavBar = () => {
     visible: {
       y: 0,
       opacity: 1,
+      transition: {
+        type: 'tween',
+      },
     },
   };
 
@@ -47,14 +51,15 @@ const NavBar = () => {
         <motion.a
           href="_self"
           className="logo center-flex"
-          initial={{ y: '-100%' }}
-          animate={{ y: 0 }}
+          initial={{ y: '-200%', opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ type: 'tween' }}
         >
           <img src={logo} alt="Logo" className="center-flex" />
         </motion.a>
         {/* div to create space in grid */}
 
-        <motion.div id="ham-menu" initial={{ y: '-100%' }} animate={{ y: 0 }}>
+        <motion.div id="ham-menu" initial={{ y: '-200%' }} animate={{ y: 0 }}>
           <HamMenu setClickMenu={setClickMenu} clickMenu={clickMenu} />
         </motion.div>
         <motion.div
@@ -65,28 +70,28 @@ const NavBar = () => {
         >
           <motion.a
             className={`${navLinksToggle}`}
-            href="#about-head"
+            href="#about-head-link"
             variants={linkVariants}
           >
             About
           </motion.a>
           <motion.a
             className={`${navLinksToggle}`}
-            href="#where-head"
+            href="#where-head-link"
             variants={linkVariants}
           >
             Experience
           </motion.a>
           <motion.a
             className={`${navLinksToggle}`}
-            href="#projects-sec"
+            href="#projects-sec-link"
             variants={linkVariants}
           >
             Projects
           </motion.a>
           <motion.a
             className={`${navLinksToggle}`}
-            href="#contact-sec"
+            href="#contact-sec-link"
             variants={linkVariants}
           >
             Contact
