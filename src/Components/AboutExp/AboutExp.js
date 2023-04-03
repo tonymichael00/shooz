@@ -22,6 +22,7 @@ const AboutMe = () => {
       x: 0,
       opacity: 1,
       transition: { type: 'tween' },
+      // viewport: { once: true, amount: 0.5 },
     },
   };
 
@@ -39,55 +40,88 @@ const AboutMe = () => {
   };
 
   return (
-    <motion.div
-      id="about-sec"
-      variants={contSideMove}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.75 }}
-    >
-      <motion.div id="about-head-cont" variants={itemSideMoveLeft}>
+    <motion.div id="about-sec">
+      <motion.div
+        id="about-head-cont"
+        variants={contSideMove}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.75 }}
+      >
         <div id="about-head-link"></div>
-        <motion.div id="about-head" className="head head-left">
+        <motion.div
+          id="about-head"
+          className="head head-left"
+          variants={itemSideMoveLeft}
+        >
           About me
         </motion.div>
       </motion.div>
       <motion.div
-        id="about-body"
-        className="blurb"
-        variants={itemSideMoveRight}
+        id="about-body-cont"
+        variants={contSideMove}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.4 }}
       >
-        <p>
-          I’ve worked in graphic design at one of the largest construction
-          companies in Chicago and have been freelancing ever since. I just
-          updated my skillset by teaching myself front end web development. I
-          built two projects: Color Sketchpad and Sanguine, an ideal weather
-          forecast. They were built using Vanilla Javascript and ReactJS
-          respectively.
-        </p>
-        <h3>
-          <p>Technical Skills</p>
-        </h3>
-        <ul>
-          <li>Vanilla Javascript</li>
-          <li>React</li>
-          <li>Node</li>
-          <li>Sass</li>
-          <li>Framer Motion</li>
-        </ul>
+        <motion.div
+          id="about-body"
+          className="blurb"
+          variants={itemSideMoveRight}
+        >
+          <p>
+            I’ve worked in graphic design at one of the largest construction
+            companies in Chicago and have been freelancing ever since. I just
+            updated my skillset by teaching myself front end web development. I
+            built two projects: Color Sketchpad and Sanguine, an ideal weather
+            forecast. They were built using Vanilla Javascript and ReactJS
+            respectively.
+          </p>
+          <h3>
+            <p>Technical Skills</p>
+          </h3>
+          <ul>
+            <li>Vanilla Javascript</li>
+            <li>React</li>
+            <li>Node</li>
+            <li>Sass</li>
+            <li>Framer Motion</li>
+          </ul>
+        </motion.div>
       </motion.div>
-      <div id="where-head-link"></div>
       <motion.div
-        id="where-head"
-        className="head head-right"
-        variants={itemSideMoveRight}
+        id="where-head-cont"
+        variants={contSideMove}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 1 }}
       >
-        Where I've worked
+        <div id="where-head-link"></div>
+        <motion.div
+          id="where-head"
+          className="head head-right"
+          variants={itemSideMoveRight}
+        >
+          Where I've worked
+        </motion.div>
       </motion.div>
-      <motion.div id="where-body" className="blurb" variants={itemSideMoveLeft}>
-        Assistant Marketing Coordinator Developed posters, advertisements,
-        pamphlets, and proposals for one of the largest construction contractors
-        in Chicago Nominated by a printing vendor for a year-end award
+      <motion.div
+        id="where-body-cont"
+        variants={contSideMove}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.4 }}
+      >
+        <motion.div
+          id="where-body"
+          className="blurb"
+          variants={itemSideMoveLeft}
+        >
+          Assistant Marketing Coordinator Developed posters, advertisements,
+          pamphlets, and proposals for one of the largest construction
+          contractors in Chicago Nominated by a printing vendor for a year-end
+          award
+        </motion.div>
       </motion.div>
     </motion.div>
   );

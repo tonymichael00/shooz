@@ -23,29 +23,39 @@
   grid-column: 1/2;
 }
 
-#about-body {
+#about-body-cont {
   grid-row: 2/3;
   grid-column: 1/2;
+}
+
+#about-body {
   font-weight: 500;
 }
+
 #about-body-link {
   grid-column: 1/2;
   grid-row: 2/3;
 }
 
-#where-head {
-  grid-column: 1/2;
-  grid-row: 4/5;
-}
-#where-head-link {
+#where-head-cont {
   grid-column: 1/2;
   grid-row: 4/5;
 }
 
-#where-body {
+#where-head {
+}
+
+#where-head-link {
+}
+
+#where-body-cont {
   grid-column: 1/2;
   grid-row: 5/6;
 }
+
+#where-body {
+}
+
 #where-body-link {
   grid-column: 1/2;
   grid-row: 5/6;
