@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './HamMenu.scss';
 
 const HamMenu = ({ setClickMenu, clickMenu }) => {
@@ -8,7 +8,6 @@ const HamMenu = ({ setClickMenu, clickMenu }) => {
 
   function handleClick() {
     setClickMenu(!clickMenu);
-    console.log('clicked!!!!!!!!');
   }
 
   return (

@@ -1,4 +1,6 @@
-/* TODO: DOUBLE CHECK CSS RESET FOR REDUNDANCY. */
+/* TODO: DOUBLE CHECK CSS RESET FOR REDUNDANCY. 
+FIGURE OUT WHY APP.SCSS OVERRIDES EVERYTHING
+*/
 /* ESPECIALLY PERSONAL RESET AT BOTTOM */
 
 @use 'src/Sass/global' as *;
@@ -94,14 +96,17 @@ a {
 h1 {
   color: $blue;
   font-weight: 900;
+  font-size: 1.45rem;
 }
 h2 {
   color: $blue;
   font-weight: 700;
+  font-size: 1.3rem;
 }
 h3 {
   color: $blue;
   font-weight: 500;
+  font-size: 1.15rem;
 }
 
 /* utility classes */
@@ -165,8 +170,16 @@ $body-font-perc: (0.17 * $body-perc) + 0.02;
     list-style: disc;
     padding: 0 0 0 2rem;
   }
-  p {
+  p,
+  h1,
+  h2,
+  h3 {
     padding: 0.4rem;
+  }
+  h1,
+  h2,
+  h3 {
+    // line-height: 1;
   }
 }
 

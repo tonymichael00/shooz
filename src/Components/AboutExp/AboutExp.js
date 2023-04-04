@@ -1,8 +1,28 @@
 import { motion } from 'framer-motion';
-import React from 'react';
+import React, { useState } from 'react';
 import './AboutExp.scss';
 
 const AboutMe = () => {
+  const [workType, setWorkType] = useState('pepper');
+
+  const pepperWork = (
+    <>
+      <h3>Assistant Marketing Coordinator</h3>
+      <p>
+        Assistant Marketing Coordinator Developed posters, advertisements,
+        pamphlets, and proposals for one of the largest construction contractors
+        in Chicago Nominated by a printing vendor for a year-end award
+      </p>
+    </>
+  );
+
+  const freelanceWork = (
+    <>
+      <h3>Owner</h3>
+      <p>I own this website boooooooooooooooooooooooooooooy.</p>
+    </>
+  );
+
   const contSideMove = {
     hidden: {
       x: 0,
@@ -38,6 +58,12 @@ const AboutMe = () => {
       transition: { type: 'tween' },
     },
   };
+
+  function handleClick(workName) {
+    setWorkType(workName);
+    // if (workName === 'pepper') setWorkType(pepperWork);
+    // else if (workName === 'freelance') setWorkType(freelanceWork);
+  }
 
   return (
     <motion.div id="about-sec">
@@ -117,10 +143,18 @@ const AboutMe = () => {
           className="blurb"
           variants={itemSideMoveLeft}
         >
-          Assistant Marketing Coordinator Developed posters, advertisements,
-          pamphlets, and proposals for one of the largest construction
-          contractors in Chicago Nominated by a printing vendor for a year-end
-          award
+          <div className="heading-links">
+            <button onClick={() => setWorkType('pepper')}>
+              <h2>Pepper</h2>
+            </button>
+            <div></div>
+            <button onClick={() => setWorkType('freelance')}>
+              <h2>Freelance</h2>
+            </button>
+          </div>
+          <div className="blurb-txt">
+            {workType === 'pepper' ? pepperWork : freelanceWork}
+          </div>
         </motion.div>
       </motion.div>
     </motion.div>
