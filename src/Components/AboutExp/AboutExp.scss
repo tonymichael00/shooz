@@ -7,10 +7,7 @@
   grid-column: 2/3;
   grid-row: 2/3;
   display: grid;
-  grid-template-rows: min-content min-content minmax(3rem, 1fr) min-content min-content minmax(
-      3rem,
-      1fr
-    );
+  grid-template-rows: min-content min-content $blurb-spacing-grid min-content min-content $blurb-spacing-grid;
   // grid-template-columns: fit-content;
 }
 

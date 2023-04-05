@@ -2,7 +2,8 @@ import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import './AboutExp.scss';
 
-const AboutMe = () => {
+const AboutMe = ({ contMotion }) => {
+  const { contSideMove, itemSideMoveLeft, itemSideMoveRight } = contMotion;
   const [workType, setWorkType] = useState('pepper');
 
   const pepperWork = (
@@ -23,47 +24,41 @@ const AboutMe = () => {
     </>
   );
 
-  const contSideMove = {
-    hidden: {
-      x: 0,
-    },
-    visible: {
-      x: 0,
-      transition: { type: 'tween' },
-    },
-  };
+  // const contSideMove = {
+  //   hidden: {
+  //     x: 0,
+  //   },
+  //   visible: {
+  //     x: 0,
+  //     transition: { type: 'tween' },
+  //   },
+  // };
 
-  const itemSideMoveLeft = {
-    hidden: {
-      x: '-100vw',
-      opacity: 0,
-    },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { type: 'tween' },
-      // viewport: { once: true, amount: 0.5 },
-    },
-  };
+  // const itemSideMoveLeft = {
+  //   hidden: {
+  //     x: '-100vw',
+  //     opacity: 0,
+  //   },
+  //   visible: {
+  //     x: 0,
+  //     opacity: 1,
+  //     transition: { type: 'tween' },
+  //     // viewport: { once: true, amount: 0.5 },
+  //   },
+  // };
 
-  const itemSideMoveRight = {
-    hidden: {
-      opacity: 0,
+  // const itemSideMoveRight = {
+  //   hidden: {
+  //     opacity: 0,
 
-      x: '100vw',
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { type: 'tween' },
-    },
-  };
-
-  function handleClick(workName) {
-    setWorkType(workName);
-    // if (workName === 'pepper') setWorkType(pepperWork);
-    // else if (workName === 'freelance') setWorkType(freelanceWork);
-  }
+  //     x: '100vw',
+  //   },
+  //   visible: {
+  //     opacity: 1,
+  //     x: 0,
+  //     transition: { type: 'tween' },
+  //   },
+  // };
 
   return (
     <motion.div id="about-sec">

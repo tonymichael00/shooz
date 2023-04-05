@@ -5,4 +5,11 @@
 
 #projects-sec {
   grid-column: 2/3;
+  display: grid;
+  grid-template-rows: min-content min-content $blurb-spacing-grid min-content $blurb-spacing-grid min-content $blurb-spacing-grid;
+}
+
+#pepper-blurb-cont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }

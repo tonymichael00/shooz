@@ -49,7 +49,7 @@ const NavBar = () => {
     <header>
       <motion.nav id="nav-bar">
         <motion.a
-          href="_self"
+          href=""
           className="logo center-flex"
           initial={{ y: '-200%', opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
