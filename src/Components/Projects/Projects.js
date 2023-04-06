@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import React from 'react';
+import Carousel from './Carousel/Carousel';
 import './Projects.scss';
 
 const Projects = ({ contMotion }) => {
@@ -55,6 +56,9 @@ const Projects = ({ contMotion }) => {
             <li>Framer Motion</li>
           </ul>
         </motion.div>
+        <div className="carousel-cont">
+          <Carousel />
+        </div>
       </motion.div>
       What I've done.
     </div>
