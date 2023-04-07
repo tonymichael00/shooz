@@ -22,7 +22,8 @@ $clamp-3: 9rem;
 #pepper-blurb-cont {
   width: $middle-column-width;
   display: grid;
-  grid-template-columns: 50% 50%;
+  //fix 50% to non flex/%
+  grid-template-columns: repeat(auto-fit, minmax($mobile-width, 50%));
 }
 
 .carousel-cont {

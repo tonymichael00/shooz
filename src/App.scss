@@ -242,6 +242,16 @@ $body-font-perc: (0.17 * $body-perc) + 0.02;
 
 /* INDIVIDUAL FORMATTING */
 #root {
+  //VARIABLES
+  //SWIPER COLOR CHANGES
+  --swiper-theme-color: #13fafc;
+  --swiper-pagination-bullet-inactive-color: #f4ff0a;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  // --swiper-scrollbar-drag-bg-color: rgba(19, 250, 252, 0.5);
+  // --swiper-scrollbar-bg-color: rgba(19, 250, 252, 0.1);
+  // --swiper-navigation-color: #13fafc;
+  // --swiper-pagination-color: #13fafc;
+
   /* center main content */
   display: flex;
   justify-content: center;
