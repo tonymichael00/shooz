@@ -40,7 +40,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+  min-height: 100svh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-weight: 500;
@@ -82,6 +82,7 @@ p {
   padding: 0;
   margin: 0;
   border: 0;
+  font-family: 'Manrope', sans-serif;
 }
 
 a {
@@ -89,8 +90,8 @@ a {
   text-decoration: none;
 }
 
-* {
-  font-family: 'Manrope', sans-serif;
+img {
+  display: block;
 }
 
 h1 {
@@ -244,8 +245,8 @@ $body-font-perc: (0.17 * $body-perc) + 0.02;
 #root {
   //VARIABLES
   //SWIPER COLOR CHANGES
-  --swiper-theme-color: #13fafc;
-  --swiper-pagination-bullet-inactive-color: #f4ff0a;
+  --swiper-theme-color: black;
+  --swiper-pagination-bullet-inactive-color: #13fafc;
   --swiper-pagination-bullet-inactive-opacity: 1;
   // --swiper-scrollbar-drag-bg-color: rgba(19, 250, 252, 0.5);
   // --swiper-scrollbar-bg-color: rgba(19, 250, 252, 0.1);
@@ -262,6 +263,6 @@ $body-font-perc: (0.17 * $body-perc) + 0.02;
   display: grid;
   grid-template-columns: 1fr $middle-column-width 1fr;
   // grid-template-rows: min(100vh, 70rem) repeat(auto-fill, auto);
-  width: 100vw;
+  // width: 100vw;
   overflow-x: hidden;
 }

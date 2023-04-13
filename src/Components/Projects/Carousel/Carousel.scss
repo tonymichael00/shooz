@@ -4,8 +4,25 @@
 
 @use 'src/Sass/global' as *;
 
-.carousel img {
-  //   max-width: 100%;
-  //   height: auto;
-  // aspect-ratio: 1/1;
+.project-img {
+  width: 100%;
+  // height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
+
+// .swiper,
+// .swiper-container,
+// .swiper-slide {
+//   width: 100%;
+//   height: auto;
+//   aspect-ratio: 1/1;
+// }
+
+// .carousel {
+//   width: fit-content;
+// }
+
+// .swiper-container {
+//   width: auto;
+// }

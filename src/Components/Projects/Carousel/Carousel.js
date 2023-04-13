@@ -5,9 +5,9 @@ import React, { useEffect, useRef } from 'react';
 import './Carousel.scss';
 import { register } from 'swiper/element/bundle';
 import img1 from './Images/img1.jpg';
-import img2 from './Images/img2.jpg';
-import img3 from './Images/img3.jpg';
-import img4 from './Images/img4.jpg';
+import img1Webp from './Images/img1.webp';
+import img13 from './Images/img13.webp';
+import img14 from './Images/img14.webp';
 
 register();
 
@@ -28,31 +28,33 @@ const Carousel = () => {
 
   return (
     <swiper-container
-      className="carousel"
       ref={swiperElRef}
-      slides-per-view="1"
+      slides-per-view="auto"
       navigation="true"
       pagination="true"
+      // auto-height="true"
+      // height="100%"
       // loop="true"
-      fill="column"
+      // fill="column"
+      grab-cursor="true"
       // scrollbar="true"
     >
       <swiper-slide>
-        <img src={img1} alt="Logo" width={'100%'} height={'100%'} />
+        <img src={img1} alt="Logo1" className="project-img" />
+        {/* {img1} */}
       </swiper-slide>
       <swiper-slide>
-        {' '}
-        <img src={img2} alt="Logo" width={'100%'} height={'100%'} />
+        <img src={img1Webp} alt="Logo2" className="project-img" />
+        {/* {img2} */}
       </swiper-slide>
       <swiper-slide>
-        {' '}
-        <img src={img3} alt="Logo" width={'100%'} height={'100%'} />
+        <img src={img13} alt="Logo3" className="project-img" />
+        {/* {img3} */}
       </swiper-slide>
       <swiper-slide>
-        {' '}
-        <img src={img4} alt="Logo" width={'100%'} height={'100%'} />
+        <img src={img14} alt="Logo4" className="project-img" />
+        {/* {img4} */}
       </swiper-slide>
-      ...
     </swiper-container>
   );
 };
