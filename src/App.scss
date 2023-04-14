@@ -245,8 +245,8 @@ $body-font-perc: (0.17 * $body-perc) + 0.02;
 #root {
   //VARIABLES
   //SWIPER COLOR CHANGES
-  --swiper-theme-color: black;
-  --swiper-pagination-bullet-inactive-color: #13fafc;
+  --swiper-theme-color: #13fafc;
+  --swiper-pagination-bullet-inactive-color: black;
   --swiper-pagination-bullet-inactive-opacity: 1;
   // --swiper-scrollbar-drag-bg-color: rgba(19, 250, 252, 0.5);
   // --swiper-scrollbar-bg-color: rgba(19, 250, 252, 0.1);

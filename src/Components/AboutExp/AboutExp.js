@@ -147,9 +147,7 @@ const AboutMe = ({ contMotion }) => {
               <h2>Freelance</h2>
             </button>
           </div>
-          <div className="blurb-txt">
-            {workType === 'pepper' ? pepperWork : freelanceWork}
-          </div>
+          <div>{workType === 'pepper' ? pepperWork : freelanceWork}</div>
         </motion.div>
       </motion.div>
     </motion.div>

@@ -31,11 +31,7 @@ const Projects = ({ contMotion }) => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}
       >
-        <motion.div
-          id="pepper-blurb"
-          className="blurb"
-          variants={itemSideMoveRight}
-        >
+        <div className="project-blurb-txt">
           <h3>Pepper</h3>
           <p>
             I’ve worked in graphic design at one of the largest construction
@@ -55,7 +51,12 @@ const Projects = ({ contMotion }) => {
             <li>Sass</li>
             <li>Framer Motion</li>
           </ul>
-        </motion.div>
+        </div>
+        <div
+          id="pepper-blurb"
+          className="blurb"
+          // variants={itemSideMoveRight}
+        ></div>
         <div className="carousel-cont">
           <Carousel />
         </div>
