@@ -152,7 +152,7 @@ $body-font-perc: (0.17 * $body-perc) + 0.02;
 .blurb {
   background-color: black;
   color: white;
-  max-width: 65ch;
+  // max-width: 65ch;
   @include resp-clamp(
     border-radius,
     $body-corner-padding-perc,
@@ -246,7 +246,7 @@ $body-font-perc: (0.17 * $body-perc) + 0.02;
   //VARIABLES
   //SWIPER COLOR CHANGES
   --swiper-theme-color: #13fafc;
-  --swiper-pagination-bullet-inactive-color: black;
+  --swiper-pagination-bullet-inactive-color: rgb(114, 114, 114);
   --swiper-pagination-bullet-inactive-opacity: 1;
   // --swiper-scrollbar-drag-bg-color: rgba(19, 250, 252, 0.5);
   // --swiper-scrollbar-bg-color: rgba(19, 250, 252, 0.1);

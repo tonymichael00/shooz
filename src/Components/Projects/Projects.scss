@@ -24,18 +24,21 @@ $clamp-3: 9rem;
   width: $middle-column-width;
   display: grid;
   //fix 50% to non flex/%
-  grid-template-columns: 40% 1fr 40%;
+  grid-template-columns: 50% 50%;
   align-items: center;
   // display: flex;
   // align-items: center;
 }
 
 .carousel-cont {
-  grid-column: 2/4;
+  grid-column: 2/3;
   grid-row: 1/2;
   position: relative;
-
+  max-height: 90%;
   height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  aspect-ratio: 1/1;
   border-radius: 1rem;
   overflow: clip;
   //MAYBE CHANGE TO BLACK
@@ -43,10 +46,11 @@ $clamp-3: 9rem;
 }
 
 #pepper-blurb {
-  grid-column: 1/3;
+  grid-column: 1/2;
   grid-row: 1/2;
-  width: 100%;
+  width: 110%;
   height: 100%;
+  z-index: -1;
 }
 
 .project-bkd {

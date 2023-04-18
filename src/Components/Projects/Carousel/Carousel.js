@@ -40,12 +40,12 @@ const Carousel = () => {
       // scrollbar="true"
     >
       <swiper-slide>
-        <img src={img1} alt="Logo1" className="project-img" />
-        {/* {img1} */}
-      </swiper-slide>
-      <swiper-slide>
         <img src={img1Webp} alt="Logo2" className="project-img" />
         {/* {img2} */}
+      </swiper-slide>
+      <swiper-slide>
+        <img src={img1} alt="Logo1" className="project-img" />
+        {/* {img1} */}
       </swiper-slide>
       <swiper-slide>
         <img src={img13} alt="Logo3" className="project-img" />
