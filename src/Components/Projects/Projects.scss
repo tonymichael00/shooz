@@ -19,9 +19,9 @@ $clamp-3: 9rem;
   width: $middle-column-width;
 }
 
-#pepper-blurb-cont {
+.project-cont {
   position: relative;
-  width: $middle-column-width;
+  // width: $middle-column-width;
   display: grid;
   //fix 50% to non flex/%
   grid-template-columns: 50% 50%;
@@ -30,9 +30,9 @@ $clamp-3: 9rem;
   // align-items: center;
 }
 
-.carousel-cont {
-  grid-column: 2/3;
-  grid-row: 1/2;
+.pic-cont {
+  // grid-column: 2/3;
+  // grid-row: 1/2;
   position: relative;
   max-height: 90%;
   height: fit-content;
@@ -43,14 +43,38 @@ $clamp-3: 9rem;
   overflow: clip;
   //MAYBE CHANGE TO BLACK
   border: 0.3rem solid black;
+  &-right {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  &-left {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
 }
 
-#pepper-blurb {
+.pepper-cont {
   grid-column: 1/2;
   grid-row: 1/2;
+}
+
+.project-blurb-bkd {
+  // grid-column: 1/2;
+  // grid-row: 1/2;
+  position: relative;
   width: 110%;
   height: 100%;
   z-index: -1;
+  &-left {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  &-right {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    //moves to left 10% width
+    right: 10%;
+  }
 }
 
 .project-bkd {
@@ -58,9 +82,8 @@ $clamp-3: 9rem;
 }
 
 .project-blurb-txt {
+  align-self: flex-start;
   position: relative;
-  grid-column: 1/2;
-  grid-row: 1/2;
   color: white;
   @include resp-clamp(
     padding,
@@ -69,4 +92,12 @@ $clamp-3: 9rem;
     $clamp-2,
     $clamp-3
   );
+  &-left {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  &-right {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
 }

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import Carousel from './Carousel/Carousel';
 import './Projects.scss';
+import img1Webp from './Images/img1.webp';
 
 const Projects = ({ contMotion }) => {
   const { contSideMove, itemSideMoveLeft, itemSideMoveRight } = contMotion;
@@ -25,13 +26,17 @@ const Projects = ({ contMotion }) => {
         </motion.div>
       </motion.div>
       <motion.div
-        id="pepper-blurb-cont"
+        // id="pepper-blurb-cont"
+        className="project-cont"
         variants={contSideMove}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}
       >
-        <motion.div className="project-blurb-txt" variants={itemSideMoveLeft}>
+        <motion.div
+          className="project-blurb-txt project-blurb-txt-left"
+          variants={itemSideMoveLeft}
+        >
           <h3>Pepper</h3>
           <p>
             I’ve worked in graphic design at one of the largest construction
@@ -53,15 +58,73 @@ const Projects = ({ contMotion }) => {
           </ul>
         </motion.div>
         <motion.div
-          id="pepper-blurb"
-          className="blurb"
+          // id="pepper-blurb"
+          className="blurb project-blurb-bkd project-blurb-bkd-left"
           variants={itemSideMoveLeft}
         ></motion.div>
-        <motion.div className="carousel-cont" variants={itemSideMoveRight}>
+        <motion.div
+          className="pic-cont pic-cont-right"
+          variants={itemSideMoveRight}
+        >
           <Carousel />
         </motion.div>
       </motion.div>
-      What I've done.
+      <div></div>
+      <motion.div
+        // id="pepper-blurb-cont"
+        className="project-cont"
+        variants={contSideMove}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.4 }}
+      >
+        <motion.div
+          className="project-blurb-txt project-blurb-txt-right"
+          variants={itemSideMoveRight}
+        >
+          <h3>Sanguine</h3>
+          <p>This is my sanguine app. Gaze upon it's splendor.</p>
+        </motion.div>
+        <motion.div
+          // id="pepper-blurb"
+          className="blurb project-blurb-bkd project-blurb-bkd-right"
+          variants={itemSideMoveRight}
+        ></motion.div>
+        <motion.div
+          className="pic-cont pic-cont-left"
+          variants={itemSideMoveLeft}
+        >
+          <img src={img1Webp} alt="Logo2" className="project-img" />
+        </motion.div>
+      </motion.div>
+      <div></div>
+      <motion.div
+        // id="pepper-blurb-cont"
+        className="project-cont"
+        variants={contSideMove}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.4 }}
+      >
+        <motion.div
+          className="project-blurb-txt project-blurb-txt-left"
+          variants={itemSideMoveLeft}
+        >
+          <h3>Coloring Pad</h3>
+          <p>So great.</p>
+        </motion.div>
+        <motion.div
+          // id="pepper-blurb"
+          className="blurb project-blurb-bkd project-blurb-bkd-left"
+          variants={itemSideMoveLeft}
+        ></motion.div>
+        <motion.div
+          className="pic-cont pic-cont-right"
+          variants={itemSideMoveRight}
+        >
+          <img src={img1Webp} alt="Logo2" className="project-img" />
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
