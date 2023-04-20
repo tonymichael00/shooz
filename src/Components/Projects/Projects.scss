@@ -82,9 +82,15 @@ $clamp-3: 9rem;
 }
 
 .project-blurb-txt {
+  background-color: gray;
   align-self: flex-start;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100%;
   position: relative;
+  // height: 100%;
   color: white;
+
   @include resp-clamp(
     padding,
     $body-corner-padding-perc,
@@ -100,4 +106,13 @@ $clamp-3: 9rem;
     grid-column: 2/3;
     grid-row: 1/2;
   }
+}
+
+.project-skills {
+  display: flex;
+  justify-content: space-between;
+  color: $yellow;
+}
+
+.project-links {
 }
