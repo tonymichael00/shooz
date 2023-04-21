@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 import './AboutExp.scss';
 
 const AboutMe = ({ contMotion }) => {
-  const { contSideMove, itemSideMoveLeft, itemSideMoveRight } = contMotion;
+  const { contSideMove, itemSideMoveLeft, itemSideMoveRight, viewportAni } =
+    contMotion;
+  const { headView, blurbView } = viewportAni;
   const [workType, setWorkType] = useState('pepper');
 
   const pepperWork = (
@@ -24,42 +26,6 @@ const AboutMe = ({ contMotion }) => {
     </>
   );
 
-  // const contSideMove = {
-  //   hidden: {
-  //     x: 0,
-  //   },
-  //   visible: {
-  //     x: 0,
-  //     transition: { type: 'tween' },
-  //   },
-  // };
-
-  // const itemSideMoveLeft = {
-  //   hidden: {
-  //     x: '-100vw',
-  //     opacity: 0,
-  //   },
-  //   visible: {
-  //     x: 0,
-  //     opacity: 1,
-  //     transition: { type: 'tween' },
-  //     // viewport: { once: true, amount: 0.5 },
-  //   },
-  // };
-
-  // const itemSideMoveRight = {
-  //   hidden: {
-  //     opacity: 0,
-
-  //     x: '100vw',
-  //   },
-  //   visible: {
-  //     opacity: 1,
-  //     x: 0,
-  //     transition: { type: 'tween' },
-  //   },
-  // };
-
   return (
     <motion.div id="about-sec">
       <motion.div
@@ -67,7 +33,7 @@ const AboutMe = ({ contMotion }) => {
         variants={contSideMove}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.75 }}
+        viewport={headView}
       >
         <div id="about-head-link"></div>
         <motion.div
@@ -83,7 +49,7 @@ const AboutMe = ({ contMotion }) => {
         variants={contSideMove}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.4 }}
+        viewport={blurbView}
       >
         <motion.div
           id="about-body"
@@ -115,7 +81,7 @@ const AboutMe = ({ contMotion }) => {
         variants={contSideMove}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 1 }}
+        viewport={headView}
       >
         <div id="where-head-link"></div>
         <motion.div
@@ -131,7 +97,7 @@ const AboutMe = ({ contMotion }) => {
         variants={contSideMove}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.4 }}
+        viewport={blurbView}
       >
         <motion.div
           id="where-body"

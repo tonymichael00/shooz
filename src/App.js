@@ -15,6 +15,7 @@ function App() {
       x: 0,
       transition: { type: 'tween' },
     },
+    viewed: { once: true, amount: 1 },
   };
 
   const itemSideMoveLeft = {
@@ -26,8 +27,8 @@ function App() {
       x: 0,
       opacity: 1,
       transition: { type: 'tween' },
-      // viewport: { once: true, amount: 0.5 },
     },
+    viewed: { once: true, amount: 1 },
   };
 
   const itemSideMoveRight = {
@@ -41,19 +42,40 @@ function App() {
       x: 0,
       transition: { type: 'tween' },
     },
+    viewed: { once: true, amount: 1 },
+  };
+
+  const viewportAni = {
+    headView: { once: true, amount: 1 },
+    blurbView: { once: true, amount: 0.1 },
   };
 
   return (
     <div id="content">
       <Landing />
       <AboutExp
-        contMotion={{ itemSideMoveLeft, itemSideMoveRight, contSideMove }}
+        contMotion={{
+          itemSideMoveLeft,
+          itemSideMoveRight,
+          contSideMove,
+          viewportAni,
+        }}
       />
       <Projects
-        contMotion={{ itemSideMoveLeft, itemSideMoveRight, contSideMove }}
+        contMotion={{
+          itemSideMoveLeft,
+          itemSideMoveRight,
+          contSideMove,
+          viewportAni,
+        }}
       />
       <Contact
-        contMotion={{ itemSideMoveLeft, itemSideMoveRight, contSideMove }}
+        contMotion={{
+          itemSideMoveLeft,
+          itemSideMoveRight,
+          contSideMove,
+          viewportAni,
+        }}
       />
     </div>
   );

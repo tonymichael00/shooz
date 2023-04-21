@@ -7,7 +7,9 @@ import GithubLogo from '../../Images/GithubLogo';
 import ExtLinkLogo from '../../Images/ExtLinkLogo';
 
 const Projects = ({ contMotion }) => {
-  const { contSideMove, itemSideMoveLeft, itemSideMoveRight } = contMotion;
+  const { contSideMove, itemSideMoveLeft, itemSideMoveRight, viewportAni } =
+    contMotion;
+  const { headView, blurbView } = viewportAni;
 
   return (
     <div id="projects-sec">
@@ -16,13 +18,14 @@ const Projects = ({ contMotion }) => {
         variants={contSideMove}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 1 }}
+        viewport={headView}
       >
         <div id="projects-sec-link"></div>
         <motion.div
           id="about-head"
           className="head head-left"
           variants={itemSideMoveLeft}
+          // viewport="viewed"
         >
           What I've Done
         </motion.div>
@@ -33,7 +36,7 @@ const Projects = ({ contMotion }) => {
         variants={contSideMove}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={blurbView}
       >
         <motion.div
           className="project-blurb-txt project-blurb-txt-left"
@@ -70,7 +73,7 @@ const Projects = ({ contMotion }) => {
         variants={contSideMove}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={blurbView}
       >
         <motion.div
           className="project-blurb-txt project-blurb-txt-right"
@@ -125,7 +128,7 @@ const Projects = ({ contMotion }) => {
         variants={contSideMove}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={blurbView}
       >
         <motion.div
           className="project-blurb-txt project-blurb-txt-left"

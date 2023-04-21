@@ -8,6 +8,7 @@ $body-corner-padding-perc: (0.2 * $body-perc) + 0.02;
 $clamp-1: 6rem;
 $clamp-2: 30vw;
 $clamp-3: 9rem;
+$bkd-width: 10%;
 
 #projects-sec {
   grid-column: 2/3;
@@ -60,7 +61,7 @@ $clamp-3: 9rem;
 
 .project-blurb-bkd {
   position: relative;
-  width: 110%;
+  width: calc(100% + $bkd-width);
   height: 100%;
   z-index: -1;
   &-left {
@@ -70,7 +71,7 @@ $clamp-3: 9rem;
   &-right {
     grid-column: 2/3;
     grid-row: 1/2;
-    right: 10%;
+    right: $bkd-width;
   }
 }
 
