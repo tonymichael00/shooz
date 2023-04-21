@@ -59,8 +59,6 @@ $clamp-3: 9rem;
 }
 
 .project-blurb-bkd {
-  // grid-column: 1/2;
-  // grid-row: 1/2;
   position: relative;
   width: 110%;
   height: 100%;
@@ -72,7 +70,6 @@ $clamp-3: 9rem;
   &-right {
     grid-column: 2/3;
     grid-row: 1/2;
-    //moves to left 10% width
     right: 10%;
   }
 }
@@ -82,15 +79,12 @@ $clamp-3: 9rem;
 }
 
 .project-blurb-txt {
-  background-color: gray;
   align-self: flex-start;
   display: grid;
   grid-template-rows: 1fr auto;
   height: 100%;
   position: relative;
-  // height: 100%;
   color: white;
-
   @include resp-clamp(
     padding,
     $body-corner-padding-perc,
@@ -108,11 +102,23 @@ $clamp-3: 9rem;
   }
 }
 
+.upper-project-txt {
+  & a {
+    color: $blue;
+  }
+}
+
 .project-skills {
   display: flex;
   justify-content: space-between;
-  color: $yellow;
+  color: $blue;
 }
 
 .project-links {
+  display: flex;
+  & a {
+    display: flex;
+    padding: 1rem;
+    padding-left: 0;
+  }
 }

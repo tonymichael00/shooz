@@ -4,6 +4,7 @@ import Carousel from './Carousel/Carousel';
 import './Projects.scss';
 import img1Webp from './Images/img1.webp';
 import GithubLogo from '../../Images/GithubLogo';
+import ExtLinkLogo from '../../Images/ExtLinkLogo';
 
 const Projects = ({ contMotion }) => {
   const { contSideMove, itemSideMoveLeft, itemSideMoveRight } = contMotion;
@@ -76,7 +77,9 @@ const Projects = ({ contMotion }) => {
           variants={itemSideMoveRight}
         >
           <div className="upper-project-txt">
-            <h3>Sanguine</h3>
+            <h3>
+              <a href="">Sanguine</a>
+            </h3>
             <p>This is my sanguine app. Gaze upon it's splendor.</p>
           </div>
           <div className="lower-project-txt">
@@ -87,7 +90,18 @@ const Projects = ({ contMotion }) => {
             </div>
             <div className="project-links">
               <a href="">
-                <GithubLogo fill={'#f4ff0a'} />
+                <GithubLogo
+                  fill={'#13fafc'}
+                  height={'1.25.rem'}
+                  width={'1.25rem'}
+                />
+              </a>
+              <a href="">
+                <ExtLinkLogo
+                  fill={'#13fafc'}
+                  height={'1.25.rem'}
+                  width={'1.25rem'}
+                />
               </a>
             </div>
           </div>
