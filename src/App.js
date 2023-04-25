@@ -15,7 +15,7 @@ function App() {
       x: 0,
       transition: { type: 'tween' },
     },
-    viewed: { once: true, amount: 1 },
+    // viewed: { once: true, amount: 1 },
   };
 
   const itemSideMoveLeft = {
@@ -28,7 +28,7 @@ function App() {
       opacity: 1,
       transition: { type: 'tween' },
     },
-    viewed: { once: true, amount: 1 },
+    // viewed: { once: true, amount: 1 },
   };
 
   const itemSideMoveRight = {
@@ -42,7 +42,7 @@ function App() {
       x: 0,
       transition: { type: 'tween' },
     },
-    viewed: { once: true, amount: 1 },
+    // viewed: { once: true, amount: 1 },
   };
 
   const viewportAni = {
