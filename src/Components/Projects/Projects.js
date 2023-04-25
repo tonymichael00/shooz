@@ -31,7 +31,6 @@ const Projects = ({ contMotion }) => {
         </motion.div>
       </motion.div>
       <motion.div
-        // id="pepper-blurb-cont"
         className="project-cont"
         variants={contSideMove}
         initial="hidden"
@@ -39,26 +38,26 @@ const Projects = ({ contMotion }) => {
         viewport={blurbView}
       >
         <motion.div
-          className="project-blurb-txt project-blurb-txt-left"
-          variants={itemSideMoveLeft}
-        >
-          <div className="upper-project-txt">
-            <h3>Pepper</h3>
-            <p>
-              I’ve worked in graphic design at one of the largest construction
-              companies in Chicago and have been freelancing ever since. I just
-              updated my skillset by teaching myself front end web development.
-              I built two projects: Color Sketchpad and Sanguine, an ideal
-              weather forecast. They were built using Vanilla Javascript and
-              ReactJS respectively.
-            </p>
-          </div>
-        </motion.div>
-        <motion.div
-          // id="pepper-blurb"
           className="blurb project-blurb-bkd project-blurb-bkd-left"
           variants={itemSideMoveLeft}
-        ></motion.div>
+        >
+          <div
+            className="project-blurb-txt project-blurb-txt-left"
+            variants={itemSideMoveLeft}
+          >
+            <div className="upper-project-txt">
+              <h3>Pepper</h3>
+              <p>
+                I’ve worked in graphic design at one of the largest construction
+                companies in Chicago and have been freelancing ever since. I
+                just updated my skillset by teaching myself front end web
+                development. I built two projects: Color Sketchpad and Sanguine,
+                an ideal weather forecast. They were built using Vanilla
+                Javascript and ReactJS respectively.
+              </p>
+            </div>
+          </div>
+        </motion.div>
         <motion.div
           className="pic-cont pic-cont-right"
           variants={itemSideMoveRight}
@@ -68,7 +67,6 @@ const Projects = ({ contMotion }) => {
       </motion.div>
       <div></div>
       <motion.div
-        // id="pepper-blurb-cont"
         className="project-cont"
         variants={contSideMove}
         initial="hidden"
@@ -76,44 +74,44 @@ const Projects = ({ contMotion }) => {
         viewport={blurbView}
       >
         <motion.div
-          className="project-blurb-txt project-blurb-txt-right"
+          className="blurb project-blurb-bkd project-blurb-bkd-right"
           variants={itemSideMoveRight}
         >
-          <div className="upper-project-txt">
-            <h3>
-              <a href="">Sanguine</a>
-            </h3>
-            <p>This is my sanguine app. Gaze upon it's splendor.</p>
-          </div>
-          <div className="lower-project-txt">
-            <div className="project-skills">
-              <p>React</p>
-              <p>Api</p>
-              <p>Responsive</p>
+          <div
+            className="project-blurb-txt project-blurb-txt-right"
+            variants={itemSideMoveRight}
+          >
+            <div className="upper-project-txt">
+              <h3>
+                <a href="">Sanguine</a>
+              </h3>
+              <p>This is my sanguine app. Gaze upon it's splendor.</p>
             </div>
-            <div className="project-links">
-              <a href="">
-                <GithubLogo
-                  fill={'#13fafc'}
-                  height={'1.25.rem'}
-                  width={'1.25rem'}
-                />
-              </a>
-              <a href="">
-                <ExtLinkLogo
-                  fill={'#13fafc'}
-                  height={'1.25.rem'}
-                  width={'1.25rem'}
-                />
-              </a>
+            <div className="lower-project-txt">
+              <div className="project-skills">
+                <p>React</p>
+                <p>Api</p>
+                <p>Responsive</p>
+              </div>
+              <div className="project-links">
+                <a href="">
+                  <GithubLogo
+                    fill={'#13fafc'}
+                    height={'1.25.rem'}
+                    width={'1.25rem'}
+                  />
+                </a>
+                <a href="">
+                  <ExtLinkLogo
+                    fill={'#13fafc'}
+                    height={'1.25.rem'}
+                    width={'1.25rem'}
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </motion.div>
-        <motion.div
-          // id="pepper-blurb"
-          className="blurb project-blurb-bkd project-blurb-bkd-right"
-          variants={itemSideMoveRight}
-        ></motion.div>
         <motion.div
           className="pic-cont pic-cont-left"
           variants={itemSideMoveLeft}
@@ -123,7 +121,6 @@ const Projects = ({ contMotion }) => {
       </motion.div>
       <div></div>
       <motion.div
-        // id="pepper-blurb-cont"
         className="project-cont"
         variants={contSideMove}
         initial="hidden"
@@ -131,19 +128,19 @@ const Projects = ({ contMotion }) => {
         viewport={blurbView}
       >
         <motion.div
-          className="project-blurb-txt project-blurb-txt-left"
-          variants={itemSideMoveLeft}
-        >
-          <div className="upper-project-txt">
-            <h3>Coloring Pad</h3>
-            <p>So great.</p>
-          </div>
-        </motion.div>
-        <motion.div
-          // id="pepper-blurb"
           className="blurb project-blurb-bkd project-blurb-bkd-left"
           variants={itemSideMoveLeft}
-        ></motion.div>
+        >
+          <div
+            className="project-blurb-txt project-blurb-txt-left"
+            variants={itemSideMoveLeft}
+          >
+            <div className="upper-project-txt">
+              <h3>Coloring Pad</h3>
+              <p>So great.</p>
+            </div>
+          </div>
+        </motion.div>
         <motion.div
           className="pic-cont pic-cont-right"
           variants={itemSideMoveRight}
