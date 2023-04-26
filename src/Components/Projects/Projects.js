@@ -73,9 +73,9 @@ const Projects = ({ contMotion }) => {
         whileInView="visible"
         viewport={blurbView}
       >
-        <div
+        <motion.div
           className="blurb project-blurb-bkd project-blurb-bkd-right"
-          // variants={itemSideMoveRight}
+          variants={itemSideMoveRight}
         >
           <div
             className="project-blurb-txt project-blurb-txt-right"
@@ -111,7 +111,7 @@ const Projects = ({ contMotion }) => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
         <motion.div
           className="pic-cont pic-cont-left"
           variants={itemSideMoveLeft}

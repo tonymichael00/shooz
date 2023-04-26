@@ -37,6 +37,7 @@ const Contact = ({ contMotion }) => {
           opportunities.
         </motion.div>
       </motion.div>
+      <div className="contact-page-space"></div>
     </div>
   );
 };

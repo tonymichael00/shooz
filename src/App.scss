@@ -185,6 +185,8 @@ $body-font-perc: (0.17 * $body-perc) + 0.02;
 }
 
 .head-right {
+  // display: flex;
+  // justify-content: left;
   margin-left: auto;
 
   @include resp-clamp(

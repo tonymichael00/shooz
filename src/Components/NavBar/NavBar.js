@@ -12,6 +12,7 @@ import { motion } from 'framer-motion';
 const NavBar = () => {
   const [clickMenu, setClickMenu] = useState(false);
 
+  //triggers opening and closing navigation menu
   let navLinksContToggle = clickMenu
     ? 'nav-links-cont-click'
     : 'nav-links-cont';
@@ -62,35 +63,36 @@ const NavBar = () => {
         <motion.div id="ham-menu" initial={{ y: '-200%' }} animate={{ y: 0 }}>
           <HamMenu setClickMenu={setClickMenu} clickMenu={clickMenu} />
         </motion.div>
+        {/* DONT REMOVE NAV-LINKS-CONT OR NAV-LINKS FROM CLASSNAME */}
         <motion.div
-          className={`${navLinksContToggle}`}
+          className={`nav-links-cont ${navLinksContToggle}`}
           variants={contVariants}
           initial="hidden"
           animate="visible"
         >
           <motion.a
-            className={`${navLinksToggle}`}
+            className={`nav-links ${navLinksToggle}`}
             href="#about-head-link"
             variants={linkVariants}
           >
             About
           </motion.a>
           <motion.a
-            className={`${navLinksToggle}`}
+            className={`nav-links ${navLinksToggle}`}
             href="#where-head-link"
             variants={linkVariants}
           >
             Experience
           </motion.a>
           <motion.a
-            className={`${navLinksToggle}`}
+            className={`nav-links ${navLinksToggle}`}
             href="#projects-sec-link"
             variants={linkVariants}
           >
             Projects
           </motion.a>
           <motion.a
-            className={`${navLinksToggle}`}
+            className={`nav-links ${navLinksToggle}`}
             href="#contact-sec-link"
             variants={linkVariants}
           >
