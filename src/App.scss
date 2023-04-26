@@ -266,4 +266,7 @@ $body-font-perc: (0.17 * $body-perc) + 0.02;
   // grid-template-rows: min(100vh, 70rem) repeat(auto-fill, auto);
   // width: 100vw;
   overflow-x: hidden;
+  // @media (max-width: $mobile-width) {
+  //   max-width: 30ch;
+  // }
 }

@@ -41,7 +41,7 @@ const Projects = ({ contMotion }) => {
           className="blurb project-blurb-bkd project-blurb-bkd-left"
           variants={itemSideMoveLeft}
         >
-          <div
+          <motion.div
             className="project-blurb-txt project-blurb-txt-left"
             variants={itemSideMoveLeft}
           >
@@ -56,7 +56,7 @@ const Projects = ({ contMotion }) => {
                 Javascript and ReactJS respectively.
               </p>
             </div>
-          </div>
+          </motion.div>
         </motion.div>
         <motion.div
           className="pic-cont pic-cont-right"
@@ -73,13 +73,13 @@ const Projects = ({ contMotion }) => {
         whileInView="visible"
         viewport={blurbView}
       >
-        <motion.div
+        <div
           className="blurb project-blurb-bkd project-blurb-bkd-right"
-          variants={itemSideMoveRight}
+          // variants={itemSideMoveRight}
         >
           <div
             className="project-blurb-txt project-blurb-txt-right"
-            variants={itemSideMoveRight}
+            // variants={itemSideMoveRight}
           >
             <div className="upper-project-txt">
               <h3>
@@ -111,7 +111,7 @@ const Projects = ({ contMotion }) => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
         <motion.div
           className="pic-cont pic-cont-left"
           variants={itemSideMoveLeft}
