@@ -1,3 +1,5 @@
+// TODO: SLOW TRANSTION SPEED
+
 import './App.scss';
 import React from 'react';
 import AboutExp from './Components/AboutExp';

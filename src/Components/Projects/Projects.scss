@@ -1,4 +1,4 @@
-/* TODO:  
+/* TODO:  fix pictures, touch sides
 */
 
 @use 'src/Sass/global' as *;
@@ -15,7 +15,7 @@ $bkd-width: 10%;
   display: grid;
   grid-template-rows: min-content min-content $blurb-spacing-grid min-content $blurb-spacing-grid min-content $blurb-spacing-grid;
   @media (max-width: $mobile-width) {
-    grid-template-rows: min-content min-content min-content min-content min-content min-content min-content;
+    // grid-template-rows: min-content min-content min-content min-content min-content min-content min-content;
     // width: 40ch;
   }
 }
@@ -26,77 +26,49 @@ $bkd-width: 10%;
 
 .project-cont {
   position: relative;
-  // width: $middle-column-width;
   display: grid;
-  //fix 50% to non flex/%
   grid-template-columns: 50% 50%;
   align-items: center;
   @media (max-width: $mobile-width) {
     grid-template-columns: 1fr;
-    // grid-template-rows: fit-content fit-content;
-    // max-width: 40ch;
   }
-  // display: flex;
-  // align-items: center;
 }
 
 .pic-cont {
-  // grid-column: 2/3;
-  // grid-row: 1/2;
   z-index: 1;
   position: relative;
-  // max-width: 90%;
   max-height: 90%;
-  // width: 100%;
   margin-left: auto;
   margin-right: auto;
   aspect-ratio: 1/1;
   border-radius: 1rem;
   overflow: clip;
-  //MAYBE CHANGE TO BLACK
   border: 0.3rem solid black;
   @media (max-width: $mobile-width) {
-    // bottom: 50%;
     top: -2rem;
-    // max-width: 40ch;
     max-width: 100%;
-    // max-height: 100%;
-    // @include resp-clamp(
-    //   top,
-    //   $body-corner-padding-perc,
-    //   calc(-1 * $clamp-1),
-    //   calc(-1 * $clamp-2),
-    //   calc(-1 * $clamp-3)
-    // );
-    // height: 105%;
   }
   &-right {
     @media (max-width: $mobile-width) {
       // margin-left: auto;
       // margin-right: 0;
+      margin-left: -1rem;
+      margin-right: auto;
     }
-
-    // grid-column: 2/3;
-    // grid-row: 1/2;
   }
   &-left {
     @media (max-width: $mobile-width) {
-      // margin-left: 0;
+      // margin-left: -1rem;
       // margin-right: auto;
+      margin-left: auto;
+      margin-right: -1rem;
     }
-    // grid-column: 1/2;
-    // grid-row: 1/2;
   }
   &-right,
   &-left {
     @media (max-width: $mobile-width) {
     }
   }
-}
-
-.pepper-cont {
-  grid-column: 1/2;
-  grid-row: 1/2;
 }
 
 .project-blurb-bkd {
@@ -121,14 +93,6 @@ $bkd-width: 10%;
       right: auto;
     }
   }
-
-  // &-right,
-  // &-left {
-  //   @media (max-width: $mobile-width) {
-  //     order: 0;
-  //     right: auto;
-  //   }
-  // }
 }
 
 .project-bkd {
@@ -142,20 +106,16 @@ $bkd-width: 10%;
   height: 100%;
   position: relative;
   color: white;
-  @include resp-clamp(
-    padding,
-    $body-corner-padding-perc,
-    $clamp-1,
-    $clamp-2,
-    $clamp-3
-  );
+  // @include resp-clamp(
+  //   padding,
+  //   $body-corner-padding-perc,
+  //   $clamp-1,
+  //   $clamp-2,
+  //   $clamp-3
+  // );
   &-left {
-    // grid-column: 1/2;
-    // grid-row: 1/2;
   }
   &-right {
-    // grid-column: 2/3;
-    // grid-row: 1/2;
   }
 }
 
@@ -165,9 +125,10 @@ $bkd-width: 10%;
   }
 }
 
+//ADD BULLETS, MAKE LIKE TEXT
 .project-skills {
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
   color: $blue;
 }
 
@@ -175,7 +136,7 @@ $bkd-width: 10%;
   display: flex;
   & a {
     display: flex;
-    padding: 1rem;
-    padding-left: 0;
+    padding: 0.5rem;
+    // padding-left: 0;
   }
 }
