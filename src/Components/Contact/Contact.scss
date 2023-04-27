@@ -35,3 +35,8 @@
   text-align: center;
   // max-width: 90%;
 }
+
+.contact-head-cont,
+.contact-cont {
+  @include resp-width();
+}

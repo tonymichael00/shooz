@@ -46,7 +46,7 @@ const Projects = ({ contMotion }) => {
             variants={itemSideMoveLeft}
           >
             <div className="upper-project-txt">
-              <h3>Pepper</h3>
+              <h2>Pepper</h2>
               <p>
                 I’ve worked in graphic design at one of the largest construction
                 companies in Chicago and have been freelancing ever since. I
@@ -82,16 +82,21 @@ const Projects = ({ contMotion }) => {
             // variants={itemSideMoveRight}
           >
             <div className="upper-project-txt">
-              <h3>
+              <h2>
                 <a href="">Sanguine</a>
-              </h3>
+              </h2>
               <p>This is my sanguine app. Gaze upon it's splendor.</p>
             </div>
             <div className="lower-project-txt">
               <div className="project-skills">
-                <p>React</p>
+                <ul>
+                  <li>React</li>
+                  <li>Api</li>
+                  <li>Responsive</li>
+                </ul>
+                {/* <p>React</p>
                 <p>Api</p>
-                <p>Responsive</p>
+                <p>Responsive</p> */}
               </div>
               <div className="project-links">
                 <a href="">
@@ -136,7 +141,7 @@ const Projects = ({ contMotion }) => {
             variants={itemSideMoveLeft}
           >
             <div className="upper-project-txt">
-              <h3>Coloring Pad</h3>
+              <h2>Coloring Pad</h2>
               <p>So great.</p>
             </div>
           </div>

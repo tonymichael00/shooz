@@ -6,6 +6,14 @@
 $ham-spacing: 0.5rem;
 $nav-spacing: 1rem;
 
+//background clamp variables
+$bkd-clamp-1: 5rem;
+$bkd-clamp-2: 27vw;
+$bkd-clamp-3: 12rem;
+//bkd percentage size
+$bkd-perc: 0.6;
+$bkd-outline-perc: 0.1 * $bkd-perc;
+
 header {
   grid-column: 1/4;
   grid-row: 1/2;
@@ -84,6 +92,12 @@ nav {
       right: 0;
       // height: 10rem;
       background-color: black;
+      outline: $blue solid
+        clamp(
+          calc($bkd-clamp-1 * $bkd-outline-perc),
+          calc($bkd-clamp-2 * $bkd-outline-perc),
+          calc($bkd-clamp-3 * $bkd-outline-perc)
+        );
       line-height: 1;
       a {
         padding: $ham-spacing;

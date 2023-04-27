@@ -12,6 +12,7 @@ const Contact = ({ contMotion }) => {
   return (
     <div id="contact-sec">
       <motion.div
+        className="contact-head-cont"
         variants={contSideMove}
         initial="hidden"
         whileInView="visible"

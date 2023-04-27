@@ -10,7 +10,7 @@ const AboutMe = ({ contMotion }) => {
 
   const pepperWork = (
     <>
-      <h3>Assistant Marketing Coordinator</h3>
+      <h2>Assistant Marketing Coordinator</h2>
       <p>
         Assistant Marketing Coordinator Developed posters, advertisements,
         pamphlets, and proposals for one of the largest construction contractors
@@ -21,7 +21,7 @@ const AboutMe = ({ contMotion }) => {
 
   const freelanceWork = (
     <>
-      <h3>Owner</h3>
+      <h2>Owner</h2>
       <p>I own this website boooooooooooooooooooooooooooooy.</p>
     </>
   );
@@ -64,9 +64,9 @@ const AboutMe = ({ contMotion }) => {
             forecast. They were built using Vanilla Javascript and ReactJS
             respectively.
           </p>
-          <h3>
+          <h2>
             <p>Technical Skills</p>
-          </h3>
+          </h2>
           <ul>
             <li>Vanilla Javascript</li>
             <li>React</li>

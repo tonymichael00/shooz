@@ -1,4 +1,6 @@
 // TODO: SLOW TRANSTION SPEED
+// First, figure out text for project blurbs
+// figure out where to place links: github, linkedIn, resume, shooz email
 
 import './App.scss';
 import React from 'react';

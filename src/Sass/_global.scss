@@ -1,4 +1,5 @@
-$mobile-width: 40rem;
+$mobile-width: 35rem;
+$small-mobile-width: 30rem;
 $yellow: #f4ff0a;
 $blue: #13fafc;
 $black: #000000;
@@ -11,4 +12,12 @@ $blurb-spacing-grid: minmax(3rem, 1fr);
 //mixins
 @mixin resp-clamp($prop, $per, $clamp-1, $clamp-2, $clamp-3) {
   #{$prop}: clamp($clamp-1 * $per, $clamp-2 * $per, $clamp-3 * $per);
+}
+
+@mixin resp-width() {
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
