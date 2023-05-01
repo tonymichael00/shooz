@@ -48,12 +48,9 @@ const Projects = ({ contMotion }) => {
             <div className="upper-project-txt">
               <h2>Pepper</h2>
               <p>
-                I’ve worked in graphic design at one of the largest construction
-                companies in Chicago and have been freelancing ever since. I
-                just updated my skillset by teaching myself front end web
-                development. I built two projects: Color Sketchpad and Sanguine,
-                an ideal weather forecast. They were built using Vanilla
-                Javascript and ReactJS respectively.
+                Here are a few of my projects I worked on at Pepper. The white
+                onboarding binder was chosen by our printer for a design
+                contest.
               </p>
             </div>
           </motion.div>
@@ -85,7 +82,11 @@ const Projects = ({ contMotion }) => {
               <h2>
                 <a href="">Sanguine</a>
               </h2>
-              <p>This is my sanguine app. Gaze upon it's splendor.</p>
+              <p>
+                Coded in React, this site will help you find your preferred
+                weather in the upcoming week and color code it based on how much
+                it matches your preferred temperature.
+              </p>
             </div>
             <div className="lower-project-txt">
               <div className="project-skills">
@@ -94,9 +95,6 @@ const Projects = ({ contMotion }) => {
                   <li>Api</li>
                   <li>Responsive</li>
                 </ul>
-                {/* <p>React</p>
-                <p>Api</p>
-                <p>Responsive</p> */}
               </div>
               <div className="project-links">
                 <a href="">
@@ -142,7 +140,37 @@ const Projects = ({ contMotion }) => {
           >
             <div className="upper-project-txt">
               <h2>Coloring Pad</h2>
-              <p>So great.</p>
+              <p>
+                Coding challenge from the Odin Project. In Vanilla Javascript I
+                created an area where hovering the mouse will change a square a
+                random color. Subsequent hovers will darken it by 10%. You can
+                also change the number of squares up to 100x100.
+              </p>
+            </div>
+            <div className="lower-project-txt">
+              <div className="project-skills">
+                <ul>
+                  <li>Vanilla Javascript</li>
+                  <li>Api</li>
+                  <li>Responsive</li>
+                </ul>
+              </div>
+              <div className="project-links">
+                <a href="">
+                  <GithubLogo
+                    fill={'#13fafc'}
+                    height={'1.25.rem'}
+                    width={'1.25rem'}
+                  />
+                </a>
+                <a href="">
+                  <ExtLinkLogo
+                    fill={'#13fafc'}
+                    height={'1.25.rem'}
+                    width={'1.25rem'}
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </motion.div>

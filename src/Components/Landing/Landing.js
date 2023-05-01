@@ -16,8 +16,8 @@ const Landing = () => {
         animate={{ x: 0, opacity: 1 }}
         transition={{ type: 'tween' }}
       >
-        <motion.div id="side-shooz-bkd"></motion.div>
-        <motion.div id="shooz-bkd">
+        <div id="side-shooz-bkd"></div>
+        <div id="shooz-bkd">
           <p className="center-flex">
             <span className="yellow-txt center-flex">shooz</span>
           </p>
@@ -28,21 +28,16 @@ const Landing = () => {
               Mike Schuster
             </span>
           </p>
-        </motion.div>
+        </div>
       </motion.div>
-      <motion.div
-        id="title-caption-wrapper"
-        // initial={{ x: '100vw', opacity: 0 }}
-        // animate={{ x: 0, opacity: 1 }}
-        // transition={{ type: 'tween' }}
-      >
-        <motion.div
+      <motion.div id="title-caption-wrapper">
+        <div
           id="title-caption-side-bkd"
           initial={{ x: '100vw', opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ type: 'tween' }}
-        ></motion.div>
-        <motion.div
+        ></div>
+        <div
           id="title-caption-bkd"
           initial={{ x: '100vw', opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -50,7 +45,7 @@ const Landing = () => {
         >
           <p>I can help solve your web problems.</p>
           <p>Don't hesitate to contact me.</p>
-        </motion.div>
+        </div>
       </motion.div>
     </div>
   );

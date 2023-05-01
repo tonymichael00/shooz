@@ -1,3 +1,5 @@
+//TODO: CHANGE BULLETS TO BLUE
+
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import './AboutExp.scss';
@@ -11,18 +13,35 @@ const AboutMe = ({ contMotion }) => {
   const pepperWork = (
     <>
       <h2>Assistant Marketing Coordinator</h2>
-      <p>
-        Assistant Marketing Coordinator Developed posters, advertisements,
-        pamphlets, and proposals for one of the largest construction contractors
-        in Chicago Nominated by a printing vendor for a year-end award
-      </p>
+      <ul>
+        <li>
+          Developed posters, advertisements, pamphlets, and proposals for one of
+          the largest construction contractors in Chicago.
+        </li>
+        <li>Nominated by a printing vendor for a year-end award</li>
+        <li>
+          Designed company content including company intranet, jobsite posters,
+          logos and graphics
+        </li>
+        <li>Captured photos and videos for social media </li>
+        <li>
+          Oversaw complete development of multiple onboarding binders including
+          custom tabs, cover art, file organization and coordination with
+          printing vendor
+        </li>
+      </ul>
     </>
   );
 
   const freelanceWork = (
     <>
-      <h2>Owner</h2>
-      <p>I own this website boooooooooooooooooooooooooooooy.</p>
+      <h2>Owner, Shooz Media</h2>
+      <ul>
+        <li>Design and maintain websites</li>
+        <li>Capture photos</li>
+        <li>Create personalized website and marketing content</li>
+        <li>Received positive reviews that my sites directly increase sales</li>
+      </ul>
     </>
   );
 
@@ -57,22 +76,22 @@ const AboutMe = ({ contMotion }) => {
           variants={itemSideMoveRight}
         >
           <p>
-            I’ve worked in graphic design at one of the largest construction
-            companies in Chicago and have been freelancing ever since. I just
-            updated my skillset by teaching myself front end web development. I
-            built two projects: Color Sketchpad and Sanguine, an ideal weather
-            forecast. They were built using Vanilla Javascript and ReactJS
-            respectively.
+            I'm a freelance web developer who is currently looking for clients
+            and job opportunities. I can help your business find the correct
+            solution for your website needs.
           </p>
           <h2>
             <p>Technical Skills</p>
           </h2>
           <ul>
-            <li>Vanilla Javascript</li>
             <li>React</li>
-            <li>Node</li>
+            <li>Vanilla Javascript</li>
             <li>Sass</li>
+            <li>Node</li>
             <li>Framer Motion</li>
+            <li>Git</li>
+            <li>Linux</li>
+            <li>Design</li>
           </ul>
         </motion.div>
       </motion.div>
