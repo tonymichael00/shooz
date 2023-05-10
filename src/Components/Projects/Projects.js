@@ -1,8 +1,11 @@
+// TODO: MOVE PICTURE OVER?
+
 import { motion } from 'framer-motion';
 import React from 'react';
 import Carousel from './Carousel/Carousel';
 import './Projects.scss';
-import img1Webp from './Images/img1.webp';
+import sanguine from './Images/sanguine.webp';
+import coloringPad from './Images/coloringPad.webp';
 import GithubLogo from '../../Images/GithubLogo';
 import ExtLinkLogo from '../../Images/ExtLinkLogo';
 
@@ -119,7 +122,7 @@ const Projects = ({ contMotion }) => {
           className="pic-cont pic-cont-left"
           variants={itemSideMoveLeft}
         >
-          <img src={img1Webp} alt="Logo2" className="project-img" />
+          <img src={sanguine} alt="Logo2" className="project-img" />
         </motion.div>
       </motion.div>
       <div></div>
@@ -178,7 +181,7 @@ const Projects = ({ contMotion }) => {
           className="pic-cont pic-cont-right"
           variants={itemSideMoveRight}
         >
-          <img src={img1Webp} alt="Logo2" className="project-img" />
+          <img src={coloringPad} alt="Logo2" className="project-img" />
         </motion.div>
       </motion.div>
     </div>

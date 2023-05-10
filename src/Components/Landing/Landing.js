@@ -30,19 +30,14 @@ const Landing = () => {
           </p>
         </div>
       </motion.div>
-      <motion.div id="title-caption-wrapper">
-        <div
-          id="title-caption-side-bkd"
-          initial={{ x: '100vw', opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ type: 'tween' }}
-        ></div>
-        <div
-          id="title-caption-bkd"
-          initial={{ x: '100vw', opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ type: 'tween' }}
-        >
+      <motion.div
+        id="title-caption-wrapper"
+        initial={{ x: '100vw', opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ type: 'tween' }}
+      >
+        <div id="title-caption-side-bkd"></div>
+        <div id="title-caption-bkd">
           <p>I can help solve your web problems.</p>
           <p>Don't hesitate to contact me.</p>
         </div>

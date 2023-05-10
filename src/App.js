@@ -1,6 +1,7 @@
 // TODO: SLOW TRANSTION SPEED
 // First, figure out text for project blurbs
 // figure out where to place links: github, linkedIn, resume, shooz email
+//make projects a minimum height that looks good
 
 import './App.scss';
 import React from 'react';
@@ -51,7 +52,7 @@ function App() {
 
   const viewportAni = {
     headView: { once: true, amount: 1 },
-    blurbView: { once: true, amount: 0.1 },
+    blurbView: { once: true, amount: 0.8 },
   };
 
   return (
