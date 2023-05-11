@@ -45,6 +45,10 @@ const Projects = ({ contMotion }) => {
           variants={itemSideMoveLeft}
         >
           <motion.div
+            className="blurb project-blurb-bkd project-blurb-bkd-left project-blurb-bkd-color"
+            // variants={itemSideMoveRight}
+          ></motion.div>
+          <motion.div
             className="project-blurb-txt project-blurb-txt-left"
             variants={itemSideMoveLeft}
           >
