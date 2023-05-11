@@ -60,7 +60,12 @@ const NavBar = () => {
         </motion.a>
         {/* div to create space in grid */}
 
-        <motion.div id="ham-menu" initial={{ y: '-200%' }} animate={{ y: 0 }}>
+        <motion.div
+          id="ham-menu"
+          initial={{ y: '-200%' }}
+          animate={{ y: 0 }}
+          transition={{ type: 'tween' }}
+        >
           <HamMenu setClickMenu={setClickMenu} clickMenu={clickMenu} />
         </motion.div>
         {/* DONT REMOVE NAV-LINKS-CONT OR NAV-LINKS FROM CLASSNAME */}

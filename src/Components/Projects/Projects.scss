@@ -9,12 +9,14 @@ $body-corner-padding-perc: (0.2 * $body-perc) + 0.02;
 $clamp-1: 6rem;
 $clamp-2: 30vw;
 $clamp-3: 9rem;
-$bkd-width: 10%;
+$bkd-width: 50%;
 
 #projects-sec {
   grid-column: 2/3;
   display: grid;
-  grid-template-rows: min-content min-content $blurb-spacing-grid min-content $blurb-spacing-grid min-content $blurb-spacing-grid;
+  grid-template-rows:
+    auto auto $blurb-spacing-grid auto
+    $blurb-spacing-grid auto $blurb-spacing-grid;
   @media (max-width: $mobile-width) {
     // grid-template-rows: min-content min-content min-content min-content min-content min-content min-content;
     // width: 40ch;
@@ -29,11 +31,29 @@ $bkd-width: 10%;
 .project-cont {
   position: relative;
   display: grid;
-  grid-template-columns: 50% 50%;
+  // max-height: 90%;
+  // width: 90%;
+  // grid-template-columns: 50% 50%;
   align-items: center;
   @include resp-width();
   @media (max-width: $mobile-width) {
     grid-template-columns: 1fr;
+  }
+  &-pic-right {
+    grid-template-columns: 40% 60%;
+    @media (max-width: $mobile-width) {
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      max-height: 100%;
+    }
+  }
+  &-pic-left {
+    grid-template-columns: 60% 40%;
+    @media (max-width: $mobile-width) {
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      max-height: 100%;
+    }
   }
 }
 
@@ -41,27 +61,29 @@ $bkd-width: 10%;
   z-index: 1;
   position: relative;
   max-height: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  // width: 110%;
+  // margin-left: auto;
+  // margin-right: auto;
   aspect-ratio: 1/1;
   border-radius: 1rem;
   overflow: clip;
   border: 0.3rem solid black;
   @media (max-width: $small-mobile-width) {
-    top: 0rem;
-    max-width: 100%;
+    top: -1rem;
+    max-width: 90%;
     max-height: 100%;
     width: 100%;
     margin-right: auto;
     margin-left: auto;
   }
-  @media (max-width: $mobile-width) and (min-width: $small-mobile-width) {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: auto;
-  }
+  // @media (max-width: $mobile-width) and (min-width: $small-mobile-width) {
+  //   width: 100%;
+  //   margin-right: auto;
+  //   margin-left: auto;
+  //   margin-bottom: auto;
+  // }
   &-right {
+    margin-left: auto;
     @media (max-width: $mobile-width) {
       // margin-left: auto;
       // margin-right: 0;
@@ -70,6 +92,7 @@ $bkd-width: 10%;
     }
   }
   &-left {
+    margin-right: auto;
     @media (max-width: $mobile-width) {
       // margin-left: -1rem;
       // margin-right: auto;
@@ -90,6 +113,10 @@ $bkd-width: 10%;
   height: 100%;
   @media (max-width: $mobile-width) {
     width: 100%;
+    height: 150%;
+    // top: 50%;
+    align-self: flex-start;
+    // bottom: 3rem;
   }
   &-left {
     order: 0;
@@ -138,9 +165,16 @@ $bkd-width: 10%;
   }
 }
 
+.lower-project-txt {
+  padding-top: 0.5rem;
+}
+
 //ADD BULLETS, MAKE LIKE TEXT
 .project-skills {
   color: $blue;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
   & ul {
     padding-left: 0;
     margin: 0;

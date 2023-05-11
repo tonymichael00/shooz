@@ -34,7 +34,7 @@ const Projects = ({ contMotion }) => {
         </motion.div>
       </motion.div>
       <motion.div
-        className="project-cont"
+        className="project-cont project-cont-pic-right"
         variants={contSideMove}
         initial="hidden"
         whileInView="visible"
@@ -67,7 +67,7 @@ const Projects = ({ contMotion }) => {
       </motion.div>
       <div></div>
       <motion.div
-        className="project-cont"
+        className="project-cont project-cont-pic-left"
         variants={contSideMove}
         initial="hidden"
         whileInView="visible"
@@ -127,7 +127,7 @@ const Projects = ({ contMotion }) => {
       </motion.div>
       <div></div>
       <motion.div
-        className="project-cont"
+        className="project-cont project-cont-pic-right"
         variants={contSideMove}
         initial="hidden"
         whileInView="visible"

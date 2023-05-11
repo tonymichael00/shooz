@@ -18,7 +18,7 @@ function App() {
     },
     visible: {
       x: 0,
-      transition: { type: 'tween' },
+      transition: { type: 'tween', duration: 0.4 },
     },
     // viewed: { once: true, amount: 1 },
   };
@@ -31,7 +31,7 @@ function App() {
     visible: {
       x: 0,
       opacity: 1,
-      transition: { type: 'tween' },
+      transition: { type: 'tween', duration: 0.4 },
     },
     // viewed: { once: true, amount: 1 },
   };
@@ -45,14 +45,14 @@ function App() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { type: 'tween' },
+      transition: { type: 'tween', duration: 0.4 },
     },
     // viewed: { once: true, amount: 1 },
   };
 
   const viewportAni = {
     headView: { once: true, amount: 1 },
-    blurbView: { once: true, amount: 0.8 },
+    blurbView: { once: true, amount: 0.5 },
   };
 
   return (
