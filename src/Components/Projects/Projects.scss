@@ -15,7 +15,7 @@ $bkd-width: 50%;
   grid-column: 2/3;
   display: grid;
   grid-template-rows:
-    auto auto $blurb-spacing-grid auto
+    auto clamp(12rem, 40vw, 21rem) $blurb-spacing-grid auto
     $blurb-spacing-grid auto $blurb-spacing-grid;
   @media (max-width: $mobile-width) {
     // grid-template-rows: min-content min-content min-content min-content min-content min-content min-content;
@@ -31,6 +31,8 @@ $bkd-width: 50%;
 .project-cont {
   position: relative;
   display: grid;
+  gap: 1rem;
+  // min-height: 20rem;
   // max-height: 90%;
   // width: 90%;
   // grid-template-columns: 50% 50%;
@@ -40,7 +42,7 @@ $bkd-width: 50%;
     grid-template-columns: 1fr;
   }
   &-pic-right {
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 60% 40%;
     @media (max-width: $mobile-width) {
       grid-template-columns: auto;
       grid-template-rows: auto auto;
@@ -48,7 +50,7 @@ $bkd-width: 50%;
     }
   }
   &-pic-left {
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 40% 60%;
     @media (max-width: $mobile-width) {
       grid-template-columns: auto;
       grid-template-rows: auto auto;
@@ -60,7 +62,7 @@ $bkd-width: 50%;
 .pic-cont {
   z-index: 1;
   position: relative;
-  max-height: 90%;
+  // max-height: 90%;
   // width: 110%;
   // margin-left: auto;
   // margin-right: auto;
@@ -124,15 +126,12 @@ $bkd-width: 50%;
     top: 0;
     left: 0;
     height: 100%;
-    width: 150%;
+    width: 100%;
     background-color: green;
   }
   &-left {
     order: 0;
-    // @media (max-width: $mobile-width) {
-    //   order: 0;
-    //   right: auto;
-    // }
+    // padding-right: 0;
   }
   &-right {
     order: 1;
@@ -144,10 +143,6 @@ $bkd-width: 50%;
   }
 }
 
-.project-bkd {
-  position: absolute;
-}
-
 .project-blurb-txt {
   align-self: flex-start;
   display: grid;
@@ -155,17 +150,6 @@ $bkd-width: 50%;
   height: 100%;
   position: relative;
   color: white;
-  // @include resp-clamp(
-  //   padding,
-  //   $body-corner-padding-perc,
-  //   $clamp-1,
-  //   $clamp-2,
-  //   $clamp-3
-  // );
-  &-left {
-  }
-  &-right {
-  }
 }
 
 .upper-project-txt {
