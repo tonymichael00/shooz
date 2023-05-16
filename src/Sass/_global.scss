@@ -1,4 +1,4 @@
-$mobile-width: 35rem;
+$mobile-width: 45rem;
 $small-mobile-width: 30rem;
 $yellow: #f4ff0a;
 $blue: #13fafc;
@@ -6,6 +6,7 @@ $black: #000000;
 $round-corner: clamp(0.5rem, 5vw, 0.9rem);
 $nav-height: 4rem;
 $middle-column-width: min(80ch, 92vw);
+$mobile-middle-column-width: min(30ch, 92vw);
 $blurb-spacing-grid: minmax(3rem, auto);
 // $middle-column-width: max(20rem, 50vw);
 
@@ -16,7 +17,7 @@ $blurb-spacing-grid: minmax(3rem, auto);
 
 @mixin resp-width() {
   @media (max-width: $mobile-width) {
-    width: 100%;
+    width: min(40ch, 92vw);
     margin-left: auto;
     margin-right: auto;
   }

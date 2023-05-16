@@ -34,7 +34,6 @@ $caption-outline-perc: 0.03 * $caption-perc;
 #landing {
   grid-column: 1/4;
   display: grid;
-  width: 100vw;
   grid-template-columns: 1fr max(20rem, 70vw) 1fr;
   grid-template-rows:
     min-content minmax(3rem, 1fr) min-content minmax(3rem, 1fr)

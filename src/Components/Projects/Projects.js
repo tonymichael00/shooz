@@ -10,15 +10,14 @@ import GithubLogo from '../../Images/GithubLogo';
 import ExtLinkLogo from '../../Images/ExtLinkLogo';
 
 const Projects = ({ contMotion }) => {
-  const { contSideMove, itemSideMoveLeft, itemSideMoveRight, viewportAni } =
-    contMotion;
+  const { itemSideMoveLeft, itemSideMoveRight, viewportAni } = contMotion;
   const { headView, blurbView } = viewportAni;
 
   return (
     <div id="projects-sec">
       <motion.div
         id="projects-head-cont"
-        variants={contSideMove}
+        // variants={itemSideMoveLeft}
         initial="hidden"
         whileInView="visible"
         viewport={headView}
@@ -35,19 +34,23 @@ const Projects = ({ contMotion }) => {
       </motion.div>
       <motion.div
         className="project-cont project-cont-pic-right"
-        variants={contSideMove}
+        // variants={contSideMove}
         initial="hidden"
         whileInView="visible"
         viewport={blurbView}
       >
         <motion.div
+          className="mobile-project-bkd"
+          variants={itemSideMoveRight}
+        ></motion.div>
+        <motion.div
           className="blurb project-blurb-bkd project-blurb-bkd-left"
-          variants={itemSideMoveLeft}
+          variants={itemSideMoveRight}
         >
           <motion.div className="blurb project-blurb-bkd project-blurb-bkd-left project-blurb-bkd-color"></motion.div>
           <motion.div
             className="project-blurb-txt project-blurb-txt-left"
-            variants={itemSideMoveLeft}
+            variants={itemSideMoveRight}
           >
             <div className="upper-project-txt">
               <h2>Pepper</h2>
@@ -69,18 +72,22 @@ const Projects = ({ contMotion }) => {
       <div></div>
       <motion.div
         className="project-cont project-cont-pic-left"
-        variants={contSideMove}
+        // variants={itemSideMoveRight}
         initial="hidden"
         whileInView="visible"
         viewport={blurbView}
       >
         <motion.div
+          className="mobile-project-bkd"
+          variants={itemSideMoveLeft}
+        ></motion.div>
+        <motion.div
           className="blurb project-blurb-bkd project-blurb-bkd-right"
-          variants={itemSideMoveRight}
+          variants={itemSideMoveLeft}
         >
           <div
             className="project-blurb-txt project-blurb-txt-right"
-            // variants={itemSideMoveRight}
+            // variants={itemSideMoveLeft}
           >
             <div className="upper-project-txt">
               <h2>
@@ -129,18 +136,22 @@ const Projects = ({ contMotion }) => {
       <div></div>
       <motion.div
         className="project-cont project-cont-pic-right"
-        variants={contSideMove}
+        // variants={itemSideMoveLeft}
         initial="hidden"
         whileInView="visible"
         viewport={blurbView}
       >
         <motion.div
+          className="mobile-project-bkd"
+          variants={itemSideMoveRight}
+        ></motion.div>
+        <motion.div
           className="blurb project-blurb-bkd project-blurb-bkd-left"
-          variants={itemSideMoveLeft}
+          variants={itemSideMoveRight}
         >
           <div
             className="project-blurb-txt project-blurb-txt-left"
-            variants={itemSideMoveLeft}
+            variants={itemSideMoveRight}
           >
             <div className="upper-project-txt">
               <h2>Coloring Pad</h2>

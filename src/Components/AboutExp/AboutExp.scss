@@ -9,6 +9,7 @@
   display: grid;
   grid-template-rows: min-content min-content $blurb-spacing-grid min-content min-content $blurb-spacing-grid;
   // grid-template-columns: fit-content;
+  @include resp-width();
 }
 
 #about-head-link {

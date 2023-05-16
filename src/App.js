@@ -12,16 +12,6 @@ import Landing from './Components/Landing';
 
 function App() {
   //variants
-  const contSideMove = {
-    hidden: {
-      x: 0,
-    },
-    visible: {
-      x: 0,
-      transition: { type: 'tween', duration: 0.4 },
-    },
-    // viewed: { once: true, amount: 1 },
-  };
 
   const itemSideMoveLeft = {
     hidden: {
@@ -62,7 +52,6 @@ function App() {
         contMotion={{
           itemSideMoveLeft,
           itemSideMoveRight,
-          contSideMove,
           viewportAni,
         }}
       />
@@ -70,7 +59,6 @@ function App() {
         contMotion={{
           itemSideMoveLeft,
           itemSideMoveRight,
-          contSideMove,
           viewportAni,
         }}
       />
@@ -78,7 +66,6 @@ function App() {
         contMotion={{
           itemSideMoveLeft,
           itemSideMoveRight,
-          contSideMove,
           viewportAni,
         }}
       />
