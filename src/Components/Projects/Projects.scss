@@ -4,19 +4,20 @@ ADD MEDIA QUERY IN BETWEEN MOBILE/DESKTOP SIZES FOR PIC-CONT
 
 @use 'src/Sass/global' as *;
 
-$body-perc: 0.7;
-$body-corner-padding-perc: (0.2 * $body-perc) + 0.02;
-$clamp-1: 6rem;
-$clamp-2: 30vw;
-$clamp-3: 9rem;
+// $body-perc: 0.7;
+// $body-corner-padding-perc: (0.2 * $body-perc) + 0.02;
+// $clamp-1: 8rem;
+// $clamp-2: 15vw;
+// $clamp-3: 9rem;
 $bkd-width: 50%;
 
 #projects-sec {
   grid-column: 2/3;
   display: grid;
   grid-template-rows:
-    auto clamp(12rem, 40vw, 21rem) $blurb-spacing-grid auto
+    auto auto $blurb-spacing-grid auto
     $blurb-spacing-grid auto $blurb-spacing-grid;
+  // grid-template-columns: min-content;
   @media (max-width: $mobile-width) {
     // grid-template-rows: min-content min-content min-content min-content min-content min-content min-content;
     // width: 40ch;
@@ -31,7 +32,7 @@ $bkd-width: 50%;
 .project-cont {
   position: relative;
   display: grid;
-  gap: 1rem;
+  gap: 0.5rem;
   // min-height: 20rem;
   // max-height: 90%;
   // width: 90%;
@@ -42,7 +43,7 @@ $bkd-width: 50%;
     grid-template-columns: 1fr;
   }
   &-pic-right {
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 60fr minmax(20rem, 40fr);
     @media (max-width: $mobile-width) {
       grid-template-columns: auto;
       grid-template-rows: auto auto;
@@ -50,7 +51,7 @@ $bkd-width: 50%;
     }
   }
   &-pic-left {
-    grid-template-columns: 40% 60%;
+    grid-template-columns: minmax(20rem, 40fr) 60fr;
     @media (max-width: $mobile-width) {
       grid-template-columns: auto;
       grid-template-rows: auto auto;
@@ -69,14 +70,15 @@ $bkd-width: 50%;
   aspect-ratio: 1/1;
   border-radius: 1rem;
   overflow: clip;
-  border: 0.3rem solid black;
+  border: 0.4rem solid black;
   @media (max-width: $small-mobile-width) {
     top: -1rem;
-    max-width: 90%;
+    // max-width: 90%;
     max-height: 100%;
     width: 100%;
     margin-right: auto;
     margin-left: auto;
+    border: 0.4rem solid green;
   }
   // @media (max-width: $mobile-width) and (min-width: $small-mobile-width) {
   //   width: 100%;
@@ -116,7 +118,7 @@ $bkd-width: 50%;
   // padding: 0;
   @media (max-width: $mobile-width) {
     width: 100%;
-    height: 150%;
+    // height: 150%;
     // top: 50%;
     align-self: flex-start;
     // bottom: 3rem;
@@ -127,7 +129,7 @@ $bkd-width: 50%;
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: green;
+    background-color: black;
   }
   &-left {
     order: 0;
@@ -159,14 +161,14 @@ $bkd-width: 50%;
 }
 
 .lower-project-txt {
-  padding-top: 0.5rem;
+  // padding-top: 0.5rem;
 }
 
 //ADD BULLETS, MAKE LIKE TEXT
 .project-skills {
   color: $blue;
   padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  // padding-bottom: 0.5rem;
 
   & ul {
     padding-left: 0;
@@ -177,16 +179,17 @@ $bkd-width: 50%;
     display: inline-block;
     padding-left: 1rem;
     &:first-child {
-      padding-left: 0.5rem;
+      padding-left: 0rem;
     }
   }
 }
 
 .project-links {
   display: flex;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
   & a {
     display: flex;
-    padding: 0.5rem;
-    // padding-left: 0;
+    padding: 0;
   }
 }

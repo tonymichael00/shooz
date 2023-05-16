@@ -1,5 +1,6 @@
 /* TODO: DOUBLE CHECK CSS RESET FOR REDUNDANCY. 
 FIGURE OUT WHY APP.SCSS OVERRIDES EVERYTHING
+FIX WHERE IVE WORKED PADDING
 */
 /* ESPECIALLY PERSONAL RESET AT BOTTOM */
 
@@ -178,12 +179,10 @@ $body-font-perc: (0.17 * $body-perc) + 0.02;
   h1,
   h2,
   h3 {
-    padding: 0.4rem;
+    padding: 0;
   }
-  h1,
-  h2,
-  h3 {
-    // line-height: 1;
+  p {
+    padding-top: 0.5rem;
   }
 }
 
