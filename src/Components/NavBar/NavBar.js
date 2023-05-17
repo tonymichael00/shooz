@@ -103,6 +103,13 @@ const NavBar = () => {
           >
             Contact
           </motion.a>
+          <motion.a
+            href="https://drive.google.com/uc?export=download&id=1oHHNpUI-g-H1eaPRs6WQVsKTDm8Ju5fU"
+            className={`nav-links ${navLinksToggle} nav-links-button`}
+            variants={linkVariants}
+          >
+            Resume
+          </motion.a>
         </motion.div>
       </motion.nav>
     </header>

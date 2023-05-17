@@ -28,6 +28,9 @@
 
 #about-body {
   font-weight: 500;
+  p {
+    padding-top: 0;
+  }
   ul {
     column-count: 2;
   }

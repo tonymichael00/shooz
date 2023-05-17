@@ -37,8 +37,10 @@ const Contact = ({ contMotion }) => {
           Feel free to contact me with your job. I’m always open to new work
           opportunities.
         </motion.div>
+        <a href="https://drive.google.com/uc?export=download&id=1oHHNpUI-g-H1eaPRs6WQVsKTDm8Ju5fU">
+          <button>resume</button>
+        </a>
       </motion.div>
-      <div className="contact-page-space"></div>
     </div>
   );
 };

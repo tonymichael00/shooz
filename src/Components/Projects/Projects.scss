@@ -94,13 +94,13 @@ $project-spacing-grid: 0.5rem;
   overflow: clip;
   border: 0.4rem solid black;
   @media (max-width: $small-mobile-width) {
-    top: -1rem;
+    // top: -1rem;
     // max-width: 90%;
     max-height: 100%;
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    border: 0.4rem solid green;
+    border: 0.4rem solid black;
   }
   // @media (max-width: $mobile-width) and (min-width: $small-mobile-width) {
   //   width: 100%;
