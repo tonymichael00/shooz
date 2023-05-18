@@ -30,6 +30,7 @@ const NavBar = () => {
         type: 'tween',
       },
     },
+    scaleSize: {},
   };
 
   const linkVariants = {
@@ -44,6 +45,16 @@ const NavBar = () => {
         type: 'tween',
       },
     },
+    scaleSize: {
+      scale: 1.1,
+      transition: { type: 'spring', duration: 0.3 },
+    },
+  };
+
+  const hoverAni = {
+    scale: 1.1,
+    // backgroundColor: 'hsla(62.7,100%,52%,25%)',
+    transition: { type: 'spring', duration: 0.3 },
   };
 
   return (
@@ -107,6 +118,7 @@ const NavBar = () => {
             href="https://drive.google.com/uc?export=download&id=1oHHNpUI-g-H1eaPRs6WQVsKTDm8Ju5fU"
             className={`nav-links ${navLinksToggle} nav-links-button`}
             variants={linkVariants}
+            whileHover={hoverAni}
           >
             Resume
           </motion.a>
