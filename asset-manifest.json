@@ -1,16 +1,22 @@
 {
   "files": {
-    "main.css": "/shooz/static/css/main.073c9b0a.css",
-    "main.js": "/shooz/static/js/main.91b13a7e.js",
+    "main.css": "/shooz/static/css/main.ef8858fa.css",
+    "main.js": "/shooz/static/js/main.61a47428.js",
     "static/js/787.9febe080.chunk.js": "/shooz/static/js/787.9febe080.chunk.js",
-    "static/media/logo.svg": "/shooz/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/sec4.webp": "/shooz/static/media/sec4.b35edb4cd7f71080a79c.webp",
+    "static/media/sec2.webp": "/shooz/static/media/sec2.1cacf6c901da15c69c61.webp",
+    "static/media/pepperLawson.webp": "/shooz/static/media/pepperLawson.507a574da071171e641a.webp",
+    "static/media/binder.webp": "/shooz/static/media/binder.3e158b2164b0f4e7d087.webp",
+    "static/media/safetyPoster.webp": "/shooz/static/media/safetyPoster.809d08f3ef893600c5f1.webp",
+    "static/media/sanguine.webp": "/shooz/static/media/sanguine.38b01fd2bb669e80f1e8.webp",
+    "static/media/coloringPad.webp": "/shooz/static/media/coloringPad.dbee2ac239f2ebe17e08.webp",
     "index.html": "/shooz/index.html",
-    "main.073c9b0a.css.map": "/shooz/static/css/main.073c9b0a.css.map",
-    "main.91b13a7e.js.map": "/shooz/static/js/main.91b13a7e.js.map",
+    "main.ef8858fa.css.map": "/shooz/static/css/main.ef8858fa.css.map",
+    "main.61a47428.js.map": "/shooz/static/js/main.61a47428.js.map",
     "787.9febe080.chunk.js.map": "/shooz/static/js/787.9febe080.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.91b13a7e.js"
+    "static/css/main.ef8858fa.css",
+    "static/js/main.61a47428.js"
   ]
 }
