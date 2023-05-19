@@ -42,7 +42,7 @@ const Contact = ({ contMotion }) => {
             opportunities.
           </p>
           <div className="project-links">
-            <p>shoozmedia@protonmail.com</p>
+            <p>shoozmedia@proton.me</p>
             <p>219-928-6120</p>
           </div>
           <div className="project-links">

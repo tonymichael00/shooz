@@ -12,16 +12,14 @@ $body-perc: 0.7;
 $body-corner-padding-perc: (0.17 * $body-perc) + 0.02;
 $body-font-perc: (0.17 * $body-perc) + 0.02;
 $bkd-width: 50%;
-$project-spacing-grid: 0.5rem;
+$project-spacing-grid: 1rem;
 
 #projects-sec {
-  // @include resp-width();
-
   grid-column: 2/3;
   display: grid;
   grid-template-rows:
     auto auto $project-spacing-grid auto
-    $project-spacing-grid auto $project-spacing-grid;
+    $project-spacing-grid auto $project-spacing-grid $blurb-spacing-grid;
   // grid-template-columns: min-content;
   @media (max-width: $mobile-width) {
     // grid-template-rows: min-content min-content min-content min-content min-content min-content min-content;
@@ -37,7 +35,7 @@ $project-spacing-grid: 0.5rem;
 .project-cont {
   position: relative;
   display: grid;
-  gap: 0.5rem;
+  gap: $project-spacing-grid;
   // min-height: 20rem;
   // max-height: 90%;
   // width: 90%;

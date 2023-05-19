@@ -7,7 +7,7 @@
   display: grid;
   grid-template-rows: min-content min-content $blurb-spacing-grid;
 
-  width: 70%;
+  width: 90%;
   margin-right: auto;
   margin-left: auto;
   grid-column: 2/3;
@@ -17,6 +17,9 @@
   }
 }
 
+#contact-sec .blurb p {
+  padding: 0;
+}
 // .contact-page-space {
 //   height: $blurb-spacing-grid;
 // }
@@ -41,7 +44,7 @@
   @include resp-width();
 }
 
-.project-links {
+#contact-sec .project-links {
   display: flex;
   justify-content: center;
   gap: 0.5rem;

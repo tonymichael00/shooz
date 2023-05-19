@@ -196,6 +196,7 @@ const Projects = ({ contMotion }) => {
           <img src={coloringPad} alt="Logo2" className="project-img" />
         </motion.div>
       </motion.div>
+      <div></div>
     </div>
   );
 };
