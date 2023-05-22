@@ -76,13 +76,10 @@ const AboutMe = ({ contMotion }) => {
           variants={itemSideMoveRight}
         >
           <p>
-            I'm a freelance web developer who is currently looking for clients
-            and job opportunities. I can help your business find the correct
-            solution for your website needs.
+            I'm a freelance web developer who is always looking for clients and
+            job opportunities. Let me know how I can help!
           </p>
-          <h2>
-            <p>Technical Skills</p>
-          </h2>
+          <h2>Technical Skills</h2>
           <ul>
             <li>React</li>
             <li>Vanilla Javascript</li>

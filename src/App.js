@@ -2,6 +2,12 @@
 // First, figure out text for project blurbs
 // figure out where to place links: github, linkedIn, resume, shooz email
 //make projects a minimum height that looks good
+// APPLE BUGS
+// CORNERS ARE SQUARE OR CUT OFF
+// LOWER LINKS ARE MESSED UP
+// ANDROID
+// NAV DOESN'T SHOW UNTIL YOU SCROLL BACK UP
+// WHAT IVE DONE, PEPPER TEXT MOVES AT DIFFERENT SPEED
 
 import './App.scss';
 import React from 'react';

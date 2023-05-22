@@ -46,17 +46,29 @@ const Contact = ({ contMotion }) => {
             <p>219-928-6120</p>
           </div>
           <div className="project-links">
-            <GithubLogo
-              fill={'#13fafc'}
-              height={'1.25.rem'}
-              width={'1.25rem'}
-            />
-            <LinkedInLogo
-              fill={'#13fafc'}
-              height={'1.25.rem'}
-              width={'1.25rem'}
-            />
-            {/* <EmailLogo fill={'#13fafc'} height={'1.25.rem'} width={'1.25rem'} /> */}
+            <a
+              href="https://github.com/tonymichael00"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GithubLogo
+                fill={'#13fafc'}
+                height={'1.25.rem'}
+                width={'1.25rem'}
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/michael-schuster-25817b64/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LinkedInLogo
+                fill={'#13fafc'}
+                height={'1.25.rem'}
+                width={'1.25rem'}
+              />
+              {/* <EmailLogo fill={'#13fafc'} height={'1.25.rem'} width={'1.25rem'} /> */}
+            </a>
             <motion.a
               href="https://drive.google.com/uc?export=download&id=1oHHNpUI-g-H1eaPRs6WQVsKTDm8Ju5fU"
               className={'project-links-button'}

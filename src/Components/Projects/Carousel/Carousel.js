@@ -33,32 +33,26 @@ const Carousel = () => {
       slides-per-view="auto"
       navigation="true"
       pagination="true"
-      // auto-height="true"
-      // height="100%"
-      // loop="true"
-      // fill="column"
       grab-cursor="true"
-      // scrollbar="true"
     >
       <swiper-slide>
-        <img src={binder} alt="Logo2" className="project-img" />
-        {/* {img2} */}
+        <img src={binder} alt="Onboarding binder" className="project-img" />
       </swiper-slide>
       <swiper-slide>
-        <img src={pepperLawson} alt="Logo2" className="project-img" />
-        {/* {img2} */}
+        <img src={sec2} alt="Onboarding Sec 1" className="project-img" />
+      </swiper-slide>
+      {/* <swiper-slide>
+        <img src={sec4} alt="Onboarding Sec 2" className="project-img" />
+      </swiper-slide> */}
+      <swiper-slide>
+        <img
+          src={pepperLawson}
+          alt="Lawson Values Poster"
+          className="project-img"
+        />
       </swiper-slide>
       <swiper-slide>
-        <img src={safetyPoster} alt="Logo2" className="project-img" />
-        {/* {img2} */}
-      </swiper-slide>
-      <swiper-slide>
-        <img src={sec2} alt="Logo2" className="project-img" />
-        {/* {img2} */}
-      </swiper-slide>
-      <swiper-slide>
-        <img src={sec4} alt="Logo2" className="project-img" />
-        {/* {img2} */}
+        <img src={safetyPoster} alt="Safety Poster" className="project-img" />
       </swiper-slide>
     </swiper-container>
   );

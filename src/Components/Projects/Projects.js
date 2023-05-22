@@ -54,11 +54,18 @@ const Projects = ({ contMotion }) => {
           >
             <div className="upper-project-txt">
               <h2>Pepper</h2>
-              <p>
-                Here are a few of my projects I worked on at Pepper. The white
-                onboarding binder was chosen by our printer for a design
-                contest.
-              </p>
+              <ol>
+                <li>
+                  My onboarding binder that was chosen by our printing company
+                  for a design contest.
+                </li>
+                <li>Onboarding section</li>
+                {/* <li>Onboarding section 4</li> */}
+                <li>Belief poster for our Texas branch</li>
+                <li>
+                  Safety poster we hung on jobsites. All logos are original.
+                </li>
+              </ol>
             </div>
           </motion.div>
         </motion.div>
@@ -85,13 +92,16 @@ const Projects = ({ contMotion }) => {
           className="blurb project-blurb-bkd project-blurb-bkd-right"
           variants={itemSideMoveLeft}
         >
-          <div
-            className="project-blurb-txt project-blurb-txt-right"
-            // variants={itemSideMoveLeft}
-          >
+          <div className="project-blurb-txt project-blurb-txt-right">
             <div className="upper-project-txt">
               <h2>
-                <a href="">Sanguine</a>
+                <a
+                  href="https://tonymichael00.github.io/sanguine/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Sanguine
+                </a>
               </h2>
               <p>
                 Coded in React, this site will help you find your preferred
@@ -108,14 +118,22 @@ const Projects = ({ contMotion }) => {
                 </ul>
               </div>
               <div className="project-links">
-                <a href="">
+                <a
+                  href="https://github.com/tonymichael00/sanguine/tree/main"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <GithubLogo
                     fill={'#13fafc'}
                     height={'1.25.rem'}
                     width={'1.25rem'}
                   />
                 </a>
-                <a href="">
+                <a
+                  href="https://tonymichael00.github.io/sanguine/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <ExtLinkLogo
                     fill={'#13fafc'}
                     height={'1.25.rem'}
@@ -154,7 +172,15 @@ const Projects = ({ contMotion }) => {
             variants={itemSideMoveRight}
           >
             <div className="upper-project-txt">
-              <h2>Coloring Pad</h2>
+              <h2>
+                <a
+                  href="https://tonymichael00.github.io/coloring-pad/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Coloring Pad
+                </a>
+              </h2>
               <p>
                 Coding challenge from the Odin Project. In Vanilla Javascript I
                 created an area where hovering the mouse will change a square a
@@ -166,19 +192,26 @@ const Projects = ({ contMotion }) => {
               <div className="project-skills">
                 <ul>
                   <li>Vanilla Javascript</li>
-                  <li>Api</li>
                   <li>Responsive</li>
                 </ul>
               </div>
               <div className="project-links">
-                <a href="">
+                <a
+                  href="https://github.com/tonymichael00/coloring-pad"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <GithubLogo
                     fill={'#13fafc'}
                     height={'1.25.rem'}
                     width={'1.25rem'}
                   />
                 </a>
-                <a href="">
+                <a
+                  href="https://tonymichael00.github.io/coloring-pad/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <ExtLinkLogo
                     fill={'#13fafc'}
                     height={'1.25.rem'}
