@@ -50,7 +50,7 @@ const Projects = ({ contMotion }) => {
           <motion.div className="blurb project-blurb-bkd project-blurb-bkd-left project-blurb-bkd-color"></motion.div>
           <motion.div
             className="project-blurb-txt project-blurb-txt-left"
-            variants={itemSideMoveRight}
+            // variants={itemSideMoveRight}
           >
             <div className="upper-project-txt">
               <h2>Pepper</h2>

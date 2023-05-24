@@ -60,6 +60,12 @@ $caption-outline-perc: 0.03 * $caption-perc;
   z-index: -1;
   left: 0;
   background-color: rgb(0, 0, 0);
+  -webkit-outline: $yellow solid
+    clamp(
+      calc($title-clamp-1 * $title-outline-perc),
+      calc($title-clamp-2 * $title-outline-perc),
+      calc($title-clamp-3 * $title-outline-perc)
+    );
   outline: $yellow solid
     clamp(
       calc($title-clamp-1 * $title-outline-perc),
