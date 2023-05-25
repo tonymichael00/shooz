@@ -60,18 +60,69 @@ $caption-outline-perc: 0.03 * $caption-perc;
   z-index: -1;
   left: 0;
   background-color: rgb(0, 0, 0);
-  -webkit-outline: $yellow solid
-    clamp(
-      calc($title-clamp-1 * $title-outline-perc),
-      calc($title-clamp-2 * $title-outline-perc),
-      calc($title-clamp-3 * $title-outline-perc)
+  // outline: $yellow solid
+  //   clamp(
+  //     calc($title-clamp-1 * $title-outline-perc),
+  //     calc($title-clamp-2 * $title-outline-perc),
+  //     calc($title-clamp-3 * $title-outline-perc)
+  //   );
+  &::before {
+    position: absolute;
+    content: '';
+    left: clamp(
+      calc($title-clamp-1 * $title-outline-perc * -1),
+      calc($title-clamp-2 * $title-outline-perc * -1),
+      calc($title-clamp-3 * $title-outline-perc * -1)
     );
-  outline: $yellow solid
-    clamp(
-      calc($title-clamp-1 * $title-outline-perc),
-      calc($title-clamp-2 * $title-outline-perc),
-      calc($title-clamp-3 * $title-outline-perc)
+    top: clamp(
+      calc($title-clamp-1 * $title-outline-perc * -1),
+      calc($title-clamp-2 * $title-outline-perc * -1),
+      calc($title-clamp-3 * $title-outline-perc * -1)
     );
+    bottom: clamp(
+      calc($title-clamp-1 * $title-outline-perc * -1),
+      calc($title-clamp-2 * $title-outline-perc * -1),
+      calc($title-clamp-3 * $title-outline-perc * -1)
+    );
+    right: clamp(
+      calc($title-clamp-1 * $title-outline-perc * -1),
+      calc($title-clamp-2 * $title-outline-perc * -1),
+      calc($title-clamp-3 * $title-outline-perc * -1)
+    );
+    border-top: $yellow solid
+      clamp(
+        calc($title-clamp-1 * $title-outline-perc),
+        calc($title-clamp-2 * $title-outline-perc),
+        calc($title-clamp-3 * $title-outline-perc)
+      );
+    border-bottom: $yellow solid
+      clamp(
+        calc($title-clamp-1 * $title-outline-perc),
+        calc($title-clamp-2 * $title-outline-perc),
+        calc($title-clamp-3 * $title-outline-perc)
+      );
+    border-right: $yellow solid
+      clamp(
+        calc($title-clamp-1 * $title-outline-perc),
+        calc($title-clamp-2 * $title-outline-perc),
+        calc($title-clamp-3 * $title-outline-perc)
+      );
+
+    @include resp-clamp(
+      border-top-right-radius,
+      $title-corner-padding-perc,
+      $title-clamp-1,
+      $title-clamp-2,
+      $title-clamp-3
+    );
+    @include resp-clamp(
+      border-bottom-right-radius,
+      $title-corner-padding-perc,
+      $title-clamp-1,
+      $title-clamp-2,
+      $title-clamp-3
+    );
+  }
   @include resp-clamp(
     border-top-right-radius,
     $title-corner-padding-perc,
@@ -95,7 +146,7 @@ $caption-outline-perc: 0.03 * $caption-perc;
   align-items: center;
   grid-column: 2/3;
   font-weight: 700;
-  background-color: black;
+  background-color: none;
   @include resp-clamp(
     padding-right,
     $title-corner-padding-perc,
