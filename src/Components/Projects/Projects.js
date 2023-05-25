@@ -148,7 +148,11 @@ const Projects = ({ contMotion }) => {
           className="pic-cont pic-cont-left"
           variants={itemSideMoveLeft}
         >
-          <img src={sanguine} alt="Logo2" className="project-img" />
+          <img
+            src={sanguine}
+            alt="Logo2"
+            className="project-img"
+          />
         </motion.div>
       </motion.div>
       <div></div>
@@ -226,7 +230,11 @@ const Projects = ({ contMotion }) => {
           className="pic-cont pic-cont-right"
           variants={itemSideMoveRight}
         >
-          <img src={coloringPad} alt="Logo2" className="project-img" />
+          <img
+            src={coloringPad}
+            alt="Logo2"
+            className="project-img"
+          />
         </motion.div>
       </motion.div>
       <div></div>

@@ -85,7 +85,7 @@ $project-spacing-grid: 1rem;
   position: relative;
   aspect-ratio: 1/1;
   border-radius: 1rem;
-  overflow: clip;
+  overflow: hidden;
   border: 0.4rem solid black;
   @media (max-width: $small-mobile-width) {
     max-height: 100%;
