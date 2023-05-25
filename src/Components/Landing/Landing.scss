@@ -1,7 +1,4 @@
-/* TODO:  adjust spacing for mobile
-fix landing height
-look into adding blue outline to title
-add yellow outline around clicked hamburger menu
+/* TODO:  
 */
 
 @use 'src/Sass/global' as *;
@@ -86,80 +83,6 @@ $caption-outline-perc: 0.03 * $caption-perc;
       $title-clamp-3 * $title-outline-perc
     )
     yellow;
-
-  // &::before {
-  //   z-index: -2;
-  //   position: absolute;
-  //   content: '';
-  //   @include resp-clamp(
-  //     left,
-  //     calc(-1 * $title-corner-padding-perc),
-  //     $title-clamp-1,
-  //     $title-clamp-2,
-  //     $title-clamp-3
-  //   );
-  //   @include resp-clamp(
-  //     top,
-  //     calc(-1 * $title-corner-padding-perc),
-  //     $title-clamp-1,
-  //     $title-clamp-2,
-  //     $title-clamp-3
-  //   );
-  //   @include resp-clamp(
-  //     right,
-  //     calc(-1 * $title-corner-padding-perc),
-  //     $title-clamp-1,
-  //     $title-clamp-2,
-  //     $title-clamp-3
-  //   );
-  //   @include resp-clamp(
-  //     bottom,
-  //     calc(-1 * $title-corner-padding-perc),
-  //     $title-clamp-1,
-  //     $title-clamp-2,
-  //     $title-clamp-3
-  //   );
-  //   box-shadow: inset 0 0 0 5rem yellow;
-
-  // @include resp-clamp(
-  //   border-right,
-  //   $title-corner-padding-perc,
-  //   $title-clamp-1,
-  //   $title-clamp-2,
-  //   $title-clamp-3,
-  //   $yellow solid
-  // );
-  // @include resp-clamp(
-  //   border-top,
-  //   $title-corner-padding-perc,
-  //   $title-clamp-1,
-  //   $title-clamp-2,
-  //   $title-clamp-3,
-  //   $yellow solid
-  // );
-  // @include resp-clamp(
-  //   border-bottom,
-  //   $title-corner-padding-perc,
-  //   $title-clamp-1,
-  //   $title-clamp-2,
-  //   $title-clamp-3,
-  //   $yellow solid
-  // );
-  // @include resp-clamp(
-  //   border-top-right-radius,
-  //   $title-corner-padding-perc,
-  //   $title-clamp-1,
-  //   $title-clamp-2,
-  //   $title-clamp-3
-  // );
-  // @include resp-clamp(
-  //   border-bottom-right-radius,
-  //   $title-corner-padding-perc,
-  //   $title-clamp-1,
-  //   $title-clamp-2,
-  //   $title-clamp-3
-  // );
-  // }
 }
 
 #shooz-bkd {
@@ -305,12 +228,19 @@ $caption-outline-perc: 0.03 * $caption-perc;
   height: 100%;
   width: 100%;
   background-color: $black;
-  outline: $blue solid
+  // outline: $blue solid
+  //   clamp(
+  //     calc($caption-clamp-1 * $caption-outline-perc),
+  //     calc($caption-clamp-2 * $caption-outline-perc),
+  //     calc($caption-clamp-3 * $caption-outline-perc)
+  //   );
+  box-shadow: 0 0 0
     clamp(
       calc($caption-clamp-1 * $caption-outline-perc),
       calc($caption-clamp-2 * $caption-outline-perc),
       calc($caption-clamp-3 * $caption-outline-perc)
-    );
+    )
+    $blue;
   @include resp-clamp(
     border-top-left-radius,
     $caption-padding-perc,

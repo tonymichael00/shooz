@@ -8,6 +8,8 @@
 // ANDROID
 // NAV DOESN'T SHOW UNTIL YOU SCROLL BACK UP
 // WHAT IVE DONE, PEPPER TEXT MOVES AT DIFFERENT SPEED  FIXED
+// contacts, phone and email squish in apple phone
+// replace shooz logo with svg
 
 import './App.scss';
 import React from 'react';
