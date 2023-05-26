@@ -6,7 +6,11 @@ import { motion } from 'framer-motion';
 // TODO: maybe add blue glow to title shapes
 // use varaints in app.js to propogate to children
 
-const Landing = () => {
+const Landing = ({ contMotion }) => {
+  const { contSideMove, itemSideMoveLeft, itemSideMoveRight, viewportAni } =
+    contMotion;
+  const { headView, blurbView } = viewportAni;
+
   return (
     <div id="landing">
       <NavBar />
@@ -15,6 +19,8 @@ const Landing = () => {
         initial={{ x: '-100vw', opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ type: 'tween' }}
+        // whileInView="visible"
+        // viewport={blurbView}
       >
         <div id="side-shooz-bkd"></div>
         <div id="shooz-bkd">

@@ -5,8 +5,6 @@
 // LOWER LINKS ARE MESSED UP
 // ANDROID
 // NAV DOESN'T SHOW UNTIL YOU SCROLL BACK UP
-// WHAT IVE DONE, PEPPER TEXT MOVES AT DIFFERENT SPEED  FIXED
-// contacts, phone and email squish in apple phone
 // replace shooz logo with svg
 
 import './App.scss';
@@ -53,7 +51,13 @@ function App() {
 
   return (
     <div id="content">
-      <Landing />
+      <Landing
+        contMotion={{
+          itemSideMoveLeft,
+          itemSideMoveRight,
+          viewportAni,
+        }}
+      />
       <AboutExp
         contMotion={{
           itemSideMoveLeft,

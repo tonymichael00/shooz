@@ -30,7 +30,7 @@ const NavBar = () => {
         type: 'tween',
       },
     },
-    scaleSize: {},
+    // scaleSize: {},
   };
 
   const linkVariants = {
@@ -45,10 +45,10 @@ const NavBar = () => {
         type: 'tween',
       },
     },
-    scaleSize: {
-      scale: 1.1,
-      transition: { type: 'spring', duration: 0.3 },
-    },
+    // scaleSize: {
+    //   scale: 1.1,
+    //   transition: { type: 'spring', duration: 0.3 },
+    // },
   };
 
   const hoverAni = {
@@ -59,7 +59,7 @@ const NavBar = () => {
 
   return (
     <header>
-      <motion.nav id="nav-bar">
+      <nav id="nav-bar">
         <motion.a
           href=""
           className="logo center-flex"
@@ -67,7 +67,11 @@ const NavBar = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ type: 'tween' }}
         >
-          <img src={logo} alt="Logo" className="center-flex" />
+          <img
+            src={logo}
+            alt="Logo"
+            className="center-flex"
+          />
         </motion.a>
         {/* div to create space in grid */}
 
@@ -77,7 +81,10 @@ const NavBar = () => {
           animate={{ y: 0 }}
           transition={{ type: 'tween' }}
         >
-          <HamMenu setClickMenu={setClickMenu} clickMenu={clickMenu} />
+          <HamMenu
+            setClickMenu={setClickMenu}
+            clickMenu={clickMenu}
+          />
         </motion.div>
         {/* DONT REMOVE NAV-LINKS-CONT OR NAV-LINKS FROM CLASSNAME */}
         <motion.div
@@ -123,7 +130,7 @@ const NavBar = () => {
             Resume
           </motion.a>
         </motion.div>
-      </motion.nav>
+      </nav>
     </header>
   );
 };
