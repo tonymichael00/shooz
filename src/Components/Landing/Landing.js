@@ -12,15 +12,19 @@ const Landing = ({ contMotion }) => {
   const { headView, blurbView } = viewportAni;
 
   return (
-    <div id="landing">
-      <NavBar />
+    <motion.div
+      id="landing"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
+    >
+      <NavBar contMotion={contMotion} />
       <motion.div
         id="shooz-bkd-wrapper"
-        initial={{ x: '-100vw', opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ type: 'tween' }}
-        // whileInView="visible"
-        // viewport={blurbView}
+        // initial={{ x: '-100vw', opacity: 0 }}
+        // animate={{ x: 0, opacity: 1 }}
+        // transition={{ type: 'tween', duration: 0.6, delay: 0.5 }}
+        variants={itemSideMoveLeft}
       >
         <div id="side-shooz-bkd"></div>
         <div id="shooz-bkd">
@@ -38,9 +42,10 @@ const Landing = ({ contMotion }) => {
       </motion.div>
       <motion.div
         id="title-caption-wrapper"
-        initial={{ x: '100vw', opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ type: 'tween' }}
+        // initial={{ x: '100vw', opacity: 0 }}
+        // animate={{ x: 0, opacity: 1 }}
+        // transition={{ type: 'tween', duration: 0.6, delay: 0.5 }}
+        variants={itemSideMoveRight}
       >
         <div id="title-caption-side-bkd"></div>
         <div id="title-caption-bkd">
@@ -48,7 +53,7 @@ const Landing = ({ contMotion }) => {
           <p>Don't hesitate to contact me.</p>
         </div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

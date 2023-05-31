@@ -9,7 +9,11 @@ import { motion } from 'framer-motion';
 // TODO: CENTER LINKS
 // import hamMenu from './Images/hamMenu.svg';
 
-const NavBar = () => {
+const NavBar = ({ contMotion }) => {
+  const { contSideMove, itemSideMoveLeft, itemSideMoveRight, viewportAni } =
+    contMotion;
+  const { headView, blurbView } = viewportAni;
+
   const [clickMenu, setClickMenu] = useState(false);
 
   //triggers opening and closing navigation menu
@@ -20,14 +24,15 @@ const NavBar = () => {
 
   const contVariants = {
     hidden: {
-      y: '-100%',
+      opacity: 0,
     },
     visible: {
-      y: 0,
+      opacity: 1,
       transition: {
-        // when: 'beforeChildren',
-        staggerChildren: 0.2,
+        staggerChildren: 0.1,
         type: 'tween',
+        // delay: 1,
+        duration: 0.6,
       },
     },
     // scaleSize: {},
@@ -35,14 +40,14 @@ const NavBar = () => {
 
   const linkVariants = {
     hidden: {
-      y: '-100%',
       opacity: 0,
     },
     visible: {
-      y: 0,
       opacity: 1,
       transition: {
         type: 'tween',
+        // delay: 1,
+        duration: 0.6,
       },
     },
     // scaleSize: {
@@ -59,13 +64,13 @@ const NavBar = () => {
 
   return (
     <header>
-      <nav id="nav-bar">
+      <motion.nav id="nav-bar">
         <motion.a
           href=""
           className="logo center-flex"
-          initial={{ y: '-200%', opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ type: 'tween' }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={linkVariants.visible.transition}
         >
           <img
             src={logo}
@@ -77,9 +82,9 @@ const NavBar = () => {
 
         <motion.div
           id="ham-menu"
-          initial={{ y: '-200%' }}
-          animate={{ y: 0 }}
-          transition={{ type: 'tween' }}
+          // initial={{ opacity: 0 }}
+          // animate={{ opacity: 1 }}
+          // transition={{ type: 'tween', duration: 1.5, delay: 1 }}
         >
           <HamMenu
             setClickMenu={setClickMenu}
@@ -130,7 +135,7 @@ const NavBar = () => {
             Resume
           </motion.a>
         </motion.div>
-      </nav>
+      </motion.nav>
     </header>
   );
 };

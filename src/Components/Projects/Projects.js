@@ -17,7 +17,6 @@ const Projects = ({ contMotion }) => {
     <div id="projects-sec">
       <motion.div
         id="projects-head-cont"
-        // variants={itemSideMoveLeft}
         initial="hidden"
         whileInView="visible"
         viewport={headView}
@@ -27,7 +26,6 @@ const Projects = ({ contMotion }) => {
           id="about-head"
           className="head head-left"
           variants={itemSideMoveLeft}
-          // viewport="viewed"
         >
           What I've Done
         </motion.div>

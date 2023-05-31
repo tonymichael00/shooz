@@ -6,6 +6,7 @@
 // ANDROID
 // NAV DOESN'T SHOW UNTIL YOU SCROLL BACK UP
 // replace shooz logo with svg
+// landing animations are occuring before page loads so it looks like a blink
 
 import './App.scss';
 import React from 'react';
