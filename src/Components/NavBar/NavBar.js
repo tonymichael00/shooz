@@ -2,7 +2,7 @@
 // onclick remove all formatting classes and change to click
 import React, { useState } from 'react';
 import './NavBar.scss';
-import logo from './Images/logo.png';
+import logo from './Images/shoozLogo.svg';
 import HamMenu from './HamMenu/HamMenu';
 import { motion } from 'framer-motion';
 
@@ -29,10 +29,10 @@ const NavBar = ({ contMotion }) => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.2,
         type: 'tween',
         // delay: 1,
-        duration: 0.6,
+        duration: 1,
       },
     },
     // scaleSize: {},
@@ -47,7 +47,7 @@ const NavBar = ({ contMotion }) => {
       transition: {
         type: 'tween',
         // delay: 1,
-        duration: 0.6,
+        duration: 1,
       },
     },
     // scaleSize: {
@@ -76,12 +76,15 @@ const NavBar = ({ contMotion }) => {
             src={logo}
             alt="Logo"
             className="center-flex"
+            height="70%"
+            // width="50%"
           />
         </motion.a>
         {/* div to create space in grid */}
 
         <motion.div
           id="ham-menu"
+          variants={linkVariants}
           // initial={{ opacity: 0 }}
           // animate={{ opacity: 1 }}
           // transition={{ type: 'tween', duration: 1.5, delay: 1 }}
