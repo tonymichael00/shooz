@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ac3e7c6e.css",
-    "main.js": "/static/js/main.65f9f140.js",
+    "main.js": "/static/js/main.862da54c.js",
     "static/js/787.9febe080.chunk.js": "/static/js/787.9febe080.chunk.js",
     "static/media/sec4.webp": "/static/media/sec4.b35edb4cd7f71080a79c.webp",
     "static/media/sec2.webp": "/static/media/sec2.1cacf6c901da15c69c61.webp",
@@ -13,11 +13,11 @@
     "static/media/shoozLogo.svg": "/static/media/shoozLogo.157240785233742a6cd48006cc5e2411.svg",
     "index.html": "/index.html",
     "main.ac3e7c6e.css.map": "/static/css/main.ac3e7c6e.css.map",
-    "main.65f9f140.js.map": "/static/js/main.65f9f140.js.map",
+    "main.862da54c.js.map": "/static/js/main.862da54c.js.map",
     "787.9febe080.chunk.js.map": "/static/js/787.9febe080.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ac3e7c6e.css",
-    "static/js/main.65f9f140.js"
+    "static/js/main.862da54c.js"
   ]
 }
