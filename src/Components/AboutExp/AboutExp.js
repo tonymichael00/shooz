@@ -5,11 +5,13 @@ import React, { useState } from 'react';
 import './AboutExp.scss';
 
 const AboutMe = ({ contMotion }) => {
+  const [workType, setWorkType] = useState('pepper');
+  //ANIMATIONS
+  //CONT IS NECESSARY FOR ANIMATIONS THAT COME OFF SCREEN
   const { contSideMove, itemSideMoveLeft, itemSideMoveRight, viewportAni } =
     contMotion;
   const { headView, blurbView } = viewportAni;
-  const [workType, setWorkType] = useState('pepper');
-
+  //WORK TEXT
   const pepperWork = (
     <>
       <h2>Assistant Marketing Coordinator</h2>
@@ -32,7 +34,6 @@ const AboutMe = ({ contMotion }) => {
       </ul>
     </>
   );
-
   const freelanceWork = (
     <>
       <h2>Owner, Shooz Media</h2>
@@ -47,6 +48,8 @@ const AboutMe = ({ contMotion }) => {
 
   return (
     <motion.div id="about-sec">
+      {/* ABOUT ME SEC */}
+      {/* HEADING BUBBLE */}
       <motion.div
         id="about-head-cont"
         variants={contSideMove}
@@ -63,6 +66,7 @@ const AboutMe = ({ contMotion }) => {
           About me
         </motion.div>
       </motion.div>
+      {/* TEXT BOX */}
       <motion.div
         id="about-body-cont"
         variants={contSideMove}
@@ -92,6 +96,8 @@ const AboutMe = ({ contMotion }) => {
           </ul>
         </motion.div>
       </motion.div>
+      {/* WHERE IVE WORKED */}
+      {/* HEADING BUBBLE */}
       <motion.div
         id="where-head-cont"
         variants={contSideMove}
@@ -108,6 +114,7 @@ const AboutMe = ({ contMotion }) => {
           Where I've worked
         </motion.div>
       </motion.div>
+      {/* TEXT BOX */}
       <motion.div
         id="where-body-cont"
         variants={contSideMove}
@@ -121,6 +128,7 @@ const AboutMe = ({ contMotion }) => {
           variants={itemSideMoveLeft}
         >
           <div className="heading-links">
+            {/* BUTTONS CHANGE TEXT BELOW  */}
             <button onClick={() => setWorkType('pepper')}>
               <h2>Pepper</h2>
             </button>

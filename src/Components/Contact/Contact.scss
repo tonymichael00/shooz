@@ -2,6 +2,8 @@
 */
 @use 'src/Sass/global' as *;
 
+// COMPONENT CENTERED ON MIDDLE COLUMN OF MAIN LAYOUT GRID
+// THEN ORGANIZED INTO VERTICAL GRID
 #contact-sec {
   display: grid;
   grid-template-rows: min-content min-content $blurb-spacing-grid;

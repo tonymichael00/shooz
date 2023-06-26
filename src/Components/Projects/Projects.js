@@ -15,6 +15,7 @@ const Projects = ({ contMotion }) => {
 
   return (
     <div id="projects-sec">
+      {/* HEADING */}
       <motion.div
         id="projects-head-cont"
         initial="hidden"
@@ -30,6 +31,7 @@ const Projects = ({ contMotion }) => {
           What I've Done
         </motion.div>
       </motion.div>
+      {/* PEPPER****************************** */}
       <motion.div
         className="project-cont project-cont-pic-right"
         initial="hidden"
@@ -70,6 +72,7 @@ const Projects = ({ contMotion }) => {
         </motion.div>
       </motion.div>
       <div></div>
+      {/* SANGUINE********************* */}
       <motion.div
         className="project-cont project-cont-pic-left"
         initial="hidden"
@@ -148,6 +151,7 @@ const Projects = ({ contMotion }) => {
         </motion.div>
       </motion.div>
       <div></div>
+      {/* COLORING PAD************************ */}
       <motion.div
         className="project-cont project-cont-pic-right"
         initial="hidden"

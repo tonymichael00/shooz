@@ -6,12 +6,15 @@ import LinkedInLogo from '../../Images/LinkedInLogo';
 import './Contact.scss';
 
 const Contact = ({ contMotion }) => {
+  //ANIMATIONS
+  //CONT IS NECESSARY FOR ANIMATIONS THAT COME OFF SCREEN
   const { contSideMove, itemSideMoveLeft, itemSideMoveRight, viewportAni } =
     contMotion;
   const { headView, blurbView } = viewportAni;
 
   return (
     <div id="contact-sec">
+      {/* YELLOW HEADING  */}
       <motion.div
         className="contact-head-cont"
         variants={contSideMove}
@@ -27,6 +30,7 @@ const Contact = ({ contMotion }) => {
           Get in touch
         </motion.div>
       </motion.div>
+      {/* TEXT BOX */}
       <motion.div
         className="contact-cont"
         variants={contSideMove}

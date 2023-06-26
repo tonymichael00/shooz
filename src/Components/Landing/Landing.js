@@ -5,6 +5,7 @@ import './Landing.scss';
 import { motion } from 'framer-motion';
 
 const Landing = ({ contMotion }) => {
+  //ANIMATION
   const { itemSideMoveLeft, itemSideMoveRight } = contMotion;
 
   return (
@@ -15,6 +16,7 @@ const Landing = ({ contMotion }) => {
       viewport={{ once: true, amount: 0.1 }}
     >
       <NavBar />
+      {/* TITLE BAR */}
       <motion.div
         id="shooz-bkd-wrapper"
         variants={itemSideMoveLeft}
@@ -33,6 +35,7 @@ const Landing = ({ contMotion }) => {
           </p>
         </div>
       </motion.div>
+      {/* SUBTITLE BAR */}
       <motion.div
         id="title-caption-wrapper"
         variants={itemSideMoveRight}

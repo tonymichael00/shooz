@@ -9,11 +9,14 @@ $middle-column-width: min(80ch, 92vw);
 $mobile-middle-column-width: min(30ch, 92vw);
 $blurb-spacing-grid: minmax(6rem, auto);
 
-//mixins
+//MIXINS
+//USED MOSTLY FOR ROUNDED CORNERS AND SPACING OF THE PROJECT.
+//CLAMP NUMBERS ARE USED IN CLAMPS AND THE $PER IS TO ADJUST
+//PROPORTIONS ON THE FLY
 @mixin resp-clamp($prop, $per, $clamp-1, $clamp-2, $clamp-3) {
   #{$prop}: clamp($clamp-1 * $per, $clamp-2 * $per, $clamp-3 * $per);
 }
-
+//FOR THE MOBILE WIDTH OF CONT SPANNING THE ENTIRE MIDDLE
 @mixin resp-width() {
   @media (max-width: $mobile-width) {
     width: min(40ch, 92vw);

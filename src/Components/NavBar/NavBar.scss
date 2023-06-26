@@ -2,6 +2,10 @@
 */
 @use 'src/Sass/global' as *;
 
+//CLICKING SWITCHES CLASSES BETWEEN CLICK AND NO CLICK
+//CLICK EQUALS HAMBURGER MENU OPEN
+
+//HAMBURGER ICON
 $ham-spacing: 0.5rem;
 $nav-spacing: 1rem;
 //background clamp variables
@@ -30,6 +34,7 @@ nav {
   }
 }
 
+//HAMBURGER MENU
 #ham-menu {
   display: none;
 
@@ -42,6 +47,7 @@ nav {
   }
 }
 
+//NAVIGATION LINKS
 .nav-links {
   z-index: 1;
   margin-top: auto;
@@ -131,6 +137,7 @@ nav {
   }
 }
 
+// LOGO
 .logo img {
   margin-right: auto;
 }

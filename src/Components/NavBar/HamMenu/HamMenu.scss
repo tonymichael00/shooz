@@ -2,8 +2,10 @@
 */
 @use 'src/Sass/global' as *;
 
+//ALLOWS SIZE ADJUSTMENTS
 $perc-width: 0.5;
 
+//HAMBURGER ICON
 #nav-icon1 {
   width: 60px * $perc-width;
   height: 45px * $perc-width;
@@ -55,6 +57,7 @@ $perc-width: 0.5;
   top: 36px * $perc-width;
 }
 
+//CLICKING ANIMATION
 #nav-icon1.open span {
   background-color: $blue;
 }

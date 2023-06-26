@@ -2,10 +2,17 @@
 */
 @use 'src/Sass/global' as *;
 
+// COMPONENT CENTERED ON MIDDLE COLUMN OF MAIN LAYOUT GRID
+// THEN ORGANIZED INTO VERTICAL GRID
+
 //the clamp numbers and percentages ensure everything is consistent in
 //responsiveness and scales equally. Adjusting percentages increases
 //size.
+
 //font-size controls box size.
+
+//USING PERCENTAGES ALLOWS FOR THE ABILITY TO GO BACK AND
+//ADJUST VISUAL LOOK ON THE FLY
 
 //title clamp variables
 $title-clamp-1: 5rem;
@@ -38,6 +45,7 @@ $caption-outline-perc: 0.03 * $caption-perc;
   position: relative;
 }
 
+//YELLOW TITLE SECTION *******************************************
 #shooz-bkd-wrapper {
   position: relative;
   grid-column: 1/4;

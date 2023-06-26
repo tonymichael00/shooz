@@ -7,11 +7,13 @@ import { motion } from 'framer-motion';
 
 const NavBar = () => {
   const [clickMenu, setClickMenu] = useState(false);
-  //triggers opening and closing navigation menu
+  //triggers opening and closing hamburger menu
   let navLinksContToggle = clickMenu
     ? 'nav-links-cont-click'
     : 'nav-links-cont';
   let navLinksToggle = clickMenu ? 'nav-links-click' : 'nav-links';
+  //ANIMATIONS
+  //CONT IS VISIBLE, ACTIVATES TRANSITION
   const contVariants = {
     hidden: {
       opacity: 0,
@@ -69,7 +71,7 @@ const NavBar = () => {
             clickMenu={clickMenu}
           />
         </motion.div>
-        {/* DONT REMOVE NAV-LINKS-CONT OR NAV-LINKS FROM CLASSNAME */}
+        {/* DONT REMOVE NAV-LINKS-CONT OR NAV-LINKS FROM CLASSNAME !!!!!*/}
         <motion.div
           className={`nav-links-cont ${navLinksContToggle}`}
           variants={contVariants}

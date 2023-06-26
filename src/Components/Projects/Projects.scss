@@ -2,6 +2,11 @@
 */
 @use 'src/Sass/global' as *;
 
+// COMPONENT CENTERED ON MIDDLE COLUMN OF MAIN LAYOUT GRID
+// THEN ORGANIZED INTO VERTICAL GRID
+//!!!!!! DO NOT USE FR UNITS FOR CAROUSEL
+
+// VARIABLES
 $clamp-1: 8rem;
 $clamp-2: 30vw;
 $clamp-3: 9rem;
@@ -11,6 +16,7 @@ $body-font-perc: (0.17 * $body-perc) + 0.02;
 $bkd-width: 50%;
 $project-spacing-grid: 1rem;
 
+// COMPONENT CONTAINER
 #projects-sec {
   grid-column: 2/3;
   display: grid;
@@ -19,11 +25,17 @@ $project-spacing-grid: 1rem;
     $project-spacing-grid auto $project-spacing-grid $blurb-spacing-grid;
 }
 
+#projects-sec ol {
+  padding-left: 2rem;
+}
+
+//HEADING
 #projects-head-cont {
   width: $middle-column-width;
   @include resp-width();
 }
 
+//PROJECT TEXT BOX
 .project-cont {
   position: relative;
   display: grid;
@@ -52,49 +64,6 @@ $project-spacing-grid: 1rem;
       grid-template-rows: auto auto;
       max-height: 100%;
     }
-  }
-}
-
-.mobile-project-bkd {
-  position: absolute;
-  background-color: none;
-  width: 100%;
-  height: 100%;
-
-  @media (max-width: $mobile-width) {
-    background-color: black;
-    @include resp-clamp(
-      border-radius,
-      $body-corner-padding-perc,
-      $clamp-1,
-      $clamp-2,
-      $clamp-3
-    );
-  }
-}
-
-.pic-cont {
-  z-index: 1;
-  position: relative;
-  aspect-ratio: 1/1;
-  border-radius: 1rem;
-  overflow: hidden;
-  border: 0.4rem solid black;
-
-  @media (max-width: $small-mobile-width) {
-    max-height: 100%;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    border: 0.4rem solid black;
-  }
-
-  &-right {
-    margin-left: auto;
-  }
-
-  &-left {
-    margin-right: auto;
   }
 }
 
@@ -128,10 +97,6 @@ $project-spacing-grid: 1rem;
       right: auto;
     }
   }
-}
-
-#projects-sec ol {
-  padding-left: 2rem;
 }
 
 .project-blurb-txt {
@@ -176,5 +141,50 @@ $project-spacing-grid: 1rem;
   & a {
     display: flex;
     padding: 0;
+  }
+}
+
+//MOBILE
+.mobile-project-bkd {
+  position: absolute;
+  background-color: none;
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: $mobile-width) {
+    background-color: black;
+    @include resp-clamp(
+      border-radius,
+      $body-corner-padding-perc,
+      $clamp-1,
+      $clamp-2,
+      $clamp-3
+    );
+  }
+}
+
+//PICTURE BOX
+.pic-cont {
+  z-index: 1;
+  position: relative;
+  aspect-ratio: 1/1;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 0.4rem solid black;
+
+  @media (max-width: $small-mobile-width) {
+    max-height: 100%;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    border: 0.4rem solid black;
+  }
+
+  &-right {
+    margin-left: auto;
+  }
+
+  &-left {
+    margin-right: auto;
   }
 }
