@@ -1,3 +1,3 @@
 # My Portfolio
 
-Check it out at http://shoozmedia.com!
+Check it out at https://shoozmedia.com!
