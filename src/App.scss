@@ -1,8 +1,5 @@
-/* TODO: DOUBLE CHECK CSS RESET FOR REDUNDANCY. 
-FIGURE OUT WHY APP.SCSS OVERRIDES EVERYTHING
-FIX WHERE IVE WORKED PADDING
+/* TODO: 
 */
-/* ESPECIALLY PERSONAL RESET AT BOTTOM */
 
 @use 'src/Sass/global' as *;
 
@@ -100,11 +97,13 @@ h1 {
   font-weight: 900;
   font-size: 1.45rem;
 }
+
 h2 {
   color: $blue;
   font-weight: 700;
   font-size: 1.3rem;
 }
+
 h3 {
   color: $blue;
   font-weight: 500;
@@ -153,7 +152,6 @@ $body-font-perc: (0.17 * $body-perc) + 0.02;
 .blurb {
   background-color: black;
   color: white;
-  // max-width: 65ch;
   @include resp-clamp(
     border-radius,
     $body-corner-padding-perc,
@@ -168,29 +166,26 @@ $body-font-perc: (0.17 * $body-perc) + 0.02;
     $clamp-2,
     $clamp-3
   );
+
   ul {
     list-style: disc;
     padding: 0 0 0 2rem;
-    // li {
-    //   padding: 0 0 0 4rem;
-    // }
   }
+
   p,
   h1,
   h2,
   h3 {
     padding: 0;
   }
+
   p {
     padding-top: 0.5rem;
   }
 }
 
 .head-right {
-  // display: flex;
-  // justify-content: left;
   margin-left: auto;
-
   @include resp-clamp(
     left,
     $head-corner-padding-perc,
@@ -213,7 +208,6 @@ $body-font-perc: (0.17 * $body-perc) + 0.02;
 
 .head {
   position: relative;
-
   @include resp-clamp(
     top,
     calc($head-corner-padding-perc/2),
@@ -239,7 +233,6 @@ $body-font-perc: (0.17 * $body-perc) + 0.02;
     $clamp-2,
     $clamp-3
   );
-
   @include resp-clamp(font-size, $head-font-perc, $clamp-1, $clamp-2, $clamp-3);
   font-weight: 700;
   line-height: 1;
@@ -249,15 +242,9 @@ $body-font-perc: (0.17 * $body-perc) + 0.02;
 #root {
   //VARIABLES
   //SWIPER COLOR CHANGES
-  // --swiper-theme-color: #13fafc;
   --swiper-theme-color: #13fafc;
   --swiper-pagination-bullet-inactive-color: rgb(80, 80, 80);
   --swiper-pagination-bullet-inactive-opacity: 1;
-  // --swiper-scrollbar-drag-bg-color: rgba(19, 250, 252, 0.5);
-  // --swiper-scrollbar-bg-color: rgba(19, 250, 252, 0.1);
-  // --swiper-navigation-color: #13fafc;
-  // --swiper-pagination-color: #13fafc;
-
   /* center main content */
   display: flex;
   justify-content: center;
@@ -267,10 +254,5 @@ $body-font-perc: (0.17 * $body-perc) + 0.02;
 #content {
   display: grid;
   grid-template-columns: 1fr $middle-column-width 1fr;
-  // grid-template-rows: min(100vh, 70rem) repeat(auto-fill, auto);
-  // width: 100vw;
   overflow-x: hidden;
-  // @media (max-width: $mobile-width) {
-  //   max-width: 30ch;
-  // }
 }

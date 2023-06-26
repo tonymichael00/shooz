@@ -1,8 +1,6 @@
-// TODO: DELETE ALL USELESS ID'S IN PROJECT
-
+// TODO:
 import { motion } from 'framer-motion';
 import React from 'react';
-import EmailLogo from '../../Images/EmailLogo/EmailLogo';
 import GithubLogo from '../../Images/GithubLogo';
 import LinkedInLogo from '../../Images/LinkedInLogo';
 import './Contact.scss';
@@ -36,7 +34,10 @@ const Contact = ({ contMotion }) => {
         whileInView="visible"
         viewport={blurbView}
       >
-        <motion.div className="blurb contact-bkd" variants={itemSideMoveLeft}>
+        <motion.div
+          className="blurb contact-bkd"
+          variants={itemSideMoveLeft}
+        >
           <p>
             Feel free to contact me with your job. I’m always open to new work
             opportunities.
@@ -67,7 +68,6 @@ const Contact = ({ contMotion }) => {
                 height={'1.25.rem'}
                 width={'1.25rem'}
               />
-              {/* <EmailLogo fill={'#13fafc'} height={'1.25.rem'} width={'1.25rem'} /> */}
             </a>
             <motion.a
               href="https://drive.google.com/uc?export=download&id=1oHHNpUI-g-H1eaPRs6WQVsKTDm8Ju5fU"

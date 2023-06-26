@@ -1,11 +1,9 @@
 /* TODO:  
 */
-
 @use 'src/Sass/global' as *;
 
 $ham-spacing: 0.5rem;
 $nav-spacing: 1rem;
-
 //background clamp variables
 $bkd-clamp-1: 5rem;
 $bkd-clamp-2: 27vw;
@@ -26,6 +24,7 @@ nav {
   grid-template-columns: min-content 1fr min-content;
   padding: $nav-spacing;
   z-index: 1;
+
   @media (max-width: $mobile-width) {
     grid-template-columns: min-content 1fr;
   }
@@ -40,9 +39,6 @@ nav {
     align-items: center;
     margin-left: auto;
     z-index: 2;
-    a {
-      // display: block;
-    }
   }
 }
 
@@ -50,18 +46,15 @@ nav {
   z-index: 1;
   margin-top: auto;
   margin-bottom: auto;
+
   &-click {
     @media (max-width: $mobile-width) {
       color: $yellow;
       display: block !important;
-      // padding: $ham-spacing;
     }
   }
+
   &-button {
-    // -webkit-appearance: button;
-    // -moz-appearance: button;
-    // appearance: button;
-    // text-decoration: none;
     color: initial;
     margin: auto;
     display: block;
@@ -73,9 +66,8 @@ nav {
     width: 5rem;
     height: min-content;
     padding: 0;
-    &:hover {
-    }
   }
+
   @media (max-width: $mobile-width) {
     display: none;
   }
@@ -86,10 +78,6 @@ nav {
   grid-template-columns: repeat(5, min-content);
   gap: 1rem;
   margin-left: auto;
-
-  a:hover {
-    // text-decoration: underline solid $blue 0.4rem;
-  }
 
   @media (max-width: $mobile-width) {
     grid-template-columns: min-content;
@@ -105,12 +93,10 @@ nav {
       padding: 1rem;
       border-bottom-left-radius: 0.7rem;
       right: $nav-spacing;
-      // top: $nav-spacing;
       top: 0rem;
       width: 10rem;
       font-size: 1rem;
       right: 0;
-      // height: 10rem;
       background-color: black;
       outline: $blue solid
         clamp(
@@ -118,6 +104,7 @@ nav {
           calc($bkd-clamp-2 * $bkd-outline-perc),
           calc($bkd-clamp-3 * $bkd-outline-perc)
         );
+
       a {
         margin: $ham-spacing;
       }
@@ -135,24 +122,10 @@ nav {
           line-height: 2;
           width: fit-content;
           margin: auto;
-          // display: block;
           svg {
             fill: $yellow;
           }
         }
-        //resume button is top row
-        // button {
-        //   margin: 0 auto;
-        //   display: block;
-        //   grid-column: 1/3;
-        //   text-align: center;
-        //   background-color: transparent;
-        //   border: 0.1rem solid $yellow;
-        //   border-radius: 99rem;
-        //   color: $yellow;
-        //   width: 5rem;
-        //   line-height: 1.2;
-        // }
       }
     }
   }

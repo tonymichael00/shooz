@@ -32,7 +32,6 @@ const Projects = ({ contMotion }) => {
       </motion.div>
       <motion.div
         className="project-cont project-cont-pic-right"
-        // variants={contSideMove}
         initial="hidden"
         whileInView="visible"
         viewport={blurbView}
@@ -46,10 +45,7 @@ const Projects = ({ contMotion }) => {
           variants={itemSideMoveRight}
         >
           <motion.div className="blurb project-blurb-bkd project-blurb-bkd-left project-blurb-bkd-color"></motion.div>
-          <motion.div
-            className="project-blurb-txt project-blurb-txt-left"
-            // variants={itemSideMoveRight}
-          >
+          <motion.div className="project-blurb-txt project-blurb-txt-left">
             <div className="upper-project-txt">
               <h2>Pepper</h2>
               <ol>
@@ -58,7 +54,6 @@ const Projects = ({ contMotion }) => {
                   for a design contest.
                 </li>
                 <li>Onboarding section</li>
-                {/* <li>Onboarding section 4</li> */}
                 <li>Belief poster for our Texas branch</li>
                 <li>
                   Safety poster we hung on jobsites. All logos are original.
@@ -77,7 +72,6 @@ const Projects = ({ contMotion }) => {
       <div></div>
       <motion.div
         className="project-cont project-cont-pic-left"
-        // variants={itemSideMoveRight}
         initial="hidden"
         whileInView="visible"
         viewport={blurbView}
@@ -156,7 +150,6 @@ const Projects = ({ contMotion }) => {
       <div></div>
       <motion.div
         className="project-cont project-cont-pic-right"
-        // variants={itemSideMoveLeft}
         initial="hidden"
         whileInView="visible"
         viewport={blurbView}

@@ -1,13 +1,10 @@
-/* TODO:  fix pictures, touch sides
-ADD MEDIA QUERY IN BETWEEN MOBILE/DESKTOP SIZES FOR PIC-CONT
+/* TODO:  
 */
-
 @use 'src/Sass/global' as *;
 
 $clamp-1: 8rem;
 $clamp-2: 30vw;
 $clamp-3: 9rem;
-
 $body-perc: 0.7;
 $body-corner-padding-perc: (0.17 * $body-perc) + 0.02;
 $body-font-perc: (0.17 * $body-perc) + 0.02;
@@ -20,11 +17,6 @@ $project-spacing-grid: 1rem;
   grid-template-rows:
     auto auto $project-spacing-grid auto
     $project-spacing-grid auto $project-spacing-grid $blurb-spacing-grid;
-  // grid-template-columns: min-content;
-  @media (max-width: $mobile-width) {
-    // grid-template-rows: min-content min-content min-content min-content min-content min-content min-content;
-    // width: 40ch;
-  }
 }
 
 #projects-head-cont {
@@ -36,23 +28,23 @@ $project-spacing-grid: 1rem;
   position: relative;
   display: grid;
   gap: $project-spacing-grid;
-  // min-height: 20rem;
-  // max-height: 90%;
-  // width: 90%;
-  // grid-template-columns: 50% 50%;
   align-items: center;
   @include resp-width();
+
   @media (max-width: $mobile-width) {
     grid-template-columns: 1fr;
   }
+
   &-pic-right {
     grid-template-columns: 60fr minmax(20rem, 40fr);
+
     @media (max-width: $mobile-width) {
       grid-template-columns: auto;
       grid-template-rows: auto auto;
       max-height: 100%;
     }
   }
+
   &-pic-left {
     grid-template-columns: minmax(20rem, 40fr) 60fr;
     @media (max-width: $mobile-width) {
@@ -68,6 +60,7 @@ $project-spacing-grid: 1rem;
   background-color: none;
   width: 100%;
   height: 100%;
+
   @media (max-width: $mobile-width) {
     background-color: black;
     @include resp-clamp(
@@ -87,6 +80,7 @@ $project-spacing-grid: 1rem;
   border-radius: 1rem;
   overflow: hidden;
   border: 0.4rem solid black;
+
   @media (max-width: $small-mobile-width) {
     max-height: 100%;
     width: 100%;
@@ -98,24 +92,20 @@ $project-spacing-grid: 1rem;
   &-right {
     margin-left: auto;
   }
+
   &-left {
     margin-right: auto;
-    @media (max-width: $mobile-width) {
-    }
-  }
-  &-right,
-  &-left {
-    @media (max-width: $mobile-width) {
-    }
   }
 }
 
 .project-blurb-bkd {
   height: 100%;
+
   @media (max-width: $mobile-width) {
     width: 100%;
     align-self: flex-start;
   }
+
   &-color {
     position: absolute;
     top: 0;
@@ -124,12 +114,15 @@ $project-spacing-grid: 1rem;
     width: 100%;
     background-color: black;
   }
+
   &-left {
     order: 0;
   }
+
   &-right {
     order: 1;
     right: $bkd-width;
+
     @media (max-width: $mobile-width) {
       order: 0;
       right: auto;
@@ -156,7 +149,6 @@ $project-spacing-grid: 1rem;
   }
 }
 
-//ADD BULLETS, MAKE LIKE TEXT
 .project-skills {
   color: $blue;
   padding-top: 0.5rem;
@@ -165,10 +157,11 @@ $project-spacing-grid: 1rem;
     padding-left: 0;
     margin: 0;
   }
+
   & ul li {
-    // list-style-type: disc;
     display: inline-block;
     padding-left: 1rem;
+
     &:first-child {
       padding-left: 0rem;
     }
@@ -179,6 +172,7 @@ $project-spacing-grid: 1rem;
   display: flex;
   gap: 0.5rem;
   padding-top: 0.5rem;
+
   & a {
     display: flex;
     padding: 0;

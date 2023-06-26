@@ -2,8 +2,6 @@ import React from 'react';
 import './HamMenu.scss';
 
 const HamMenu = ({ setClickMenu, clickMenu }) => {
-  // const [clickMenu, setClickMenu] = useState(false);
-  // const [clickMenu, setClickMenu] = useState(false);
   let menuClassToggle = clickMenu ? 'open' : '';
 
   function handleClick() {
@@ -11,13 +9,15 @@ const HamMenu = ({ setClickMenu, clickMenu }) => {
   }
 
   return (
-    // <div id="menu-toggle" className={menuClassToggle} onClick={handleClick}>
-    <div id="nav-icon1" className={menuClassToggle} onClick={handleClick}>
+    <div
+      id="nav-icon1"
+      className={menuClassToggle}
+      onClick={handleClick}
+    >
       <span></span>
       <span></span>
       <span></span>
     </div>
-    // </div>
   );
 };
 

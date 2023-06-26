@@ -1,17 +1,15 @@
 /* TODO:  
 */
-
 @use 'src/Sass/global' as *;
 
 #contact-sec {
   display: grid;
   grid-template-rows: min-content min-content $blurb-spacing-grid;
-
   width: 90%;
   margin-right: auto;
   margin-left: auto;
   grid-column: 2/3;
-  // min-height: 40vh;
+
   @media (max-width: $mobile-width) {
     width: 100%;
   }
@@ -20,13 +18,9 @@
 #contact-sec .blurb p {
   padding: 0;
 }
-// .contact-page-space {
-//   height: $blurb-spacing-grid;
-// }
 
 .contact-head {
   position: relative;
-  // right: 10%;
 }
 
 .contact-cont {
@@ -36,7 +30,6 @@
 
 .contact-bkd {
   text-align: center;
-  // max-width: 90%;
 }
 
 .contact-head-cont,
@@ -51,15 +44,18 @@
   gap: 0.5rem;
   padding-top: 0.5rem;
   color: $blue;
+
   & a {
     display: flex;
     padding: 0;
   }
+
   p {
     display: block;
     padding: 0;
     color: $blue;
   }
+
   &-button {
     display: flex;
     justify-content: center;
@@ -73,10 +69,9 @@
     width: 5rem;
     height: min-content;
     padding: 0;
+
     &:hover {
       background-color: hsla(180.5, 97.5%, 53.1%, 25%);
-      // border: 0.15rem solid $blue;
-      // color: $yellow;
     }
   }
 }

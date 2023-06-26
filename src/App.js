@@ -1,13 +1,4 @@
-// TODO: SLOW TRANSTION SPEED
-// First, figure out text for project blurbs
-// APPLE BUGS
-// CORNERS ARE SQUARE OR CUT OFF
-// LOWER LINKS ARE MESSED UP
-// ANDROID
-// NAV DOESN'T SHOW UNTIL YOU SCROLL BACK UP
-// replace shooz logo with svg
-// landing animations are occuring before page loads so it looks like a blink
-
+// TODO:
 import './App.scss';
 import React from 'react';
 import AboutExp from './Components/AboutExp';
@@ -17,7 +8,6 @@ import Landing from './Components/Landing';
 
 function App() {
   //variants
-
   const itemSideMoveLeft = {
     hidden: {
       x: '-100vw',
@@ -28,13 +18,10 @@ function App() {
       opacity: 1,
       transition: { type: 'tween', duration: 0.4 },
     },
-    // viewed: { once: true, amount: 1 },
   };
-
   const itemSideMoveRight = {
     hidden: {
       opacity: 0,
-
       x: '100vw',
     },
     visible: {
@@ -42,9 +29,7 @@ function App() {
       x: 0,
       transition: { type: 'tween', duration: 0.4 },
     },
-    // viewed: { once: true, amount: 1 },
   };
-
   const viewportAni = {
     headView: { once: true, amount: 1 },
     blurbView: { once: true, amount: 0.5 },

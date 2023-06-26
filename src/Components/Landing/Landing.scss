@@ -1,6 +1,5 @@
 /* TODO:  
 */
-
 @use 'src/Sass/global' as *;
 
 //the clamp numbers and percentages ensure everything is consistent in
@@ -56,12 +55,6 @@ $caption-outline-perc: 0.03 * $caption-perc;
   width: 100%;
   z-index: -1;
   background-color: rgb(0, 0, 0);
-  // outline: $yellow solid
-  //   clamp(
-  //     calc($title-clamp-1 * $title-outline-perc),
-  //     calc($title-clamp-2 * $title-outline-perc),
-  //     calc($title-clamp-3 * $title-outline-perc)
-  //   );
   @include resp-clamp(
     border-top-right-radius,
     $title-corner-padding-perc,
@@ -228,12 +221,6 @@ $caption-outline-perc: 0.03 * $caption-perc;
   height: 100%;
   width: 100%;
   background-color: $black;
-  // outline: $blue solid
-  //   clamp(
-  //     calc($caption-clamp-1 * $caption-outline-perc),
-  //     calc($caption-clamp-2 * $caption-outline-perc),
-  //     calc($caption-clamp-3 * $caption-outline-perc)
-  //   );
   box-shadow: 0 0 0
     clamp(
       calc($caption-clamp-1 * $caption-outline-perc),

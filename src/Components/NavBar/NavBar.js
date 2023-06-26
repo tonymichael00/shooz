@@ -1,27 +1,17 @@
-// TODO: create class for clicked ham menu. change class when clicked
-// onclick remove all formatting classes and change to click
+// TODO:
 import React, { useState } from 'react';
 import './NavBar.scss';
 import logo from './Images/shoozLogo.svg';
 import HamMenu from './HamMenu/HamMenu';
 import { motion } from 'framer-motion';
 
-// TODO: CENTER LINKS
-// import hamMenu from './Images/hamMenu.svg';
-
-const NavBar = ({ contMotion }) => {
-  const { contSideMove, itemSideMoveLeft, itemSideMoveRight, viewportAni } =
-    contMotion;
-  const { headView, blurbView } = viewportAni;
-
+const NavBar = () => {
   const [clickMenu, setClickMenu] = useState(false);
-
   //triggers opening and closing navigation menu
   let navLinksContToggle = clickMenu
     ? 'nav-links-cont-click'
     : 'nav-links-cont';
   let navLinksToggle = clickMenu ? 'nav-links-click' : 'nav-links';
-
   const contVariants = {
     hidden: {
       opacity: 0,
@@ -31,13 +21,10 @@ const NavBar = ({ contMotion }) => {
       transition: {
         staggerChildren: 0.1,
         type: 'tween',
-        // delay: 1,
         duration: 1,
       },
     },
-    // scaleSize: {},
   };
-
   const linkVariants = {
     hidden: {
       opacity: 0,
@@ -46,19 +33,12 @@ const NavBar = ({ contMotion }) => {
       opacity: 1,
       transition: {
         type: 'tween',
-        // delay: 1,
         duration: 1,
       },
     },
-    // scaleSize: {
-    //   scale: 1.1,
-    //   transition: { type: 'spring', duration: 0.3 },
-    // },
   };
-
   const hoverAni = {
     scale: 1.1,
-    // backgroundColor: 'hsla(62.7,100%,52%,25%)',
     transition: { type: 'spring', duration: 0.3 },
   };
 
@@ -77,17 +57,12 @@ const NavBar = ({ contMotion }) => {
             alt="Logo"
             className="center-flex"
             height="70%"
-            // width="50%"
           />
         </motion.a>
         {/* div to create space in grid */}
-
         <motion.div
           id="ham-menu"
           variants={linkVariants}
-          // initial={{ opacity: 0 }}
-          // animate={{ opacity: 1 }}
-          // transition={{ type: 'tween', duration: 1.5, delay: 1 }}
         >
           <HamMenu
             setClickMenu={setClickMenu}

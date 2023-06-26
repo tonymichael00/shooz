@@ -1,6 +1,5 @@
 /* TODO:  
 */
-
 @use 'src/Sass/global' as *;
 
 #about-sec {
@@ -8,7 +7,6 @@
   grid-row: 2/3;
   display: grid;
   grid-template-rows: min-content min-content $blurb-spacing-grid min-content min-content $blurb-spacing-grid;
-  // grid-template-columns: fit-content;
   @include resp-width();
 }
 
@@ -49,12 +47,6 @@
   grid-row: 4/5;
 }
 
-#where-head {
-}
-
-#where-head-link {
-}
-
 #where-body-cont {
   grid-column: 1/2;
   grid-row: 5/6;
@@ -76,12 +68,10 @@
 .heading-links {
   display: grid;
   grid-template-columns: min-content 2ch min-content;
-  // gap: 1ch;
   & button h2 {
     position: relative;
     color: $yellow;
     z-index: 1;
-    // line-height: 1;
   }
 
   button {
@@ -94,16 +84,5 @@
     background-color: rgba(255, 255, 255, 0.15);
     text-align: center;
     cursor: pointer;
-
-    &:nth-child(1) {
-      // margin-right: 1ch;
-    }
-    &:nth-child(2) {
-      // margin-left: 1ch;
-    }
   }
 }
-
-// .blurb ul {
-//   column-count: 2;
-// }

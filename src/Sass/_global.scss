@@ -8,7 +8,6 @@ $nav-height: 4rem;
 $middle-column-width: min(80ch, 92vw);
 $mobile-middle-column-width: min(30ch, 92vw);
 $blurb-spacing-grid: minmax(6rem, auto);
-// $middle-column-width: max(20rem, 50vw);
 
 //mixins
 @mixin resp-clamp($prop, $per, $clamp-1, $clamp-2, $clamp-3) {

@@ -1,15 +1,11 @@
+// TODO:
 import React from 'react';
 import NavBar from '../NavBar';
 import './Landing.scss';
 import { motion } from 'framer-motion';
 
-// TODO: maybe add blue glow to title shapes
-// use varaints in app.js to propogate to children
-
 const Landing = ({ contMotion }) => {
-  const { contSideMove, itemSideMoveLeft, itemSideMoveRight, viewportAni } =
-    contMotion;
-  const { headView, blurbView } = viewportAni;
+  const { itemSideMoveLeft, itemSideMoveRight } = contMotion;
 
   return (
     <motion.div
@@ -18,12 +14,9 @@ const Landing = ({ contMotion }) => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
     >
-      <NavBar contMotion={contMotion} />
+      <NavBar />
       <motion.div
         id="shooz-bkd-wrapper"
-        // initial={{ x: '-100vw', opacity: 0 }}
-        // animate={{ x: 0, opacity: 1 }}
-        // transition={{ type: 'tween', duration: 0.6, delay: 0.5 }}
         variants={itemSideMoveLeft}
       >
         <div id="side-shooz-bkd"></div>
@@ -42,9 +35,6 @@ const Landing = ({ contMotion }) => {
       </motion.div>
       <motion.div
         id="title-caption-wrapper"
-        // initial={{ x: '100vw', opacity: 0 }}
-        // animate={{ x: 0, opacity: 1 }}
-        // transition={{ type: 'tween', duration: 0.6, delay: 0.5 }}
         variants={itemSideMoveRight}
       >
         <div id="title-caption-side-bkd"></div>
