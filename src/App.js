@@ -8,6 +8,8 @@ import Landing from './Components/Landing';
 
 function App() {
   //variants
+  //DO NOT DELETE CONTAINERS OF ELEMENTS WITH ANIMATIONS
+  //ANIMATIONS USE FRAMER MOTION
   const itemSideMoveLeft = {
     hidden: {
       x: '-100vw',
