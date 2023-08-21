@@ -34,7 +34,7 @@ function App() {
   };
   const viewportAni = {
     headView: { once: true, amount: 1 },
-    blurbView: { once: true, amount: 0.5 },
+    blurbView: { once: true, amount: 0.1 },
   };
 
   return (
