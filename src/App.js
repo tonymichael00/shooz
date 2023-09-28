@@ -18,7 +18,7 @@ function App() {
     visible: {
       x: 0,
       opacity: 1,
-      transition: { type: 'tween', duration: 0.4 },
+      transition: { type: 'tween', duration: 0.2 },
     },
   };
   const itemSideMoveRight = {
@@ -29,7 +29,7 @@ function App() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { type: 'tween', duration: 0.4 },
+      transition: { type: 'tween', duration: 0.2 },
     },
   };
   const viewportAni = {
