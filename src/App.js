@@ -1,3 +1,6 @@
+//NOTES: to achieve https. On Cloudflare go to shoozmedia.com > Overview >
+//      Advanced Actions > Pause Cloudflare on this site. Click and wait for
+//      Github pages certificates to clear. Turn back on.
 // TODO:
 import './App.scss';
 import React from 'react';
