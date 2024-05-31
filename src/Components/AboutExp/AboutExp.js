@@ -86,9 +86,12 @@ const AboutMe = ({ contMotion }) => {
           <h2>Technical Skills</h2>
           <ul>
             <li>React</li>
+            <li>Next.js</li>
             <li>Vanilla Javascript</li>
             <li>Sass</li>
             <li>Node</li>
+            <li>PostgreSQL</li>
+            <li>SQL</li>
             <li>Framer Motion</li>
             <li>Git</li>
             <li>Linux</li>
